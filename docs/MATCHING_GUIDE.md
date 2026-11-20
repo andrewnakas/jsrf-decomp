@@ -36,16 +36,34 @@ For near misses. `xbx help` lists every command.
 
 | Command | What it does |
 |---|---|
-| `xbx diff` | diagnoses a unit and shows the retail code next to ours |
-| `xbx score` | scores source variants of a function |
-| `xbx try` | scores a file of variants and records them |
-| `xbx history` | shows a function's recorded variants |
-| `xbx triage` | classifies the open functions |
-| `xbx exemplars` | finds matched functions that look like this one |
-| `xbx idiom` | shows where matched code uses an instruction that so far only the retail code has |
-| `xbx search` | runs a beam search over source mutators |
+| `xbx diff ADDR [file]` | diagnoses a unit and shows the retail code next to ours, with the differing lines marked |
+| `xbx score ADDR [files...]` | scores source variants of a function (default: the unit in the tree) |
+| `xbx try ADDR variants.txt [--start base.cpp]` | scores a file of variants (separated by lines of `=====`) and records them |
+| `xbx history ADDR` | shows a function's recorded variants, best first |
+| `xbx triage [ADDR...]` | classifies the open functions by what kind of difference is left |
+| `xbx exemplars ADDR` | finds matched functions that look like this one |
+| `xbx idiom ADDR [file]` | shows where matched code uses an instruction that so far only the retail code has |
+| `xbx search ADDR [--time-limit S] [--beam N]` | runs a beam search over source mutators |
+| `xbx names [ADDR...]` | prints the declaration the tree already uses for an address |
 
-<!-- TODO(maintainer): add each workbench command's arguments and a sample of its output once they are final. -->
+A variant is a whole unit file; keep variants under `work/`. Every scored variant gets a line of numbers:
+
+```
+0003BEC0 work/func_0003BEC0.cpp size 58  lock    7  dist    4  sem   2  frame +0  first +0x12
+  classes: semantic regs   frame retail 0x0 ours 0x0
+  retail only: inc R x1
+  ours only:   add R, 2 x1
+   0028 cmp dword ptr [ecx], eax                       | 0028 cmp dword ptr [ecx], eax
+!! 002c inc esi                                        | 002c add esi, 2
+```
+
+`dist` is the number of instructions that differ after the two sides are aligned, `sem` the difference with
+registers and stack slots ignored (the code does something else), `lock` the instruction-by-instruction count,
+`frame` the difference in stack frame size and `first` the offset of the first difference. `MATCH` is the
+gate's strict verdict, nothing less. Steer by `dist` and `sem`, not by `lock`: one extra instruction early
+shifts every later one. The full description of every command and number is
+[docs/WORKBENCH.md](https://github.com/andrewnakas/decompathon-xbox/blob/main/docs/WORKBENCH.md) in the tools'
+repository.
 
 Whatever a search or a mutator finds must still pass the rulings below. A variant that matches by a banned
 construct is not a match.

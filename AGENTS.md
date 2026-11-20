@@ -24,7 +24,11 @@ the KeybadeBlox JSRF-Decompilation repository**, not even to check a name. See P
 | Claude lane 3 | `0x00110000`–`0x0018CB3F`, and `0x001BA8A0`–`0x001BBABF` (section `MMATRIX`) | `claude-lane3/` |
 | Any other agent or human | an unclaimed range from the Active claims issue | `<name>/` |
 
-A function belongs to the lane its start address falls in. Lanes work on owner `game`, kind `func`.
+A function belongs to the lane its start address falls in. Lanes work on owner `game`, kind `func`. A lane in
+this table owns its range and does not `/claim` inside it; everyone else claims first.
+
+`.venv/bin/xbx asm --list 40 --from 00011000 --to 00090000 --min-size 16` lists a range's smallest open
+functions, one line each (`--leaf` for those that call nothing); `--small` prints their disassembly.
 
 Library code is linked in among the game code. Direct3D 8, DirectSound, XGraphics and XPP have sections and
 owners of their own (`lib:d3d8`, `lib:dsound`, `lib:xgraphics`, `lib:xpp`); they are a separate category in the
