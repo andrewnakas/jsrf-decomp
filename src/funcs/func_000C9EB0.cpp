@@ -1,4 +1,4 @@
-/* sym: ?func_000C60C0@Object_000C7240@@UAEXXZ = 0x000C9EB0 */
+/* sym: ?func_000C60C0@Object_000C7910@@UAEXXZ = 0x000C9EB0 */
 struct Node {
     virtual ~Node();
     virtual void func_00011C90();
@@ -69,7 +69,7 @@ struct Object_00157F10 {
 extern Object_00157F10 *data_00257CE8;
 
 // The class whose tables are at 0x1CE1C8 (Node) and 0x1CE1C0 (Object_000C60C0 at +0x44).
-struct Object_000C7240 : Node, Object_000C60C0 {
+struct Object_000C7910 : Node, Object_000C60C0 {
     virtual void func_000C60C0();
 
     char unknown_48[0x68];
@@ -91,7 +91,7 @@ inline void relink(Node *node)
     }
 }
 
-void Object_000C7240::func_000C60C0()
+void Object_000C7910::func_000C60C0()
 {
     Slot_000C9EB0 *slot = speed->scene->slot;
     if (slot->current == this)
