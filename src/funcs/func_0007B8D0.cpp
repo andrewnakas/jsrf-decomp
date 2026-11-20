@@ -47,7 +47,7 @@ int func_001167F0();
 void func_00117350(int first, int second);
 void func_00024620(unsigned int color, float step);
 void func_0004E930(int first, int second, int third);
-void func_00055530(int value);
+int func_00055530(int value);
 
 struct Step_0007AF80;
 
