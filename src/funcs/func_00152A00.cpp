@@ -1,8 +1,9 @@
-// A 0x24-byte description that func_0014EA40 fills from a width, a height and a depth.
+/* sym: ??0Swizzle@@QAE@KKK@Z = 0x0014EA40 */
+// A 0x24-byte description that its constructor (0x14EA40) fills from a width, a height and a depth.
 struct Swizzle {
     char unknown_00[0x24];
 
-    void func_0014EA40(unsigned long width, unsigned long height, unsigned long depth);
+    Swizzle(unsigned long width, unsigned long height, unsigned long depth);
 };
 
 void __stdcall func_0014EAC0(Swizzle *swizzle, void *destination, void *source, unsigned long bits);
@@ -35,8 +36,7 @@ void __stdcall Object_001E12B8::func_00152A00()
     void *source = object;
 
     if (source) {
-        Swizzle swizzle;
-        swizzle.func_0014EA40(size, size, 1);
+        Swizzle swizzle(size, size, 1);
         if (format == 4)
             func_0014EAC0(&swizzle, data, source, 0x20);
         else
