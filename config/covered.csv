@@ -97,6 +97,7 @@ addr,unit
 000fad80,src/funcs/func_000FA500.cpp
 000fb9d0,src/funcs/func_000FB300.cpp
 000fdf10,src/funcs/func_000FD9B0.cpp
+000fe880,src/funcs/func_000FDF30.cpp
 000ff370,src/funcs/func_000FEC60.cpp
 000ffb70,src/funcs/func_000FF9B0.cpp
 001005d0,src/funcs/func_000FFD10.cpp
