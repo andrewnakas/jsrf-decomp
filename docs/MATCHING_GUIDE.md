@@ -270,6 +270,27 @@ struct Node {
 The evidence for a folded address is one function filling two slots of the same vtable. An alias on an address
 that is not listed is refused; ask a maintainer to list it.
 
+#### Overrides
+
+An override keeps the name of the virtual function it overrides, so it cannot carry its own address. Give it
+one with a `sym:` line, in its own unit and in every unit whose object carries the class's vtable:
+
+```cpp
+/* sym: ?func_00011C90@Derived@@UAEXXZ = 0x000728D0 */
+struct Derived : Node {
+    virtual ~Derived();
+    virtual void func_00011C90();       // overrides Node's slot 1; this one is at 0x728D0
+};
+```
+
+Only a virtual member function's name may take another address this way. A slot the class does not override
+keeps the base's name and address. If one override's code fills the same slot of two unrelated classes, the
+linker folded them: the address goes under `[names] folded`, and each class keeps its own override name.
+
+A class that declares no destructor gets an implicit one. When a deleting destructor in the object calls it,
+the matcher places and compares it like the deleting destructor; declaring an empty destructor instead adds a
+vtable store that retail does not have.
+
 ## `/* sym: */`: special members
 
 Constructors, destructors, operators and vtables have decorated names that start with `??` and cannot carry an

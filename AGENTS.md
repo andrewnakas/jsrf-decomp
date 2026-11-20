@@ -199,7 +199,9 @@ or destructor), and that unit gets the credit:
 
 `0x11C90` (`ret`) and `0x11C80` (`ret 4`) are folded: each is many source functions, and units name the
 others `func_00011C90_1`, `func_00011C90_2`, ... (MATCHING_GUIDE, "Folded functions"). `xbx names` says
-when an address is folded.
+when an address is folded. An override keeps the name of the function it overrides and takes its own address
+from a `sym:` line (MATCHING_GUIDE, "Overrides"); a merged unit that turns out to be an override is renamed
+in the PR that adds its class's constructor or destructor.
 
 ## Equivalent but not matching yet (`src/nonmatching/`)
 
