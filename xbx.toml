@@ -15,9 +15,10 @@ code_sections = [".text", "D3D", "DSOUND", "MMATRIX", "XGRPH", "XPP"]
 profile = "msvc7.0"
 banner = "13.00.9466"
 cflags = ["/O2", "/GX"]
-# /Oy-: 12 game functions keep a frame pointer with no exception handling and no stack alignment
-# (0x14370, 0x15520, 0x23f20, 0x47160, 0x47230, 0x50690, 0xa2960, 0xa6dc0, 0xc3a60, 0xd27f0, 0xe45d0,
-# 0xedc30), while their neighbours have none: STATUS.md, "How the flags were pinned"
+# /Oy-: 11 game functions keep a frame pointer with no exception handling and no stack alignment
+# (0x14370, 0x23f20, 0x47160, 0x47230, 0x50690, 0xa2960, 0xa6dc0, 0xc3a60, 0xd27f0, 0xe45d0, 0xedc30),
+# while their neighbours have none; five already match with it and not without: STATUS.md, "How the flags
+# were pinned"
 allowed_cflags = ["/Oy-"]
 includes = ["include", "include/game", "include/sdk"]
 
