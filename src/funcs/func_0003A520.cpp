@@ -1,0 +1,16 @@
+struct Object_00039BE0 {
+    virtual ~Object_00039BE0();
+
+    char unknown_0004[0x29f8];
+    unsigned int bits_29fc[8];
+    unsigned int bits_2a1c[0x20];
+
+    void func_0003A520(unsigned int index);
+};
+
+void Object_00039BE0::func_0003A520(unsigned int index)
+{
+    if (index < 0x100) {
+        bits_29fc[index >> 5] |= 1 << (index & 0x1f);
+    }
+}
