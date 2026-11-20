@@ -506,6 +506,15 @@ the unit that proves it.
   lock 144 to 5).
 - Before naming the cases of a switch with a byte map, read the whole map (`xbx asm` prints it in rows of
   four, the last row may be short): an empty case shifts every label after it (`func_000BB7B0`).
+- MSVC unrolls small constant-count loops completely (2 passes in `func_000B6ED0`, 4 in `func_000A5070`), but
+  not every one (`func_000A4D80`). With an `unsigned int` index a 2- or 4-pass loop keeps retail's countdown
+  counter in memory; an `int` index gives a pointer compare (`func_000EFFF0`, `func_000DC490`).
+- Struct copies written in both arms of an if/else are merged into one shared copy through a pointer
+  (`func_000DA3E0`).
+- `x * 45.0f * 182.04445f` folds the two constants into one; an inline helper that multiplies by the second
+  keeps both `fmul`s (`func_000AFA90`).
+- Copies through a walking pointer (`*v = template[i]; ... v++;`) match where indexed `vertex[i]` keeps a
+  base register (`func_0005FAF0`).
 - Computing a derived pointer before its base (`data = pack + off + 0x10; chunk = pack + off;`) gives retail's
   `lea` and registers (`func_0002E1C0`, `func_0002E4C0`, `func_00033920`).
 - An inline helper's argument is evaluated inside the helper's loop; computed into a local first, it is
