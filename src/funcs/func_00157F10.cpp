@@ -1,0 +1,13 @@
+// The base of the classes whose tables are at 0x1E1478, 0x1E1498 and 0x1E14B8 (created by 0x158490).
+struct Object_001E1478 {
+    virtual long __stdcall func_00157F00(const void *iid, void **object);  // slot 0
+    virtual unsigned long __stdcall func_001532F0_2();  // slot 1
+    virtual unsigned long __stdcall func_0014D080_5();  // slot 2
+    virtual long __stdcall func_00157F10(unsigned long value);  // slot 3
+};
+
+// Returns 0. The linker folded it with a game member function that takes two arguments (called at 0xCBDC1).
+long __stdcall Object_001E1478::func_00157F10(unsigned long value)
+{
+    return 0;
+}
