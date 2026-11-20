@@ -31,7 +31,7 @@ struct Object_000C5B50 {
 
 struct Limits_000CC020 {
     char unknown_00[4];
-    int value_04;
+    float limit;
 };
 
 // The base with a pure slot 0 (table 0x1CE304, destructor func_000E7EB0).
@@ -61,7 +61,7 @@ struct Object_000CCE00 : Object_000CC600 {
     virtual void func_000CCA40();
     virtual void func_000CC020();
 
-    void func_000CC4B0(int value);
+    void func_000CC4B0(float value);
     void func_000CCD10();
 
     Object_000C5B50 *owner;
@@ -78,7 +78,7 @@ struct Object_000CCE00 : Object_000CC600 {
 void Object_000CCE00::func_000CD140()
 {
     Object_000C5B50 *owner;
-    func_000CC4B0(limits->value_04);
+    func_000CC4B0(limits->limit);
     func_000CCD10();
     this->owner->area = data_00257CE0->func_000BFF80(&this->owner->position);
     owner = this->owner;

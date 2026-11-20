@@ -66,10 +66,7 @@ struct Object_000265A0 {
 
 struct Limits_000CC020 {
     int value_00;
-    union {
-        float limit;
-        int value_04;
-    };
+    float limit;
     char unknown_08[8];
     float rate;
     char unknown_14[4];
@@ -106,7 +103,7 @@ struct Object_000CCE00 : Object_000CC600 {
     virtual void func_000CC020();
 
     int func_000CC040();
-    void func_000CC4B0(int value);
+    void func_000CC4B0(float value);
     float func_000CCAE0();
 
     Object_000C5B50 *owner;
@@ -160,7 +157,7 @@ struct Object_000DCBC0 : Object_000CCE00 {
 void Object_000DCBC0::func_000CD060()
 {
     next = 1;
-    func_000CC4B0(limits->value_04);
+    func_000CC4B0(limits->limit);
     if (!func_000DDCB0()) {
         state = 2;
         owner->flags &= ~0x40;
