@@ -6,7 +6,7 @@ struct Swizzle {
     Swizzle(unsigned long width, unsigned long height, unsigned long depth);
 };
 
-void __stdcall func_0014EAC0(Swizzle *swizzle, void *destination, void *source, unsigned long bits);
+long __stdcall func_0014EAC0(Swizzle *swizzle, void *swizzled, void *linear, unsigned long bits);
 
 // The base of the classes whose tables are at 0x1E1290 (destructor 0x152690), 0x1E1298, 0x1E12B8 and 0x1E12D8
 // (created by 0x152BC0); all four share this QueryInterface.

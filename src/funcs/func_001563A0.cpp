@@ -1,7 +1,12 @@
+// The empty helper base at +4 of the engine's objects; its callers pass ecx = object + 4.
+struct Stats {
+    unsigned int func_001563A0(unsigned long fvf);
+};
+
 // The size in bytes of a vertex of the flexible vertex format (D3DFVF bits): the position (3 to 7 floats by the
 // bits 1-3), the normal (0x10), the diffuse (0x40) and specular (0x80) colours and up to four texture coordinate
 // sets (count in bits 8-11, each set's size in two bits from bit 16). E_INVALIDARG for an unknown position.
-unsigned int __stdcall func_001563A0(unsigned long fvf)
+unsigned int Stats::func_001563A0(unsigned long fvf)
 {
     unsigned int size;
     switch (fvf & 0xE) {
