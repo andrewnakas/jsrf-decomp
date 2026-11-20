@@ -1,4 +1,4 @@
-/* sym: ??0Object_000C4850@@QAE@PAUNode@@HIPAUVector3@@HH@Z = 0x000C4850 */
+/* sym: ??0Object_000C4850@@QAE@PAUNode@@HIPAUVector3@@1H@Z = 0x000C4850 */
 struct Game {
     void *func_000128C0(int id);
 };
@@ -19,16 +19,17 @@ struct Node {
 
 // The child of Node with the table at 0x1CDE20 (0xc0 bytes).
 struct Object_000C4850 : Node {
-    Object_000C4850(Node *owner, int id, unsigned int flags, Vector3 *position, int first, int second);
+    Object_000C4850(Node *owner, int id, unsigned int flags, Vector3 *position, Vector3 *direction, int angle);
 
     char unknown_40[0x80];
 };
 
-// For kind 0, creates an Object_000C4850 at the position with both values under object 9 (id -1, flags 0x100).
-void func_000C4BE0(int kind, Vector3 *position, int first, int second)
+// For kind 0, creates an Object_000C4850 at the position, thrown along the direction at the angle, under object 9
+// (id -1, flags 0x100).
+void func_000C4BE0(int kind, Vector3 *position, Vector3 *direction, int angle)
 {
     Node *stage = (Node *)data_0022FCE0->func_000128C0(9);
     if (kind == 0) {
-        new Object_000C4850(stage, -1, 0x100, position, first, second);
+        new Object_000C4850(stage, -1, 0x100, position, direction, angle);
     }
 }
