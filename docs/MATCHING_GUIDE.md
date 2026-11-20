@@ -487,6 +487,13 @@ the unit that proves it.
   pointer local before the loop it becomes retail's single advancing pointer (`func_000E5EA0`).
 - x87 stack slots follow how often each value is used, not the order of declaration; a separate temporary
   changed them to retail's (`func_00044F00`).
+- Quad drawers match when each vertex field repeats its sum inline (`x + w[i]`): the compiler merges the
+  repeats into stack temporaries itself, and sums computed into locals first do not match (`func_00120F40`,
+  `func_00132290`).
+- Equality tests on a field read from memory are not jump-threaded; the same tests on a local copy are
+  (`func_00123240`).
+- A jump table whose entries land in the middle of blocks comes from cases that fall through into the next
+  (`func_000EC990`).
 - Computing a derived pointer before its base (`data = pack + off + 0x10; chunk = pack + off;`) gives retail's
   `lea` and registers (`func_0002E1C0`, `func_0002E4C0`, `func_00033920`).
 - An inline helper's argument is evaluated inside the helper's loop; computed into a local first, it is
