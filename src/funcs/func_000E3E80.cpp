@@ -13,7 +13,7 @@ struct Object_00157F10 {
 
 extern Object_00157F10 *data_00257CE8;
 
-void func_0005E7B0(void *target, int first, int second, int third, int fourth);
+int func_0005E7B0(void *target, int first, int second, int third, int fourth);
 
 struct Node {
     virtual ~Node();

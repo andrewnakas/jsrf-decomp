@@ -76,7 +76,7 @@ extern char data_00217878[];
 
 void *func_00025700(unsigned int index, int first, int second, int third);
 int func_0005E790(void *source, int flags);
-void func_0005E7B0(void *target, int first, int second, int third, int fourth);
+int func_0005E7B0(void *target, int first, int second, int third, int fourth);
 
 // The object the behaviour serves: its id at 0x8, flags at 0xa4.
 struct Desc_000DCBC0 {

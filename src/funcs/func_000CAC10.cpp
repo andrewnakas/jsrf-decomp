@@ -1,7 +1,7 @@
 /* const: 0x40000 */
 struct Motion_0005F060;
 
-void func_0005E7B0(void *target, int first, int second, int third, int fourth);
+int func_0005E7B0(void *target, int first, int second, int third, int fourth);
 void func_0005EAF0(void *target, Motion_0005F060 *first, float firstTime, Motion_0005F060 *second, float secondTime,
                    Motion_0005F060 *blend, float blendTime);
 void func_0005EC20(void *target, int first, int second, int third, int fourth, Motion_0005F060 *blend,

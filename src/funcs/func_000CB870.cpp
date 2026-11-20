@@ -1,6 +1,6 @@
 struct Motion_0005F060;
 
-void func_0005E7B0(void *target, int first, int second, int third, int fourth);
+int func_0005E7B0(void *target, int first, int second, int third, int fourth);
 
 struct Part_000CB870 {
     char unknown_00[8];

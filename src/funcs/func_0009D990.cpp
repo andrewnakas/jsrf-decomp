@@ -1,7 +1,7 @@
 struct Motion_0005F060;
 
 int func_0004A7F0(int first, int second);
-void func_0005E7B0(void *target, int first, int second, int third, int fourth);
+int func_0005E7B0(void *target, int first, int second, int third, int fourth);
 void func_0005EC20(void *target, int first, int second, int third, int fourth, Motion_0005F060 *blend,
                    float blendFrame, float weight);
 int func_0005E030(Motion_0005F060 *motion, float *time, float speed, int loop);

@@ -45,7 +45,7 @@ struct Model_000F55E0 {
 };
 
 int func_0005E030(Motion_0005F060 *motion, float *time, float step, int hold);
-void func_0005E7B0(void *first, int second, int third, int fourth, int fifth);
+int func_0005E7B0(void *first, int second, int third, int fourth, int fifth);
 
 // The child of Node whose table is at 0x1CF220 (constructor func_000F5E70, destructor func_000F60C0); slots 16 to
 // 52 of its table. The class of the table at 0x1CEAC0 derives from it.

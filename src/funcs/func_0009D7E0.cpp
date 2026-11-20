@@ -1,6 +1,6 @@
 struct Motion_0005F060;
 
-void func_0005E7B0(void *target, int first, int second, int third, int fourth);
+int func_0005E7B0(void *target, int first, int second, int third, int fourth);
 
 // A posed part: its pose target at 0x8.
 struct Part_0009D7E0 {

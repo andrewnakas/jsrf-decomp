@@ -7,7 +7,7 @@ struct Vector3 {
 struct Motion_0005F060;
 
 int func_0005E030(Motion_0005F060 *motion, float *time, float speed, int loop);
-void func_0005E7B0(void *target, int first, int second, int third, int fourth);
+int func_0005E7B0(void *target, int first, int second, int third, int fourth);
 float __fastcall func_0014CBA0(const Vector3 *a, const Vector3 *b);
 
 // The model at 0x184: its target at 8.

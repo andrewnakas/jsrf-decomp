@@ -1,6 +1,6 @@
 struct Motion_0005F060;
 
-void func_0005E7B0(void *target, int first, int second, int third, int fourth);
+int func_0005E7B0(void *target, int first, int second, int third, int fourth);
 void func_0005EAF0(void *target, Motion_0005F060 *first, float firstTime, Motion_0005F060 *second, float secondTime,
                    Motion_0005F060 *third, float thirdTime);
 int func_0005E030(Motion_0005F060 *motion, float *time, float speed, int loop);

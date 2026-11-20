@@ -33,7 +33,7 @@ extern char data_00258688[];
 
 void *func_00025700(unsigned int index, int first, int second, int third);
 int func_0005E790(void *source, int flags);
-void func_0005E7B0(void *source, int first, int second, int third, int fourth);
+int func_0005E7B0(void *source, int first, int second, int third, int fourth);
 
 // A centre and a radius.
 struct Sphere_000F4820 {

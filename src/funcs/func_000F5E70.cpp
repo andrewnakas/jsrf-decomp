@@ -12,7 +12,7 @@ struct Vector3 {
 
 void *func_00025700(unsigned int index, int first, int second, int third);
 int func_0005E790(void *source, int flags);
-void func_0005E7B0(void *target, int first, int second, int third, int fourth);
+int func_0005E7B0(void *target, int first, int second, int third, int fourth);
 
 struct Motion_0005F060;
 

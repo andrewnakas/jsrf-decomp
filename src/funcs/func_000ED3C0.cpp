@@ -2,7 +2,7 @@ struct Motion_0005F060;
 
 int func_0005E030(Motion_0005F060 *motion, float *time, float speed, int loop);
 
-void func_0005E7B0(void *target, int first, int second, int third, int fourth);
+int func_0005E7B0(void *target, int first, int second, int third, int fourth);
 
 struct Set_000E7F50 {
     Motion_0005F060 *motions[32];
