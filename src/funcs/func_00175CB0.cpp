@@ -78,8 +78,8 @@ public:
 
 }
 
-// A std::list of 0x18-byte records: the count is at +8.
-struct RecordLinkedList {
+// A std::list of 0x18-byte records (nodes of 0x20 bytes, head node 0x175AD0): the count is at +8.
+struct Object_00175AD0 {
     char allocator;
     void *head;
     unsigned int size;
@@ -89,7 +89,7 @@ struct RecordLinkedList {
 
 // Counts `count` more elements, or throws std::length_error("list<T> too long") when the count would pass
 // 0xAAAAAAA, the most a list of 0x18-byte records can hold.
-void RecordLinkedList::func_00175CB0(unsigned int count)
+void Object_00175AD0::func_00175CB0(unsigned int count)
 {
     if (0xAAAAAAA - size < count)
         throw std::length_error(String("list<T> too long"));
