@@ -103,7 +103,7 @@ struct Resource_000D0680 {
 void *func_00025700(unsigned int first, int second, int third, int fourth);
 
 void func_001BAA00();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 
 struct Node {

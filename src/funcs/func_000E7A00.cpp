@@ -1,6 +1,6 @@
 /* sym: ?func_00011C80@Object_000E7D70@@UAEXH@Z = 0x000E7A00 */
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 struct Node {
     Node(Node *owner, int id, unsigned int flags);

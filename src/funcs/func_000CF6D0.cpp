@@ -11,7 +11,7 @@ struct Angles_000C1300 {
 };
 
 void func_001BAA00();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *position);
 void __fastcall func_001BAB20(Vector3 *out, const Vector3 *in);
 void func_001BB2B0(float scale);

@@ -11,7 +11,7 @@ struct Matrix_001BA950 {
 void func_0004A750(Vector3 *to, const Vector3 *from);
 void func_001BA9C0();
 void __fastcall func_001BA950(Matrix_001BA950 *matrix);
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAB20(Vector3 *to, const Vector3 *from);
 void __fastcall func_001BAC00(Vector3 *to, const Vector3 *from);
 void __fastcall func_001BADB0(Vector3 *position);

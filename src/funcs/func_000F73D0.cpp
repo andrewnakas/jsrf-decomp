@@ -92,7 +92,7 @@ extern Light_00046920 *data_001F963C;
 void func_001BA9C0();
 void __fastcall func_001BAAA0(float *vector);
 void func_001BB3D0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 // The child of Node whose table is at 0x1CF2F8 (constructor func_000F7280, destructor func_000F7320).
 struct Object_000F7280 : Node {

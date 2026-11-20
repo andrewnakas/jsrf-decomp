@@ -63,7 +63,7 @@ struct Object_000512E0 : Node {
 };
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 void __fastcall func_001BAC50(int *angles, int zero);
 void func_001BB650(float distance);

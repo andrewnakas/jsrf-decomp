@@ -104,7 +104,7 @@ extern Object_00046670 data_001F93C8;
 extern Light_00046920 *data_001F963C;
 
 void func_001BAA00();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 void func_001BB650(float scale);
 

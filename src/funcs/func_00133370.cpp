@@ -64,7 +64,7 @@ struct Object_00120420 {
 extern Device_00251D6C *data_00251D6C;
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void func_001BAA60(float x, float y, float z);
 
 // Draws each shown model of the seven at +0x2510 (flags +0x2EBA on) at (2, 3, 102) with device slot 33 at -10:

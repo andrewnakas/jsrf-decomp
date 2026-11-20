@@ -80,7 +80,7 @@ struct Sprite_000C4850 {
 
 void *func_00025700(unsigned int index, int first, int second, int third);
 void func_001BAA00();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAC70(Rotation_000D2B90 *rotation);
 void __fastcall func_001BAC00(Vector3 *out, const Vector3 *in);
 

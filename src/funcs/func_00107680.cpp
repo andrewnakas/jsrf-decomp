@@ -110,7 +110,7 @@ struct Matrix_001BA950 {
 
 void func_001BAA00();
 void __fastcall func_001BA8F0(Matrix_001BA950 *matrix);
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 struct Motion_0005F060;
 

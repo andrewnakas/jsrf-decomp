@@ -5,7 +5,7 @@ struct Vector3 {
 };
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 void __fastcall func_001BAB20(Vector3 *out, const Vector3 *in);
 void __fastcall func_001BAC00(Vector3 *out, const Vector3 *in);

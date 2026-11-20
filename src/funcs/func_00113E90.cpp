@@ -37,7 +37,7 @@ extern Object_00043700 data_001F9138;
 extern Object_00039BE0 data_001EFFB0;
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void func_001BAA60(float x, float y, float z);
 void func_001BB230(float x, float y, float z);
 

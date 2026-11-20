@@ -19,7 +19,7 @@ struct Object_00157F10 {
 extern Object_00157F10 *data_00257CE8;
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 
 extern unsigned int data_0021AFC0[4];

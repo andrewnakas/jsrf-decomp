@@ -9,7 +9,7 @@ void func_001BAA00();
 void func_001BA9C0();
 void __fastcall func_001BAAA0(float *matrix);
 void __fastcall func_001BAB20(Vector3 *to, const Vector3 *from);
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 // A frame of the model (0x6c bytes): the index of its part at +0x8, its matrix at +0x14.
 struct Frame_00015480 {

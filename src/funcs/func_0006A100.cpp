@@ -1,6 +1,6 @@
 /* sym: ?func_00047820@Object_00069F00@@UAEXH@Z = 0x0006A100 */
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 struct Matrix_001BA950;
 struct Surface_000476F0;

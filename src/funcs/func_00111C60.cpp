@@ -83,7 +83,7 @@ struct Object_001118F0 {
 extern Device_00251D6C *data_00251D6C;
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *position);
 void __fastcall func_001BAAE0(float *matrix);
 void func_001BB230(float x, float y, float z);

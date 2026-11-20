@@ -51,7 +51,7 @@ struct Game {
 extern Game *data_0022FCE0;
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 
 // Calls slot 3 on the nodes of a list (linked through +0x34) that pass the flag and mask tests, each between

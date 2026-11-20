@@ -34,7 +34,7 @@ struct Object_000C5B50 {
 
 void func_000C4B70(int kind);
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 void __fastcall func_001BB2E0(int angle);
 void __fastcall func_001BB330(int angle);

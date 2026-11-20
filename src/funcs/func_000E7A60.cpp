@@ -56,7 +56,7 @@ extern Object_0006DB80 data_00251F78;
 void *func_00025700(unsigned int first, int second, int third, int fourth);
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 void __fastcall func_001BB2E0(int angle);
 void __fastcall func_001BB330(int angle);

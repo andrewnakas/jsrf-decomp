@@ -1,6 +1,6 @@
 /* sym: ?func_00047820@Object_0003D790@@UAEXH@Z = 0x0003E3C0 */
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 struct Object_00066980 {
     float func_00066950();

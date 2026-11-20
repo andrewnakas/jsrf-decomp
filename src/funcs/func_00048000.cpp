@@ -4,7 +4,7 @@ struct Matrix_001BA950 {
 
 void func_001BA9C0();
 void __fastcall func_001BA8F0(Matrix_001BA950 *matrix);
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 // The effect of a kind (+0x2e8 of 0x251D7C, 0x24 bytes per kind): slot 5 sets its constants.
 struct Effect_00048000 {

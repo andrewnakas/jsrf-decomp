@@ -1,7 +1,7 @@
 void *func_00025700(unsigned int index, int first, int second, int third);
 int func_0014C7D0(float x, float z);
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BB330(int handle);
 
 // The Direct3D device.

@@ -43,7 +43,7 @@ struct Object_00047470 {
 };
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 extern unsigned int data_0021B010[2];
 extern unsigned int data_0021B018[2];

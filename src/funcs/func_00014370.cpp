@@ -14,7 +14,7 @@ void __fastcall func_0014C410(Vector3 *out, const Vector3 *in);
 float __fastcall func_0014C460(Vector3 *a, const Vector3 *b);
 void __fastcall func_0014C4C0(Vector3 *out, const Vector3 *a, const Vector3 *b);
 void func_001BAA00();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 struct Device_00251D6C {
     virtual void __stdcall slot0();

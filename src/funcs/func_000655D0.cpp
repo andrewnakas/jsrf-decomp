@@ -20,7 +20,7 @@ extern Vector3 data_00251DC8;
 
 void func_001BA9C0();
 void func_001BA8A0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAC50(int *angles, int order);
 void __fastcall func_001BAC00(Vector3 *out, const Vector3 *in);
 

@@ -41,7 +41,7 @@ struct Object_00113C40 {
 
 extern Object_000149B0 data_0020C750;
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void func_001BB230(float x, float y, float z);
 void __fastcall func_001BADB0(Vector3 *position);
 

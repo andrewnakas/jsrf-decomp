@@ -66,7 +66,7 @@ struct List_000E45D0 {
 void *func_00025700(unsigned int index, int first, int second, int third);
 int func_0005E790(void *source, int flags);
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 void __fastcall func_001BB2E0(int angle);
 void __fastcall func_001BB330(int angle);

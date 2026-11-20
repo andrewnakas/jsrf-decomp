@@ -1,5 +1,5 @@
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 struct Object_00047470 {
     void func_000480C0(unsigned int index);

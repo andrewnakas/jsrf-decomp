@@ -1,6 +1,6 @@
 /* sym: ?func_000D77D0@Object_000E7F50@@UAEXXZ = 0x000E9200 */
 void func_001BAA00();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 void __fastcall func_001BB2E0(int angle);
 void __fastcall func_001BB330(int angle);

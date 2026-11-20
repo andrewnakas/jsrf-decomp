@@ -18,7 +18,7 @@ float __fastcall func_0014C460(Vector3 *a, const Vector3 *b);
 void __fastcall func_0014C4C0(Vector3 *out, const Vector3 *from, const Vector3 *to);
 int func_0014C7D0(float x, float z);
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 void __fastcall func_001BAB20(Vector3 *out, const Vector3 *in);
 void __fastcall func_001BAC00(Vector3 *out, const Vector3 *in);

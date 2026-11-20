@@ -268,7 +268,7 @@ extern Game *data_0022FCE0;
 
 void __fastcall func_001BAF70(Vector3 *eye, Vector3 *target, int roll);
 void func_001BAA00();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 int func_0004EA70();
 
 struct Object_000A1C50 {

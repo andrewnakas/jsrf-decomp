@@ -90,7 +90,7 @@ extern Vector3_0011F1C0 data_00225AA0[];
 
 void *func_00025700(unsigned int index, int first, int second, int third);
 void func_001BAA00();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 void __fastcall func_001BAAE0(float *vector);
 void __fastcall func_001BA950(Matrix_001BA950 *matrix);

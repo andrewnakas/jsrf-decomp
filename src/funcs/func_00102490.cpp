@@ -139,7 +139,7 @@ void func_001BB630(float distance);
 void func_001BB650(float distance);
 void __fastcall func_001BB330(int angle);
 void __fastcall func_001BB2E0(int angle);
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 // A direct child of Node (table 0x1D1DD0, destructor func_00102480).
 struct Object_00102480 : Node {

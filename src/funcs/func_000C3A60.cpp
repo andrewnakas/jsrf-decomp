@@ -139,7 +139,7 @@ struct Device_00251D6C {
 extern Device_00251D6C *data_00251D6C;
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 // The Node class whose table is at 0x1cdd60 (stored by its constructor): overrides Node's slots 1 to 3.
 struct Object_000C39E0 : Node {

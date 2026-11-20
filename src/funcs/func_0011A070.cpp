@@ -160,7 +160,7 @@ extern Vector3 data_00224FF8[];
 
 void func_001BA9C0();
 void func_001BAA00();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *position);
 
 // Slot 3 of the class whose table is at 0x1D7BA0. Messages 0, 3, 5 and 8 draw it with slot 33 of the device at

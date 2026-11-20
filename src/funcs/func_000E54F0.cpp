@@ -25,7 +25,7 @@ struct Object_00046670 {
 extern Object_00046670 data_001F93C8;
 
 void func_001BAA00();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAC00(Vector3 *out, const Vector3 *in);
 void __fastcall func_001BAC50(int *angles, int order);
 

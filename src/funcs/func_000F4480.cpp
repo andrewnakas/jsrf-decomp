@@ -108,7 +108,7 @@ int func_001186D0(int handle);
 void func_001BA9C0();
 void __fastcall func_001BAAA0(float *position);
 void __fastcall func_001BB330(int angle);
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 // Slot 1: runs entry `state` of the member-function table at 0x21b2dc, steps the motion at 0x98 by 0.5
 // (func_0005E030), and in states 0 to 2 draws the model (func_000F4170) and moves the handle at 0x108 to the position.

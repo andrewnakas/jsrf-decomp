@@ -159,7 +159,7 @@ struct Object_00046670 {
 
 extern Object_00046670 data_001F93C8;
 extern Light_00046920 *data_001F963C;
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 struct Game {
     void *func_000128C0(int id);

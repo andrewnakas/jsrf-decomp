@@ -24,7 +24,7 @@ extern Vector3 data_00216234;
 int func_0014C7D0(float x, float z);
 void func_001BAA00();
 // Declared not to throw: retail leaves the second piece's unwind state live across this call (no reset to -1).
-void func_001BAA50() throw();
+void __fastcall func_001BAA50() throw();
 void __fastcall func_001BB330(int angle);
 void __fastcall func_001BAC00(Vector3 *out, const Vector3 *in);
 void __fastcall func_0014C730(Vector3 *target, Vector3 *direction, float scale);

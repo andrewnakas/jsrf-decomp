@@ -57,7 +57,7 @@ struct Object_00120420 {
 extern Device_00251D6C *data_00251D6C;
 void func_001BA9C0();
 void func_001BAA00();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BB380(int angle);
 
 // Member of object 0x1de2's class: draws the cells of a player (func_00123460 for each of its 15 cells with an

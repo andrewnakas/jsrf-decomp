@@ -14,7 +14,7 @@ struct Angles_000C1300 {
 void __fastcall func_001BAAA0(float *vector);
 void __fastcall func_001BB330(int angle);
 void func_001BB2B0(float scale);
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void func_001BA9C0();
 
 // The object a behaviour serves: its position at 0x44 and angles at 0x50.

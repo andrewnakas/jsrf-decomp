@@ -45,7 +45,7 @@ struct Object_001379E0 {
 };
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void func_001BB2B0(float scale);
 void func_001BB630(float distance);
 void func_001BB650(float distance);

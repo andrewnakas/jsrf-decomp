@@ -10,7 +10,7 @@ struct Vector3 {
 };
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BA8F0(Matrix_001BA950 *matrix);
 void __fastcall func_001BA950(Matrix_001BA950 *matrix);
 void __fastcall func_001BAAA0(float *vector);

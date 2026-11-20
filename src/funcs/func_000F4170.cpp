@@ -105,7 +105,7 @@ int func_001186D0(int handle);
 void func_001BA9C0();
 void __fastcall func_001BAAA0(float *position);
 void __fastcall func_001BB330(int angle);
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 // Draws the model: the transform from the position at 0x48 and the angle at 0x60 (plus a half turn) around the
 // mesh at 0xec (func_00019570 from the mesh at 0x21B2C4), then the item at 0xe4 (func_000162A0).

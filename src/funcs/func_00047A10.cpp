@@ -4,7 +4,7 @@ struct Matrix_001BA950 {
 
 void func_001BA9C0();
 void __fastcall func_001BA8F0(Matrix_001BA950 *matrix);
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BB430(float *vector);
 
 struct Frame_000479D0 {

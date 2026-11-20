@@ -88,7 +88,7 @@ unsigned int func_0014C690(float value);
 float func_0003D750(float scale, int text);
 void func_0003D5D0(float x, float y, float scale, unsigned int color, float first, float second, int text);
 void func_001BAA00();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 
 // The child of Node whose table is at 0x1D08A0 (constructor func_000F98B0): three models at 0x48, the fade at 0x5c,

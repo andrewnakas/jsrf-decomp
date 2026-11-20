@@ -28,7 +28,7 @@ struct Resource_000D01A0 {
 void *func_00025700(unsigned int first, int second, int third, int fourth);
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAC00(Vector3 *out, const Vector3 *in);
 void __fastcall func_001BB380(int angle);
 

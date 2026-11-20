@@ -106,7 +106,7 @@ int func_001186D0(int handle);
 void func_001BA9C0();
 void __fastcall func_001BAAA0(float *position);
 void __fastcall func_001BB330(int angle);
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 // Entry 0 of the member-function table at 0x21b2dc: the angle from (x, z) at 0x64/0x6c (func_0014C7D0) into 0x60,
 // func_000F41C0, state 1 and a handle from func_000C1160(0x30, 8) at the position into 0x108.

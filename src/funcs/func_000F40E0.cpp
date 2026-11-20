@@ -105,7 +105,7 @@ int func_001186D0(int handle);
 void func_001BA9C0();
 void __fastcall func_001BAAA0(float *position);
 void __fastcall func_001BB330(int angle);
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 // Entry 3 of the member-function table at 0x21b2dc: func_000C70A0 at the centre of the mesh's second part (kind 1),
 // state 4 and 0 at 0x70, releases the handle (func_001186D0), then func_000C1160(0x30, 9) at that centre.

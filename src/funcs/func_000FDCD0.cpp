@@ -135,7 +135,7 @@ void func_001BA9C0();
 void func_001BA8A0();
 void __fastcall func_001BAAA0(float *vector);
 void func_001BB650(float scale);
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 // The child of Node whose table is at 0x1D1BA8 (constructor func_000FD870); slot 16 is func_000FDDC0, and the
 // classes with tables 0x1D08E0 and 0x1D1B20 derive from it.

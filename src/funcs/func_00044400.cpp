@@ -9,7 +9,7 @@ struct Motion_0005F060;
 
 void func_001BA9C0();
 void __fastcall func_001BAAA0(float *vector);
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAB20(Vector3 *out, const Vector3 *in);
 
 struct Object_0006A960 {

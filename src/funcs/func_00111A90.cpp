@@ -34,7 +34,7 @@ struct Object_001118F0 {
 
 extern Object_00014A80 data_001EB938;
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 void func_001BB230(float x, float y, float z);
 

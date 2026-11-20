@@ -61,7 +61,7 @@ struct Object_00086960 : Node {
 };
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAC00(Vector3 *out, const Vector3 *in);
 void __fastcall func_001BAC70(Rotation_000D2B90 *rotation);
 void __fastcall func_0014C3B0(Vector3 *out, const Vector3 *a, const Vector3 *b);

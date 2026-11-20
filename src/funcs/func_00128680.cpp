@@ -139,7 +139,7 @@ extern Transform_000704E0 data_00227A8C;
 extern Transform_000704E0 data_00227AA4;
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void func_001BAA60(float x, float y, float z);
 
 // Draws each shown model of the 70 at +0x28DC of object 0x1de2 (flags at +0x319C) at its position (+0x490) with

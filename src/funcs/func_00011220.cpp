@@ -24,7 +24,7 @@ struct Node {
 };
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 // Calls slot 3 with 0 on every node of the tree that does not have flag 0x40000, each between func_001BA9C0 and func_001BAA50.
 void Node::func_00011220()

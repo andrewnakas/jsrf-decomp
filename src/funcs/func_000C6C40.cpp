@@ -94,7 +94,7 @@ extern Object_000C1270 *data_00257CE4;
 extern Part_00017F60 data_00216240;
 
 void func_001BAA00();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *matrix);
 
 // The base whose slot 1 is shared by the tables at 0x1CE078, 0x1CE0B8, 0x1CE0F8, 0x1CE138 and 0x1CE178 (the

@@ -1,5 +1,5 @@
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 int func_0014C7D0(float first, float second);
 

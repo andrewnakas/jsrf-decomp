@@ -5,7 +5,7 @@ struct Vector3 {
 };
 
 void func_001BAA00();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 void __fastcall func_001BB2E0(int angle);
 void __fastcall func_001BB330(int angle);

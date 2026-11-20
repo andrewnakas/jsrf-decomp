@@ -11,7 +11,7 @@ struct Vector3 {
 void *func_00025700(unsigned int index, int first, int second, int third);
 void func_001BA9C0();
 void __fastcall func_001BAAA0(float *matrix);
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 // The first part of a mesh: two words at +0x1c and +0x20.
 struct Part_00017F60 {

@@ -99,7 +99,7 @@ struct Resource_000F08E0 {
 void *func_00025700(unsigned int index, int first, int second, int third);
 void func_001BA9C0();
 void func_001BAA00();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 void __fastcall func_001BAB20(Vector3 *out, const Vector3 *in);
 

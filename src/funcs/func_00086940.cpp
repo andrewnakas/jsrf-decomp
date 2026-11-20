@@ -25,7 +25,7 @@ struct Object_00086960 {
 
 void func_001BA9C0();
 void __fastcall func_001BAAA0(float *vector);
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 // Slot 16 of the table at 0x1CD170: runs func_00086850 between func_001BA9C0 and func_001BAA50, after
 // func_001BAAA0 on the vector at +0x44 (the same bracket the tree walkers use).

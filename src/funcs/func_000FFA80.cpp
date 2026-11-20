@@ -134,7 +134,7 @@ extern int data_001FA1D0;
 void func_001BA9C0();
 void func_001BA8A0();
 void __fastcall func_001BAAA0(float *vector);
-void func_001BAA50();
+void __fastcall func_001BAA50();
 
 // A direct child of Node (table 0x1D1C70, destructor func_000FF9B0): three sprites from func_00025700, the second
 // chosen by the value at 0x44.

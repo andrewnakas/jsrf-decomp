@@ -42,7 +42,7 @@ extern Object_00016200 data_0022FCE8;
 extern Mesh_00017F60 data_001F9120;
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *matrix);
 void __fastcall func_0014C300(Vector3 *out, const Vector3 *a, const Vector3 *b);
 

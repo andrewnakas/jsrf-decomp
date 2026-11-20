@@ -20,7 +20,7 @@ int func_0004A7A0(float x, float z);
 int func_0004A7F0(int angle, int other);
 float __fastcall func_0014C6B0(const Vector3 *vector);
 void func_001BAA00();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAC00(Vector3 *out, const Vector3 *in);
 void __fastcall func_001BB2E0(int angle);
 void __fastcall func_001BB330(int angle);

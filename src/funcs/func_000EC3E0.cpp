@@ -8,7 +8,7 @@ struct Motion_0005F060;
 
 int func_0005E030(Motion_0005F060 *motion, float *time, float speed, int flags);
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAB20(Vector3 *out, const Vector3 *in);
 void func_000EB540(Vector3 *position, int column, int row);
 

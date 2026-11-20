@@ -23,7 +23,7 @@ struct Object_00016200 {
 extern Object_00016200 data_0022FCE8;
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 void __fastcall func_001BB2E0(int angle);
 void __fastcall func_001BB330(int angle);

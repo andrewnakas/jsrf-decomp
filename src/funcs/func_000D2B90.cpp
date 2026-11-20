@@ -32,7 +32,7 @@ struct Object_00157F10 {
 extern Object_00157F10 *data_00257CE8;
 
 void func_001BAA00();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 void __fastcall func_001BAC70(Rotation_000D2B90 *rotation);
 void __fastcall func_001BB330(int angle);

@@ -77,7 +77,7 @@ extern float data_00258F90;
 extern float data_00258F94;
 
 void func_001BA9C0();
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void func_001BB630(float distance);
 void func_001BB650(float distance);
 void func_001BB670(float angle);

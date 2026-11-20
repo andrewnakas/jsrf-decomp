@@ -9,7 +9,7 @@ struct Motion_0005F060;
 
 void func_001BA9C0();
 void __fastcall func_001BAAA0(float *vector);
-void func_001BAA50();
+void __fastcall func_001BAA50();
 void func_001BB230(float x, float y, float z);
 
 // The Direct3D device.
