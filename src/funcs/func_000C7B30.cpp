@@ -5,7 +5,7 @@ struct Motion_0005F060 {
 
 // The owner type of the Object_000CC600 family; func_000C5B10 calls its callback at 0xe8.
 struct Object_000C5B50 {
-    int func_000C5B10(int first, int second);
+    int func_000C5B10(int message, void *data);
 };
 
 // The object at 0x30 of the one at 0x3b4.
@@ -154,6 +154,6 @@ void Object_000C7910::func_000C7B30()
     flags &= ~0x40;
     flags |= 0x2000000;
     timer = 0;
-    value_8c = owner->func_000C5B10(12, (int)&value_48);
+    value_8c = owner->func_000C5B10(12, &value_48);
     func_000C9CC0();
 }

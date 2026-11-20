@@ -60,7 +60,7 @@ struct Object_000C4CF0 : Node {
     virtual void func_00011C90_12();
 };
 
-Node *func_000C70A0(Node *owner, int value, int kind);
+Node *func_000C70A0(Node *owner, Vector3 *position, int kind);
 
 // The child of func_000C4CF0's class with the table at 0x1CDF50 (constructor func_000C53D0).
 struct Object_000C5490 : Object_000C4CF0 {
@@ -79,7 +79,7 @@ struct Object_000C5490 : Object_000C4CF0 {
 void Object_000C5490::func_00011C90_11()
 {
     if (unknown_84) {
-        func_000C70A0(0, (int)&unknown_44, 1);
+        func_000C70A0(0, &unknown_44, 1);
         data_00257CE4->func_000C1160(0x2b, 3, &unknown_44);
         func_00011BE0(this);
         func_00011C20(child);

@@ -10,7 +10,7 @@ struct Game {
 };
 
 struct Object_000607B0 {
-    void func_000651E0(int kind, void *position, int argument);
+    void func_000651E0(int kind, void *position, Vector3 *direction);
 };
 
 extern Game *data_0022FCE0;
@@ -69,21 +69,21 @@ struct Object_000C52E0 : Object_000C4CF0 {
     char unknown_40[4];
     Vector3 unknown_44;
     char unknown_50[0x18];
-    int unknown_68;
-    char unknown_6c[0x18];
+    Vector3 unknown_68;
+    char unknown_74[0x10];
     int unknown_84;
 
     virtual void func_00011C90_11();
 };
 
 // Overrides slot 17: when the field at 0x84 is set, tells object 0xe8 (func_000651E0, kind 0x1f) about the
-// point at 0x44 and the field at 0x68, and marks itself and everything below it as dead.
+// point at 0x44 and the vector at 0x68, and marks itself and everything below it as dead.
 void Object_000C52E0::func_00011C90_11()
 {
     if (unknown_84) {
         Object_000607B0 *target = (Object_000607B0 *)data_0022FCE0->func_000128C0(0xe8);
         if (target) {
-            target->func_000651E0(0x1f, &unknown_44, (int)&unknown_68);
+            target->func_000651E0(0x1f, &unknown_44, &unknown_68);
         }
         func_00011BE0(this);
         func_00011C20(child);

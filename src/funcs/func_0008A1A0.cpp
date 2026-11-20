@@ -4,8 +4,10 @@ struct Game {
 
 extern Game *data_0022FCE0;
 
+struct Vector3;
+
 struct Object_000607B0 {
-    void func_000651E0(int kind, void *data, int flags);
+    void func_000651E0(int kind, void *data, Vector3 *direction);
 };
 
 struct Object_0008A1A0 {
