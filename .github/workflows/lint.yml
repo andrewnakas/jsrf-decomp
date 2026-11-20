@@ -2,10 +2,9 @@
 # Matching itself is judged on the maintainer's machine (Steward), which has the disc and the compiler.
 name: lint
 
+# Pull requests only: main moves only by merging them (and by maintainer pushes, checked by hand).
 on:
   pull_request:
-  push:
-    branches: [main]
 
 permissions:
   contents: read

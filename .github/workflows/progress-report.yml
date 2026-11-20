@@ -6,17 +6,20 @@
 # also POSTed to the upload API.
 name: progress
 
+# Only main: ByteMatch reads main's runs, and Steward computes a PR's progress itself. With merges every
+# couple of minutes, a run that a newer push cancels would never finish, so a run in flight is kept and
+# only the newest waiting one runs after it (2026-11-20: cancelling left main without a report for hours).
 on:
   push:
     branches: [main]
-  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: progress-${{ github.ref }}
-  cancel-in-progress: true
+  group: progress-main
+  cancel-in-progress: false
 
 jobs:
   report:
