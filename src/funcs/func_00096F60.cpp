@@ -1,8 +1,21 @@
+/* sym: ?func_00011C90_3@Object_00096F60@@UAEXXZ = 0x00096F60 */
 struct Node {
     virtual ~Node();
-    virtual void slot1();
-    virtual void slot2();
-    virtual void slot3(int argument);
+    virtual void func_00011C90();
+    virtual void func_00011C90_1();
+    virtual void func_00011C80(int argument);
+    virtual void func_00011C90_2();
+    virtual void func_00011C90_3();
+    virtual void func_00011C80_1(int argument);
+    virtual void func_00011C90_4();
+    virtual void func_00011C90_5();
+    virtual void func_00011C80_2(int argument);
+    virtual void func_00011C90_6();
+    virtual void func_00011C90_7();
+    virtual void func_00011C80_3(int argument);
+    virtual void func_00011C90_8();
+    virtual void func_00011C90_9();
+    virtual void func_00011C80_4(int argument);
 
     unsigned int flags;
     int id;
@@ -26,15 +39,16 @@ struct Owner_00096F60 {
     int state;
 };
 
+// One of six direct children of Node (tables 0x1CD290, 0x1CD2E0, 0x1CD320, 0x1CD360, 0x1CD3A0 and 0x1CD3E0)
+// whose slot 5 is this same code.
 struct Object_00096F60 : Node {
-    virtual void func_00096F60();
+    virtual void func_00011C90_3();
 };
 
-// Virtual (slot 5 of six vtables, data_001CD290 to data_001CD3E0). Runs the second virtual function when the
-// parent's state at 0xe50 is 27.
-void Object_00096F60::func_00096F60()
+// Overrides Node's slot 5: runs slot 2 when the parent's state at 0xe50 is 27.
+void Object_00096F60::func_00011C90_3()
 {
     if (((Owner_00096F60 *)func_00011BD0())->state == 27) {
-        slot2();
+        func_00011C90_1();
     }
 }
