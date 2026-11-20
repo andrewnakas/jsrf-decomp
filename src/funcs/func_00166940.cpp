@@ -1,9 +1,9 @@
 struct Guid;
-struct Object_001E21A0;
+struct DirectInput8;
 
 // What slot 3 takes: the object it belongs to and a 1-based index.
 struct Key {
-    Object_001E21A0 *owner;
+    DirectInput8 *owner;
     unsigned short index;
 };
 
@@ -14,7 +14,7 @@ struct Entry {
 };
 
 // The class whose table is at 0x1E21A0.
-struct Object_001E21A0 {
+struct DirectInput8 {
     virtual long __stdcall slot0(const Guid &id, void **object);
     virtual unsigned long __stdcall slot1();
     virtual unsigned long __stdcall slot2();
@@ -29,7 +29,7 @@ struct Object_001E21A0 {
 // Slot 3: gives out entry `index` (1-based) of the table at +0x18, with a reference, for a key that names this object.
 // E_INVALIDARG for a null pointer, a key of another object, index 0 or an empty entry, 0x800401F0 (not initialised)
 // while +0xc is null.
-long __stdcall Object_001E21A0::func_00166940(const Key *key, Entry **entry, void *)
+long __stdcall DirectInput8::func_00166940(const Key *key, Entry **entry, void *)
 {
     if (ready) {
         if (entry && key->owner == this && key->index) {
