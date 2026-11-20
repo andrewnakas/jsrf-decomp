@@ -13,7 +13,7 @@ struct Object_001E141C {
     virtual long __stdcall func_001571E0(unsigned long first, unsigned long second);  // slot 6
     virtual long __stdcall func_001572D0();  // slot 7
     virtual long __stdcall func_00157300();  // slot 8
-    virtual long __stdcall func_0015A1C0(unsigned long first, unsigned long second, unsigned long third);  // slot 9
+    virtual void __stdcall func_0015A1C0(unsigned long x, unsigned long y, const unsigned short *text);  // slot 9
     virtual long __stdcall func_00157320(unsigned long first, unsigned long second);  // slot 10
     virtual long __stdcall func_001574C0(unsigned long first, unsigned long second, unsigned long third);  // slot 11
 
