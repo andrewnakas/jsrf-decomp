@@ -76,12 +76,16 @@ matches all ten.
 of the ten functions has one, so they match with or without it. A function that only matches under another
 set is evidence for a per-file flag: see RULES.md.
 
-`/Oy-` is allowed per file (2026-11-20). Twelve game functions open a frame pointer (`push ebp; mov ebp, esp`)
-with no exception handling and no stack alignment: `0x14370`, `0x15520`, `0x23F20`, `0x47160`, `0x47230`,
-`0x50690`, `0xA2960`, `0xA6DC0`, `0xC3A60`, `0xD27F0`, `0xE45D0`, `0xEDC30`. Their neighbours have none, so it
-is not a whole file built differently but these functions, and a unit is one function. A unit may ask for
-`/* cflags: /Oy- */` only if it matches with it and not without. (19 other functions open a frame and align the
-stack with `and esp, -8`: that comes from 8-byte locals under the pinned flags and needs no per-file flag.)
+`/Oy-` is allowed per file (2026-11-20). Eleven game functions open a frame pointer (`push ebp; mov ebp, esp`)
+that the pinned flags do not give them, with no stack alignment: `0x14370`, `0x23F20`, `0x47160`, `0x47230`,
+`0x50690`, `0xA2960`, `0xA6DC0`, `0xC3A60`, `0xD27F0`, `0xE45D0`, `0xEDC30` (the last three are constructors
+with exception handling). Their neighbours have none, so it is not a whole file built differently but these
+functions, and a unit is one function. A unit may ask for `/* cflags: /Oy- */` only if it matches with it and
+not without. Confirmed by eight units: `0x14370`, `0x23F20`, `0x47160`, `0x47230`, `0x50690`, `0xD27F0`,
+`0xE45D0` and `0xEDC30` each match with the flag, and without it differ by 153, 23, 24, 96, 13, 68, 129 and
+130 bytes.
+(20 other functions open a frame and align the stack, 19 with `and esp, -8` and `0x15520` with `and esp, -32`:
+that comes from aligned locals under the pinned flags and needs no per-file flag.)
 
 ## Known gaps
 
