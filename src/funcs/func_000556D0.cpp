@@ -8,7 +8,7 @@ struct Game {
 extern Game *data_0022FCE0;
 
 // Object 9; func_00051780 starts it (1) or carries it on (0).
-struct Stage_00051780 {
+struct Object_0004ABA0 {
     char unknown_00[0x48];
     unsigned int unknown_48;
 
@@ -38,15 +38,15 @@ struct Object_000556D0 {
     Record_000556D0 records[4];
 };
 
-inline Stage_00051780 *stage_000556D0()
+inline Object_0004ABA0 *stage_000556D0()
 {
-    return (Stage_00051780 *)data_0022FCE0->func_000128C0(9);
+    return (Object_0004ABA0 *)data_0022FCE0->func_000128C0(9);
 }
 
 // As func_00055530.
 inline int start_000556D0(int restart)
 {
-    Stage_00051780 *stage = stage_000556D0();
+    Object_0004ABA0 *stage = stage_000556D0();
     if (stage) {
         if (restart) {
             stage->func_00051780(1);

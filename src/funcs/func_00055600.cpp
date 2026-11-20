@@ -6,7 +6,7 @@ struct Game {
 extern Game *data_0022FCE0;
 
 // Object 9; func_00051780 starts it (1) or carries on (0) once its word at +0x48 is at least 2.
-struct Stage_00051780 {
+struct Object_0004ABA0 {
     char unknown_00[0x48];
     unsigned int unknown_48;
 
@@ -21,22 +21,22 @@ struct Object_000667D0 {
 
 extern Object_000667D0 *data_00251F24;
 
-inline Stage_00051780 *stage_00055590()
+inline Object_0004ABA0 *stage_00055590()
 {
-    return (Stage_00051780 *)data_0022FCE0->func_000128C0(9);
+    return (Object_0004ABA0 *)data_0022FCE0->func_000128C0(9);
 }
 
 // As func_0004EA30: object 9 exists and its word at +0x48 is at least 2.
 inline int ready_00055590()
 {
-    Stage_00051780 *stage = stage_00055590();
+    Object_0004ABA0 *stage = stage_00055590();
     return stage && stage->unknown_48 >= 2;
 }
 
 // As func_00055530.
 inline int start_00055590(int restart)
 {
-    Stage_00051780 *stage = stage_00055590();
+    Object_0004ABA0 *stage = stage_00055590();
     if (stage) {
         if (restart) {
             stage->func_00051780(1);

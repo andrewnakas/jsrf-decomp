@@ -5,8 +5,9 @@ struct Game {
 
 extern Game *data_0022FCE0;
 
-// Object 9; func_00051780 starts it (1) or carries on (0) once its word at +0x48 is at least 2.
-struct Stage_00051780 {
+// Object 9 (Object_0004ABA0: 0x51780 sets the state at +0x5c and runs func_0004C960 as state handler 31 does);
+// func_00051780 starts it (1) or carries on (0) once its word at +0x48 is at least 2.
+struct Object_0004ABA0 {
     char unknown_00[0x48];
     unsigned int unknown_48;
 
@@ -17,7 +18,7 @@ struct Stage_00051780 {
 // did either.
 int func_00055530(int restart)
 {
-    Stage_00051780 *stage = (Stage_00051780 *)data_0022FCE0->func_000128C0(9);
+    Object_0004ABA0 *stage = (Object_0004ABA0 *)data_0022FCE0->func_000128C0(9);
     if (stage) {
         if (restart) {
             stage->func_00051780(1);
