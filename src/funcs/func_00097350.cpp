@@ -27,10 +27,11 @@ struct Owner_00097350 {
 };
 
 struct Object_00097350 : Node {
-    void func_00097350();
+    virtual void func_00097350();
 };
 
-// Runs the first virtual function after the destructor when the parent's state at 0xe50 is 27.
+// Virtual (slot 4 of the vtable at data_001CD420). Runs the first virtual function after the destructor when
+// the parent's state at 0xe50 is 27.
 void Object_00097350::func_00097350()
 {
     if (((Owner_00097350 *)func_00011BD0())->state == 27) {

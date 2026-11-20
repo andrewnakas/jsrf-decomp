@@ -31,10 +31,11 @@ struct Object_0010F620 : Node {
     int value_68;
     float timer;
 
-    void func_0010F620();
+    virtual void func_0010F620();
 };
 
-// Advances the timer at 0x6c by 1/60 and wraps it at 0.5; restarts it when the parent's field at 0xe0
+// Virtual (slot 1 of the vtable at data_001D24F0). Advances the timer at 0x6c by 1/60 and wraps it at 0.5;
+// restarts it when the parent's field at 0xe0
 // changes, keeping a copy at 0x68.
 void Object_0010F620::func_0010F620()
 {

@@ -27,10 +27,11 @@ struct Owner_000967B0 {
 };
 
 struct Object_000967B0 : Node {
-    void func_000967B0(int argument);
+    virtual void func_000967B0(int argument);
 };
 
-// Passes the argument to the third virtual function when the parent's state at 0xe50 is 27.
+// Virtual (slot 6 of four vtables, data_001CD320 to data_001CD3E0). Passes the argument to the third virtual
+// function when the parent's state at 0xe50 is 27.
 void Object_000967B0::func_000967B0(int argument)
 {
     if (((Owner_000967B0 *)func_00011BD0())->state == 27) {

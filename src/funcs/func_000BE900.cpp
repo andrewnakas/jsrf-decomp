@@ -38,10 +38,11 @@ struct Object_000BE900 : Node {
     char unknown_050[0x24];
     int value_74;
 
-    void func_000BE900();
+    virtual void func_000BE900();
 };
 
-// Takes the parent's position at 0x300 and sets the field at 0x74 to 0x71c.
+// Virtual (slot 2 of the vtable at data_001CDB60). Takes the parent's position at 0x300 and sets the field at
+// 0x74 to 0x71c.
 void Object_000BE900::func_000BE900()
 {
     Owner_000BE900 *owner = (Owner_000BE900 *)func_00011BD0();

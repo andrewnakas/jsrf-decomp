@@ -27,10 +27,11 @@ struct Owner_00096F60 {
 };
 
 struct Object_00096F60 : Node {
-    void func_00096F60();
+    virtual void func_00096F60();
 };
 
-// Runs the second virtual function when the parent's state at 0xe50 is 27.
+// Virtual (slot 5 of six vtables, data_001CD290 to data_001CD3E0). Runs the second virtual function when the
+// parent's state at 0xe50 is 27.
 void Object_00096F60::func_00096F60()
 {
     if (((Owner_00096F60 *)func_00011BD0())->state == 27) {
