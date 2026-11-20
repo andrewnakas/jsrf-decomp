@@ -29,7 +29,7 @@
 
 - Kind `eh` rows are compiler-made exception-handling stubs. They are matched together with the function that
   registers them (the `parent` column) and never get a unit of their own.
-- 441 functions (56 of them `game`) have a non-empty `conv`: link-time code generation gave them a custom
+- 418 functions (38 of them `game`) have a non-empty `conv`: link-time code generation gave them a custom
   calling convention. Lanes skip them for now (AGENTS.md).
 
 ## What is in `.text`
@@ -78,7 +78,7 @@ set is evidence for a per-file flag: see RULES.md.
 
 ## Known gaps
 
-- Link-time code generation is rare in the game's own code: 56 `game` functions read a register no standard
+- Link-time code generation is rare in the game's own code: 38 `game` functions read a register no standard
   calling convention passes arguments in. The per-object compile cannot reproduce those; everything else is in
   reach.
 - 82 two-byte rows in `engine` (`0x14B9A1` and after) are not functions. Each is a short jump over filler to the

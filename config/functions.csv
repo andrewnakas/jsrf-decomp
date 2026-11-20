@@ -97,7 +97,7 @@ addr,size,owner,kind,section,conv,parent,calls
 000147a0,152,game,func,.text,,,00014610 0004a900
 00014840,48,game,func,.text,,,000147a0
 00014870,229,game,func,.text,,,00014610 000147a0
-00014960,65,game,func,.text,eax,,000128c0 000851a0
+00014960,65,game,func,.text,,,000128c0 000851a0
 000149b0,20,game,func,.text,,,00086110
 000149d0,4,game,func,.text,,,
 000149e0,4,game,func,.text,,,
@@ -596,8 +596,8 @@ addr,size,owner,kind,section,conv,parent,calls
 00039260,419,game,func,.text,,,0006eb20
 00039410,516,game,func,.text,,,000127e0 00025400 00025dd0 00038f10 00039070 00039260 00043700 00145a5d 00145ccb
 00039620,274,game,func,.text,,,0004a900 0006e7b0 00145a5d
-00039740,29,game,func,.text,eax,,
-00039760,13,game,func,.text,eax,,
+00039740,29,game,func,.text,,,
+00039760,13,game,func,.text,,,
 00039770,28,game,func,.text,,,
 00039790,66,game,func,.text,,,0006e7b0
 000397e0,110,game,func,.text,,,0006e1c0
@@ -696,8 +696,8 @@ addr,size,owner,kind,section,conv,parent,calls
 0003c2b0,87,game,func,.text,,,00011000
 0003c310,1045,game,func,.text,,,
 0003c730,85,game,func,.text,,,
-0003c790,156,game,func,.text,eax,,
-0003c830,46,game,func,.text,eax,,
+0003c790,156,game,func,.text,,,
+0003c830,46,game,func,.text,,,
 0003c860,103,game,func,.text,,,
 0003c8d0,304,game,func,.text,,,
 0003ca00,30,game,func,.text,,,0003c2b0 0004a900
@@ -1297,7 +1297,7 @@ addr,size,owner,kind,section,conv,parent,calls
 00065e90,53,game,func,.text,,,0004a8f0
 00065ed0,54,game,func,.text,,,0014b910
 00065f10,509,game,func,.text,,,
-00066110,675,game,func,.text,eax,,0004a6f0 0014b800 0014bcb0 0014c100 0014c800
+00066110,675,game,func,.text,,,0004a6f0 0014b800 0014bcb0 0014c100 0014c800
 000663c0,31,game,func,.text,,,0004a900
 000663e0,96,game,func,.text,,,00011000 00025740
 00066440,266,game,func,.text,,,000127b0 000257b0 0006e910 0006f730 00145560
@@ -2234,7 +2234,7 @@ addr,size,owner,kind,section,conv,parent,calls
 000a1c70,45,game,func,.text,,,00119540
 000a1ca0,77,game,func,.text,,,001186d0 00118710 00118bd0
 000a1cf0,53,game,func,.text,,,001186d0 00118710
-000a1d30,230,game,func,.text,edi,,001186d0 00118710
+000a1d30,230,game,func,.text,,,001186d0 00118710
 000a1e20,98,game,func,.text,,,0007f9b0 00119540
 000a1e90,160,game,func,.text,,,0007f9b0 00119540
 000a1f30,25,game,func,.text,,,00119540
@@ -2435,7 +2435,7 @@ addr,size,owner,kind,section,conv,parent,calls
 000b3c30,423,game,func,.text,,,0006ac10 000b9b50 000b9c70 001ba8f0 001ba950 001ba9c0 001baa50 001baaa0 001bab20 001bac50 001bb270
 000b3de0,5,game,func,.text,,,
 000b3df0,30,game,func,.text,,,0004a900 000b3200
-000b3e10,299,game,func,.text,edi,,000b3e10 0014c690
+000b3e10,299,game,func,.text,,,000b3e10 0014c690
 000b3f40,191,game,func,.text,,,000128c0
 000b4000,131,game,func,.text,,,0006ebb0 0015f1f0
 000b4090,95,game,func,.text,,,00011be0 00011c20 000128c0
@@ -2453,7 +2453,7 @@ addr,size,owner,kind,section,conv,parent,calls
 000b5cc0,418,game,func,.text,,,00011000 00011be0 00011c20 000128c0 000178d0 0001b400 0004a900 000607b0
 000b5e70,59,game,func,.text,,,
 000b5eb0,2216,game,func,.text,,,00047970 0006ac10 000b9b50 000b9c70 001ba8f0 001ba950 001ba9c0 001baa00 001baa50 001baaa0 001baae0 001bac50 001bb270 001bb3d0
-000b6760,1898,game,func,.text,ebx,,000128c0 00016240 000178b0 0001b500 0001d940 00047970 000606c0 00060930 000651e0 0006aaa0 0006ac40 001ba9c0 001baa00 001baa50 001baaa0 001bab20 001bac50 001badb0 001bb270
+000b6760,1898,game,func,.text,,,000128c0 00016240 000178b0 0001b500 0001d940 00047970 000606c0 00060930 000651e0 0006aaa0 0006ac40 001ba9c0 001baa00 001baa50 001baaa0 001bab20 001bac50 001badb0 001bb270
 000b6ed0,630,game,func,.text,,,00016240 000178b0 0001d940 00047970 0006aaa0 0006ac40 001ba8f0 001baa00 001baa50 001baaa0 001bac50 001bb270
 000b7150,30,game,func,.text,,,0004a900 000b5cc0
 000b7170,712,game,func,.text,,,00011be0 00011c20 00012100 00025700 0004a8f0 0005e790 0017c3e8
@@ -3175,7 +3175,7 @@ addr,size,owner,kind,section,conv,parent,calls
 000da1e0,377,game,func,.text,,,00012100 000128c0 00019680 000651e0 000c1160 0014c410
 000da360,127,game,func,.text,,,00011000 00019760 001186d0
 000da3e0,454,game,func,.text,,,000128c0 00018260 000194b0 000651e0 000c1160 000c1270 00118710
-000da5b0,181,game,func,.text,eax,,
+000da5b0,181,game,func,.text,,,
 000da670,105,game,func,.text,,,000128c0 0004a8f0 000da1e0
 000da6e0,30,game,func,.text,,,0004a900 000da360
 000da700,13,game,func,.text,,,000da3e0
@@ -3633,7 +3633,7 @@ addr,size,owner,kind,section,conv,parent,calls
 000f2420,218,game,func,.text,,,000128c0 00047970 000480c0 000c5b10 000c5b40 000c5b70 000f3d60 000f3da0 001baa00 001baa50 001bab20
 000f2500,209,game,func,.text,,,000128c0 00047970 000480c0 000651e0 000c5b10 000f43d0 001baa00 001baa50 001bab20 001bac00
 000f25e0,296,game,func,.text,,,000128c0 000480c0 000606c0 000c5b10 000c5b40 000c5b70 001baa00 001baa50 001bab20
-000f2710,92,game,func,.text,esi,,
+000f2710,92,game,func,.text,edi,,
 000f2770,209,game,func,.text,,,000128c0 00060810 000c5b50
 000f2850,43,game,func,.text,,,000f2420
 000f2880,30,game,func,.text,,,000f2420
@@ -3793,7 +3793,7 @@ addr,size,owner,kind,section,conv,parent,calls
 000fa580,509,game,func,.text,,,0003d610 000466d0 00046740 00046940 00046a30 001ba8a0 001ba9c0 001baa50 001baaa0 001bb650
 000fa780,79,game,func,.text,,,001166b0 00117140
 000fa7d0,7,game,func,.text,,,
-000fa7e0,180,game,func,.text,edi,,
+000fa7e0,180,game,func,.text,,,
 000fa8a0,698,game,func,.text,,,00043700 0004a8f0 000fb2e0
 000fab60,540,game,func,.text,,,000127e0 00025700 00043700 000fa7e0 000fa8a0 000fd870 00116810 0014cca0
 000fad80,30,game,func,.text,,,0004a900 000fa500
@@ -3807,7 +3807,7 @@ addr,size,owner,kind,section,conv,parent,calls
 000fb530,20,game,func,.text,,,
 000fb550,88,game,func,.text,,,001166b0 00117140 001186a0
 000fb5b0,7,game,func,.text,,,
-000fb5c0,180,game,func,.text,edi,,
+000fb5c0,180,game,func,.text,,,
 000fb680,486,game,func,.text,,,00043700 0004a8f0 000fb2e0
 000fb870,340,game,func,.text,,,00025700 00043700 000fb5c0 000fb680 000fd870 00116810
 000fb9d0,30,game,func,.text,,,0004a900 000fb300
@@ -3839,8 +3839,8 @@ addr,size,owner,kind,section,conv,parent,calls
 000fdfb0,429,game,func,.text,,,000128c0 000128e0 00043700 0004a8f0 000fa780 000fa7d0 000fab60 000fb550 000fb5b0 000fb870 00116810
 000fe160,42,game,func,.text,,,000128c0
 000fe190,119,game,func,.text,,,00011be0 00011c20 000128c0 0004a900
-000fe210,348,game,func,.text,edi,,00011be0 00011c20 000128c0 000128e0 0004a8f0 0004a900 000fd870
-000fe370,258,game,func,.text,ebx,,000128e0 0004a8f0 0004a900 000fd870
+000fe210,348,game,func,.text,,,00011be0 00011c20 000128c0 000128e0 0004a8f0 0004a900 000fd870
+000fe370,258,game,func,.text,,,000128e0 0004a8f0 0004a900 000fd870
 000fe480,95,game,func,.text,,,000128c0
 000fe4e0,110,game,func,.text,,,000127e0 000128c0 000fdfb0
 000fe550,60,game,func,.text,,,000128c0
@@ -3853,7 +3853,7 @@ addr,size,owner,kind,section,conv,parent,calls
 000fe6c0,117,game,func,.text,,,000128c0 0004a8f0 000f98b0
 000fe740,309,game,func,.text,,,00012170 00046700 00046740 00046920 00046940
 000fe880,30,game,func,.text,,,0004a900 000fdf30
-000fe8a0,478,game,func,.text,ebx,,00011be0 00011c20 000128c0 000128e0 0004a8f0 0004a900 000fd870 00116810
+000fe8a0,478,game,func,.text,,,00011be0 00011c20 000128c0 000128e0 0004a8f0 0004a900 000fd870 00116810
 000fea80,55,game,func,.text,,,000128c0 000fe8a0
 000feac0,58,game,func,.text,,,000128c0 000fe8a0
 000feb00,43,game,func,.text,,,000128c0 000ff390
@@ -4000,7 +4000,7 @@ addr,size,owner,kind,section,conv,parent,calls
 00107b50,50,game,func,.text,,,000128c0
 00107b90,103,game,func,.text,,,000128c0 000732a0 000743c0
 00107c00,271,game,func,.text,,,000128e0 0004a8f0 001067a0
-00107d10,86,game,func,.text,ebx,,000128c0 00106580
+00107d10,86,game,func,.text,,,000128c0 00106580
 00107d70,81,game,func,.text,,,000128c0 00106590
 00107dd0,102,game,func,.text,edi,,0006db80
 00107e40,27,game,func,.text,,,000128c0 0010e070
@@ -4480,7 +4480,7 @@ addr,size,owner,kind,section,conv,parent,calls
 001302b0,64,game,func,.text,ebx,,
 001302f0,248,game,func,.text,,,00070960 001302b0
 001303f0,911,game,func,.text,,,0006e130 0006e360 0006e4e0
-00130780,62,game,func,.text,eax,,
+00130780,62,game,func,.text,,,
 001307c0,234,game,func,.text,,,0004a900 0006e7b0
 001308b0,29,game,func,.text,,,
 001308d0,705,game,func,.text,,,
@@ -5353,7 +5353,7 @@ addr,size,owner,kind,section,conv,parent,calls
 0014f340,764,engine,func,.text,eax,,0004a8f0 0004a900 0018ce80 0018d620 0018e160 0018e730 00192990 001929e0 00199b40 00199b60 001bbca5
 0014f640,134,engine,func,.text,,,0014e580 00154b00 00192990
 0014f6d0,77,engine,func,.text,,,0014f640
-0014f720,785,engine,func,.text,eax,,0014e730 0014ef20 0014f1e0 0014f340 0014f640 00154900 0018cbf0 0018cc20 0018d620 0018e730 00199a60 00199ae0
+0014f720,785,engine,func,.text,,,0014e730 0014ef20 0014f1e0 0014f340 0014f640 00154900 0018cbf0 0018cc20 0018d620 0018e730 00199a60 00199ae0
 0014fa40,211,engine,func,.text,,,0014c410 00156120 001869e0 0018dc00 0018dde0
 0014fb20,138,engine,func,.text,,,0014c410 0018dc00
 0014fbb0,100,engine,func,.text,,,00156120 001869e0 0018dc00 0018dde0
@@ -6380,7 +6380,7 @@ addr,size,owner,kind,section,conv,parent,calls
 001765b0,119,musashi,func,.text,,,00176530
 00176630,110,musashi,func,.text,,,001765b0
 001766a0,37,musashi,func,.text,,,
-001766d0,289,musashi,func,.text,ebx,,00145585 001455a3 001463c6 00146401 001497dc 0014a838 0017c750
+001766d0,289,musashi,func,.text,,,00145585 001455a3 001463c6 00146401 001497dc 0014a838 0017c750
 00176800,68,musashi,func,.text,,,
 00176850,858,musashi,func,.text,,,00145f8b 0014614e 00146401 0017ca70 0017d4d0
 00176bb0,85,musashi,func,.text,,,00145585 0014a821 0014a838
@@ -6713,7 +6713,7 @@ addr,size,owner,kind,section,conv,parent,calls
 001807fd,114,lib:crt,func,.text,,,0018077e 001807b0
 0018086f,27,lib:crt,func,.text,,,
 0018088a,25,lib:crt,func,.text,,,
-001808a3,123,lib:crt,func,.text,edi,,
+001808a3,123,lib:crt,func,.text,,,
 0018091e,344,lib:crt,func,.text,,,001807fd 0018086f 0018088a 001808a3
 00180a76,22,lib:crt,func,.text,,,0018091e
 00180a8c,22,lib:crt,func,.text,,,0018091e
@@ -6781,7 +6781,7 @@ addr,size,owner,kind,section,conv,parent,calls
 00182464,296,lib:crt,func,.text,,,00181167 00181402 001814ad 001814f1
 0018258c,546,lib:crt,func,.text,,,00181ab8 00181b37 00181b65
 001827ae,118,lib:crt,func,.text,,,0018258c
-00182824,76,lib:crt,func,.text,edi,,0017c965 001822fb 001829fc 00182a97
+00182824,76,lib:crt,func,.text,,,0017c965 001822fb 001829fc 00182a97
 00182870,70,lib:crt,func,.text,,,0017d1f8 0017d231 001815d8 00182824 001828b9
 001828b6,3,lib:crt,func,.text,,,
 001828b9,8,lib:crt,func,.text,,,0018162a
@@ -7993,7 +7993,7 @@ addr,size,owner,kind,section,conv,parent,calls
 0018ae00,12,game,func,.text,,,0017c53d
 0018ae10,12,game,func,.text,,,0017c53d
 0018ae20,39,game,func,.text,,,0004a8f0 0017c53d
-0018ae50,31,game,func,.text,eax,,0017c53d
+0018ae50,31,game,func,.text,,,0017c53d
 0018ae70,39,game,func,.text,,,0004a8f0 0017c53d
 0018aea0,12,game,func,.text,,,0017c53d
 0018aeb0,53,game,func,.text,,,00147303 0014732c 0017c53d
@@ -8603,7 +8603,7 @@ addr,size,owner,kind,section,conv,parent,calls
 001a4069,26,lib:dsound,func,DSOUND,,,001a2453
 001a4083,114,lib:dsound,func,DSOUND,,,001a1b7c 001a1baf
 001a40f5,285,lib:dsound,func,DSOUND,,,001a1b7c 001a1baf 001a3e58 001a4021 001a4069
-001a4212,383,lib:dsound,func,DSOUND,eax,,001a1b7c 001a1baf 001a2b85 001a3e58 001a4021 001a40f5
+001a4212,383,lib:dsound,func,DSOUND,,,001a1b7c 001a1baf 001a2b85 001a3e58 001a4021 001a40f5
 001a4391,73,lib:dsound,func,DSOUND,,,001a1b7c 001a1baf
 001a43da,217,lib:dsound,func,DSOUND,,,001a1b7c 001a1baf 001a289b 001a3570
 001a44b3,70,lib:dsound,func,DSOUND,,,001a39ef 001a4003 001a403a
