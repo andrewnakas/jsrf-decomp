@@ -100,7 +100,7 @@ extern const Mesh_00017F60 data_0021B2C4;
 
 int func_0005E030(Motion_0005F060 *motion, float *time, float step, int flag);
 int func_0014C7D0(float x, float z);
-Node *func_000C70A0(Node *owner, Vector3 *position, int kind);
+void func_000C70A0(Node *owner, Vector3 *position, int kind);
 int func_001186D0(int handle);
 void func_001BA9C0();
 void __fastcall func_001BAAA0(float *position);

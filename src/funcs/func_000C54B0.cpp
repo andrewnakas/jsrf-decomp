@@ -60,7 +60,7 @@ struct Object_000C4CF0 : Node {
     virtual void func_00011C90_12();
 };
 
-Node *func_000C70A0(Node *owner, Vector3 *position, int kind);
+void func_000C70A0(Node *owner, Vector3 *position, int kind);
 
 // The child of func_000C4CF0's class with the table at 0x1CDF50 (constructor func_000C53D0).
 struct Object_000C5490 : Object_000C4CF0 {

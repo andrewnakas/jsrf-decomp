@@ -45,7 +45,7 @@ struct Node {
     char unknown_34[0x10];
 };
 
-Node *func_000C70A0(Node *owner, Vector3 *position, int kind);
+void func_000C70A0(Node *owner, Vector3 *position, int kind);
 void __fastcall func_0014C730(Vector3 *target, Vector3 *direction, float scale);
 
 // The child of Node whose table is at 0x1CEDA0; its handlers (table at 0x218E4C) run by the state at 0x9c.
