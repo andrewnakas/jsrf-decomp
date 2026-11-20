@@ -32,7 +32,7 @@ struct Node {
     char unknown_34[0x10];
 };
 
-struct Object_001077C0 {
+struct Object_00107FE0 {
     char unknown_0000[0x1700];
     unsigned int flags;
     int unknown_1704;
@@ -67,7 +67,7 @@ void Object_00074260::func_00074260()
         if (flags_9c & 0x4000000) {
             func_00074200();
         }
-        Object_001077C0 *object = (Object_001077C0 *)data_0022FCE0->func_000128C0(target);
+        Object_00107FE0 *object = (Object_00107FE0 *)data_0022FCE0->func_000128C0(target);
         if (object) {
             object->unknown_1704 = value;
             if (!(flags & 0x40000000)) {

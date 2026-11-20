@@ -43,7 +43,7 @@ struct Game {
 extern Game *data_0022FCE0;
 
 // The object with the id at 0x138 (one of 0x115e to 0x1162).
-struct Object_001077C0 {
+struct Object_00107FE0 {
     void func_001077C0(int index);
 };
 
@@ -84,7 +84,7 @@ struct Object_00103D60 : Node {
 // func_001077C0(0xc) of the object with the id at 0x138, unlinks itself (func_00011BE0) and links its child.
 void Object_00103D60::func_00011C90()
 {
-    Object_001077C0 *object = (Object_001077C0 *)data_0022FCE0->func_000128C0(target);
+    Object_00107FE0 *object = (Object_00107FE0 *)data_0022FCE0->func_000128C0(target);
     switch (state) {
     case 0:
         count = 0;

@@ -14,7 +14,7 @@ struct Object_000FEDB0 {
     void func_000FEFE0(int id, int value);
 };
 
-struct Object_001077C0 {
+struct Object_00107FE0 {
     char unknown_0000[0x1700];
     unsigned int flags;
 
@@ -71,7 +71,7 @@ struct Object_00073AD0 : Node {
 // passes 0 to func_00118870.
 Object_00073AD0::~Object_00073AD0()
 {
-    Object_001077C0 *object = (Object_001077C0 *)data_0022FCE0->func_000128C0(owner);
+    Object_00107FE0 *object = (Object_00107FE0 *)data_0022FCE0->func_000128C0(owner);
     if (object && !(state & 0x40000000)) {
         object->func_001077C0(0x12);
         object->flags |= 0x80000000;
