@@ -16,7 +16,7 @@ struct Owner_000D1700 {
     unsigned int flags;
 };
 
-struct Object_000D1700 {
+struct Object_000D27F0 {
     char unknown_000[4];
     Owner_000D1700 *owner;
     int state;
@@ -39,7 +39,7 @@ struct Object_000D1700 {
 // Entry 21 of the member-function table at 0x2169e0: climbs by the owner's 0x60 and runs func_000D38D0(3); in phase 2
 // at 0xf38, when the owner lacks the flag 0x80: state 0x16, 0xf30 = 0x11, the owner gains the flag 0x8000 and stops,
 // the timer restarts, and the first time func_000C6950 places the owner's position with the scale at 0x40.
-void Object_000D1700::func_000D42A0()
+void Object_000D27F0::func_000D42A0()
 {
     y += owner->climb;
     func_000D38D0(3);

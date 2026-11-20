@@ -1,4 +1,4 @@
-struct Object_000D1700 {
+struct Object_000D27F0 {
     char unknown_000[8];
     int state;
     char unknown_00c[4];
@@ -12,7 +12,7 @@ struct Object_000D1700 {
 
 // A handler (0x216A40): func_000D38D0(3), then counts up the timer at 0x10; past 120, state 0x13 and 0xe at
 // 0xf30.
-void Object_000D1700::func_000D43A0()
+void Object_000D27F0::func_000D43A0()
 {
     func_000D38D0(3);
     if (++timer > 120) {

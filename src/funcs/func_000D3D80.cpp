@@ -1,4 +1,4 @@
-struct Object_000D1700 {
+struct Object_000D27F0 {
     char unknown_000[8];
     int state;
     char unknown_00c[4];
@@ -21,7 +21,7 @@ struct Object_000D1700 {
 
 // A handler of the same table (entry 6): func_000D38D0(3); with the count at 0xeb8 at most 1, state 7 and 13 at
 // 0xf30; then func_000D34B0.
-void Object_000D1700::func_000D3D80()
+void Object_000D27F0::func_000D3D80()
 {
     func_000D38D0(3);
     if (count <= 1) {

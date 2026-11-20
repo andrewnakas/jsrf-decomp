@@ -1,4 +1,4 @@
-struct Object_000D1700 {
+struct Object_000D27F0 {
     char unknown_000[8];
     int state;
     char unknown_00c[4];
@@ -20,7 +20,7 @@ struct Object_000D1700 {
 };
 
 // A handler of the same table (entry 17): the same with func_000D38D0(3).
-void Object_000D1700::func_000D41B0()
+void Object_000D27F0::func_000D41B0()
 {
     func_000D38D0(3);
     if (count <= 1) {

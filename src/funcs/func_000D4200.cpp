@@ -5,7 +5,7 @@ struct Owner_000D1700 {
     unsigned int flags;
 };
 
-struct Object_000D1700 {
+struct Object_000D27F0 {
     char unknown_000[4];
     Owner_000D1700 *owner;
     int state;
@@ -25,7 +25,7 @@ struct Object_000D1700 {
 // A handler of the table at 0x216A08: clears the owner's flag 0x1000000 and advances the time by the owner's step;
 // unless 0xf30 is 14, state 1, +0x84 cleared, the timer at 60 and the owner's flag 0x8000 cleared; then
 // func_000D34B0.
-void Object_000D1700::func_000D4200()
+void Object_000D27F0::func_000D4200()
 {
     owner->flags &= ~0x1000000;
     time += owner->step;

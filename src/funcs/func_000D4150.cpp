@@ -1,4 +1,4 @@
-struct Object_000D1700 {
+struct Object_000D27F0 {
     char unknown_000[8];
     int state;
     char unknown_00c[4];
@@ -21,7 +21,7 @@ struct Object_000D1700 {
 
 // A handler of the same table (entry 15): counts the timer at 0x10 up; past the limit at 0x8c, state 16 and 12 at
 // 0xf30; then func_000D34B0.
-void Object_000D1700::func_000D4150()
+void Object_000D27F0::func_000D4150()
 {
     if (++timer > limit) {
         state = 16;

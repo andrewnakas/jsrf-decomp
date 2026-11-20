@@ -39,8 +39,9 @@ struct Point_000D1700 {
     char unknown_00[0x18];
 };
 
-// The handlers of the member-function table at 0x2169e0 (the table Object_000D27F0's slot 0 runs).
-struct Object_000D1700 {
+// The class (constructor func_000D27F0) whose slot 0 runs the member-function table at 0x2169e0; these are its
+// handlers.
+struct Object_000D27F0 {
     char unknown_000[4];
     Object_000C5B50 *owner;
     int state;
@@ -83,7 +84,7 @@ struct Object_000D1700 {
 // Entry 27 of the member-function table at 0x2169e0: with 0x17 at 0xf30, the glow at 0x7c fades by 1/180 down to 0;
 // every fourth call it shows (0x78) on odd toggles at 0x74, and after 45 toggles the owner unlinks itself and its
 // children and gets the flag 0x20.
-void Object_000D1700::func_000D1750()
+void Object_000D27F0::func_000D1750()
 {
     if (next == 0x17) {
         if (glow > 0.0f) {
