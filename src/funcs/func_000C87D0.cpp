@@ -1,6 +1,6 @@
 // The owner type of the Object_000CC600 family.
 struct Object_000C5B50 {
-    int func_000C5B10(int first, int second);
+    int func_000C5B10(int message, void *data);
     void func_000C5B40(int id, void *position);
 };
 
@@ -145,7 +145,7 @@ void Object_000C7910::func_000C87D0()
             value_1bc = 3;
             flags |= 0x8000;
             speed = 0.0f;
-            owner->func_000C5B10(18, (int)&value_48);
+            owner->func_000C5B10(18, &value_48);
         }
     } else {
         timer++;

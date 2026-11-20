@@ -1,3 +1,5 @@
+struct Vector3;
+
 // The owner at 0x4. The objects of this family call func_000C5B50 (and func_000C59A0, func_000C5B10, ...) with
 // this taken from 0x4, so the owner is that function's class.
 struct Object_000C5B50 {
@@ -35,9 +37,9 @@ struct Object_000CD1E0 : Object_000CC600 {
     virtual void func_000CD850();
     virtual void func_000D77D0() = 0;
     virtual void func_000D7880() = 0;
-    virtual void func_000CD440();
+    virtual float func_000CD440();
     virtual float func_000CD4F0();
-    virtual void func_000CD390();
+    virtual int func_000CD390(Vector3 *position, float value, Vector3 *direction);
 
     Object_000C5B50 *owner;
     int state;
