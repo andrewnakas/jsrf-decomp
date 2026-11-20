@@ -1,4 +1,4 @@
-struct Object_00070530 {
+struct Object_00070850 {
     void func_00070960(int index);
 };
 
@@ -16,10 +16,10 @@ void Object_00120420::func_00122AE0()
 {
     if (func_00127070() > 0 && level < 7) {
         level++;
-        ((Object_00070530 *)this)->func_00070960(1);
+        ((Object_00070850 *)this)->func_00070960(1);
     }
     if (func_00127070() < 0 && level > 1) {
         level--;
-        ((Object_00070530 *)this)->func_00070960(1);
+        ((Object_00070850 *)this)->func_00070960(1);
     }
 }

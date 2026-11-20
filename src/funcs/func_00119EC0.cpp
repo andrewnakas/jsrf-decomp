@@ -40,15 +40,12 @@ struct Node {
     void func_00011C20(Node *node);
 };
 
-// The class whose table is at 0x1D7B60 (its destructor's unit names it so); its other members are declared as
-// Object_00119C00's.
+// The class whose table is at 0x1D7B60 (named after its destructor).
 struct Object_001197F0 : Node {
     virtual ~Object_001197F0();
     virtual void func_00011C90();
     virtual void func_00011C80(int argument);
-};
 
-struct Object_00119C00 {
     void func_00119800();
     void func_00119C20();
     void func_00119CE0();
@@ -85,19 +82,19 @@ void Object_001197F0::func_00011C90()
             mode = 1;
             break;
         case 1:
-            ((Object_00119C00 *)this)->func_00119800();
+            func_00119800();
             if (flags_64 & 5) {
-                ((Object_00119C00 *)this)->func_00119C20();
+                func_00119C20();
             } else if (flags_64 & 0xa) {
-                ((Object_00119C00 *)this)->func_00119CE0();
+                func_00119CE0();
             } else if (flags_64 & 0x10) {
-                ((Object_00119C00 *)this)->func_00119E20();
+                func_00119E20();
             } else if (flags_64 & 0x20) {
-                ((Object_00119C00 *)this)->func_00119E60();
+                func_00119E60();
             } else if (flags_64 & 0x40) {
-                ((Object_00119C00 *)this)->func_00119DE0();
+                func_00119DE0();
             } else if (flags_64 & 0x80) {
-                ((Object_00119C00 *)this)->func_00119DA0();
+                func_00119DA0();
             }
             break;
         }
