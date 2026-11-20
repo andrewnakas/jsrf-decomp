@@ -11,6 +11,7 @@ void __fastcall func_001BAB20(Vector3 *out, const Vector3 *in);
 
 struct Mesh_00017F60;
 struct Model_000178B0;
+struct Motion_0005F060;
 
 struct Item_00016200 {
     int unknown_00;
@@ -35,7 +36,7 @@ struct Object_00016200 {
     void func_00016240(Item_00016200 *item);
     void func_00016260(Item_00016260 *item, int value);
     void func_000162A0(Item_000162A0 *item);
-    void func_000178B0(Model_000178B0 *model, float time, float blend);
+    void func_000178B0(Model_000178B0 *model, Motion_0005F060 *motion, float time);
     void func_00017D90(Box_00017CC0 *box, const Vector3 *points, unsigned int count, float radius);
     void func_00019570(Mesh_00017F60 *mesh, const Mesh_00017F60 *source);
 };
@@ -128,7 +129,7 @@ struct Object_000ECB50 : Node, Object_000C60C0 {
     char unknown_128[0x18];
     Object_00047470 *model;
     char unknown_144[0xc];
-    float time_150;
+    Motion_0005F060 *motion_150;
     char unknown_154[0x20];
     Sphere_000EC7E0 spheres[4];
     char unknown_1b4[0x14];
@@ -139,14 +140,14 @@ struct Object_000ECB50 : Node, Object_000C60C0 {
     Block_000EC7E0 blocks[4];
 };
 
-// Draws the model at 0x258 at the time at 0x150 (func_000178B0) through the item at 0x25c, the part at 0xbc with the
-// model at 0x140; then for each of the four spheres at 0x174, while the flag 0x4000000 is clear at 0x90: the model's
-// bone from data_0021A158, the centre from data_0021A174 in that frame, the block at 0x264 around it, and the mesh
-// item at 0x1c8 drawn at data_0021A128 with data_0021A110.
+// Draws the model at 0x258 posed by the motion at 0x150 (func_000178B0) through the item at 0x25c, the part at 0xbc
+// with the model at 0x140; then for each of the four spheres at 0x174, while the flag 0x4000000 is clear at 0x90: the
+// model's bone from data_0021A158, the centre from data_0021A174 in that frame, the block at 0x264 around it, and the
+// mesh item at 0x1c8 drawn at data_0021A128 with data_0021A110.
 void Object_000ECB50::func_000EC7E0()
 {
     func_001BA9C0();
-    data_0022FCE8.func_000178B0(drawn, time_150, 0.0f);
+    data_0022FCE8.func_000178B0(drawn, motion_150, 0.0f);
     data_0022FCE8.func_00016240(&item_25c);
     part.func_000EB950(model);
     for (unsigned int i = 0; i < 4; i++) {

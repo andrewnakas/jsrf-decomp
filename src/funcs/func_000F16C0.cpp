@@ -24,10 +24,11 @@ struct Object_000C5B50 {
 
 struct Item_00016200;
 struct Model_000178B0;
+struct Motion_0005F060;
 
 struct Object_00016200 {
     void func_00016240(Item_00016200 *item);
-    void func_000178B0(Model_000178B0 *model, float first, float second);
+    void func_000178B0(Model_000178B0 *model, Motion_0005F060 *motion, float time);
 };
 
 extern Object_00016200 data_0022FCE8;
@@ -109,6 +110,6 @@ void Object_000F1820::func_000F16C0()
         }
     }
     func_001BAA50();
-    data_0022FCE8.func_000178B0(body.model, *(float *)&motions[20], 0.0f);
+    data_0022FCE8.func_000178B0(body.model, (Motion_0005F060 *)motions[20], 0.0f);
     data_0022FCE8.func_00016240((Item_00016200 *)&body);
 }
