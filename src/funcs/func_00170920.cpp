@@ -18,8 +18,6 @@ struct ItemList {
     }
 };
 
-struct Thing;
-
 // The class whose table is at 0x1E3C08 (30 slots, the same Release as 0x1E3B90).
 struct Object_001E3C08 {
     virtual long __stdcall slot0(const Guid &id, void **object);
@@ -36,8 +34,8 @@ struct Object_001E3C08 {
     virtual void slot11();
     virtual void slot12();
     virtual long __stdcall func_00170920(unsigned long first, unsigned long second);
-    long __stdcall func_0016FE20(Thing **thing);
-    long __stdcall func_00170890(Thing *thing);
+    long __stdcall func_0016FE20(long *position);
+    long __stdcall func_00170890(long position);
 
     char unknown_04[0xc];
     void *ready;
@@ -49,18 +47,18 @@ struct Object_001E3C08 {
     unsigned int selected;
 };
 
-// Slot 13: takes an object from 0x16FE20, keeps the two words at +0x108 and +0x10c and passes the object on to
-// 0x170890. 0x800401F0 (not initialised) while +0x10 is null.
+// Slot 13: reads the level's position (0 to 10000) between the old bounds (0x16FE20), keeps the new bounds at +0x108
+// and +0x10c and sets the level from the same position (0x170890). 0x800401F0 (not initialised) while +0x10 is null.
 long __stdcall Object_001E3C08::func_00170920(unsigned long first, unsigned long second)
 {
     long result;
     if (ready) {
-        Thing *thing;
-        result = func_0016FE20(&thing);
+        long position;
+        result = func_0016FE20(&position);
         if (result >= 0) {
             this->first = first;
             this->second = second;
-            result = func_00170890(thing);
+            result = func_00170890(position);
         }
     } else {
         result = 0x800401F0;
