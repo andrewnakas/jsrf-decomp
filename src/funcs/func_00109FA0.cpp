@@ -1,4 +1,6 @@
-struct Object_0010A040 {
+// The object func_00108870 creates for an Object_00107FE0 and whose id it keeps at that object's 0x50 (constructor
+// func_00109900, table 0x1D2060; the constructor sets 0x74-0x7c and -1 at 0x80).
+struct Object_00109B60 {
     char unknown_00[0x74];
     int value;
     int unknown_78;
@@ -17,7 +19,7 @@ struct Object_0010A040 {
 
 // Mode 0: state 8 showing the value at 0x74 (or 0 with 0x94/0x98 cleared when it is -1); mode 1: unless nothing is
 // shown, state 3 towards the value at level 255 and nothing shown.
-void Object_0010A040::func_00109FA0(int mode)
+void Object_00109B60::func_00109FA0(int mode)
 {
     switch (mode) {
     case 0:
