@@ -39,8 +39,9 @@ struct Point_000D1700 {
     char unknown_00[0x18];
 };
 
-// The handlers of the member-function table at 0x2169e0 (the table Object_000D27F0's slot 0 runs).
-struct Object_000D1700 {
+// The class (constructor func_000D27F0) whose slot 0 runs the member-function table at 0x2169e0; these are its
+// handlers.
+struct Object_000D27F0 {
     char unknown_000[4];
     Object_000C5B50 *owner;
     int state;
@@ -83,7 +84,7 @@ struct Object_000D1700 {
 // Entry 12 of the member-function table at 0x2169e0: when 0x88 holds 1 or func_000D2190 passes for the point at 0x7c
 // of data_00257CE4, the count at 0xeb8 becomes 1, 0xebc and 0xee0 0, state 13 and 9 at 0xf30, and the owner gets
 // message 10 with its position (func_000C5B10); then func_000D34B0.
-void Object_000D1700::func_000D3EB0()
+void Object_000D27F0::func_000D3EB0()
 {
     if (held == 1 || func_000D2190(&data_00257CE4->unknown_7c, 0x222, 0x1555)) {
         count = 1;

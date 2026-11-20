@@ -39,8 +39,9 @@ struct Point_000D1700 {
     char unknown_00[0x18];
 };
 
-// The handlers of the member-function table at 0x2169e0 (the table Object_000D27F0's slot 0 runs).
-struct Object_000D1700 {
+// The class (constructor func_000D27F0) whose slot 0 runs the member-function table at 0x2169e0; these are its
+// handlers.
+struct Object_000D27F0 {
     char unknown_000[4];
     Object_000C5B50 *owner;
     int state;
@@ -83,7 +84,7 @@ struct Object_000D1700 {
 // Entry 25 of the member-function table at 0x2169e0: climbs by the owner's 0x60 and runs func_000D38D0(3); when the
 // owner lacks the flag 0x80: state 0x1a, 0xf30 = 0x15, 0x88 cleared, the owner gains the flag 0x8000 and stops, the
 // timer restarts, and the first time func_000C6950 places the owner's position with the scale at 0x40.
-void Object_000D1700::func_000D43D0()
+void Object_000D27F0::func_000D43D0()
 {
     y += owner->climb;
     func_000D38D0(3);

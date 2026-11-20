@@ -1,4 +1,4 @@
-struct Object_000D1700 {
+struct Object_000D27F0 {
     char unknown_000[8];
     int state;
     char unknown_00c[4];
@@ -21,7 +21,7 @@ struct Object_000D1700 {
 
 // A handler of the same table (entry 18): in phase 2 at 0xf38, state 1 and the fields at 0xf30 and 0x10 cleared;
 // then func_000D34B0.
-void Object_000D1700::func_000D41E0()
+void Object_000D27F0::func_000D41E0()
 {
     if (phase == 2) {
         state = 1;

@@ -1,4 +1,4 @@
-struct Object_000D1700 {
+struct Object_000D27F0 {
     char unknown_000[8];
     int state;
     char unknown_00c[4];
@@ -21,7 +21,7 @@ struct Object_000D1700 {
 
 // A handler of the member-function table at 0x2169e0 (entry 7): in phase 2 at 0xf38, state 1, 0 at 0x84 and the
 // timer at 0x10 set to 60; then func_000D34B0.
-void Object_000D1700::func_000D3DB0()
+void Object_000D27F0::func_000D3DB0()
 {
     if (phase == 2) {
         state = 1;

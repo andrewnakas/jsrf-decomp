@@ -1,4 +1,4 @@
-struct Object_000D1700 {
+struct Object_000D27F0 {
     char unknown_000[8];
     int state;
     char unknown_00c[4];
@@ -11,7 +11,7 @@ struct Object_000D1700 {
 };
 
 // A handler of the table at 0x216A38 (twice): func_000D38D0(3); after 120 calls, state 20 and 15 at 0xf30.
-void Object_000D1700::func_000D4440()
+void Object_000D27F0::func_000D4440()
 {
     func_000D38D0(3);
     if (++timer > 120) {
