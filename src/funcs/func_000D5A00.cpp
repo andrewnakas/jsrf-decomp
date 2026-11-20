@@ -1,0 +1,36 @@
+struct Motion_0005F060;
+
+int func_0005E030(Motion_0005F060 *motion, float *time, float speed, int loop);
+
+struct Set_000D27F0 {
+    Motion_0005F060 *motions[32];
+};
+
+struct Object_000D27F0 {
+    char unknown_000[0xf00];
+    Set_000D27F0 *set;
+    Motion_0005F060 *motion;
+    char unknown_f08[0x14];
+    float time;
+    char unknown_f20[0x10];
+    int next;
+    char unknown_f34[0x4];
+    int phase;
+
+    void func_000D5A00();
+};
+
+// A handler of the table at 0x216DC8: starts motion 19 at time 0 (phase 1), then plays it at half speed once;
+// 1 at 0xf30 when it ends.
+void Object_000D27F0::func_000D5A00()
+{
+    if (phase == 0) {
+        motion = set->motions[19];
+        time = 0.0f;
+        phase = 1;
+        return;
+    }
+    if (func_0005E030(motion, &time, 0.5f, 1)) {
+        next = 1;
+    }
+}

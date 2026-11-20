@@ -12,6 +12,7 @@
 /* sym: ?func_000D7880@Object_000EDC30@@UAEXXZ = 0x000EFFF0 */
 extern "C" void *memset(void *destination, int value, unsigned int size);
 
+struct Vector3;
 struct Mesh_00017F60;
 
 struct Object_00016200 {
@@ -136,9 +137,9 @@ struct Object_000CD1E0 : Object_000CC600 {
     virtual void func_000CD850();
     virtual void func_000D77D0() = 0;
     virtual void func_000D7880() = 0;
-    virtual void func_000CD440();
+    virtual float func_000CD440();
     virtual float func_000CD4F0();
-    virtual void func_000CD390();
+    virtual int func_000CD390(Vector3 *position, float value, Vector3 *direction);
 
     int unknown_04;
     int state;

@@ -14,7 +14,7 @@ struct Object_000C5B50 {
     char unknown_60[0x44];
     unsigned int flags;
 
-    int func_000C5B10(int first, int second);
+    int func_000C5B10(int message, void *data);
 };
 
 // The objects whose state handlers fill the table at 0x2165F4 to 0x216660 (func_000CE1A0, func_000CE220,
@@ -43,7 +43,7 @@ void Object_000CE220::func_000CF690()
         state = 12;
         value_94 = 8;
         timer = 0;
-        owner->func_000C5B10(0x41, (int)&owner->position);
+        owner->func_000C5B10(0x41, &owner->position);
     }
     func_000CE2D0();
 }

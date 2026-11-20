@@ -8,6 +8,8 @@
 /* sym: ?func_000CD210@Object_000D6350@@UAEXXZ = 0x000D6980 */
 /* sym: ?func_000CD800@Object_000D6350@@UAEXXZ = 0x000D6A00 */
 /* sym: ?func_000CD850@Object_000D6350@@UAEXXZ = 0x000D7950 */
+struct Vector3;
+
 extern "C" void *memset(void *destination, int value, unsigned int size);
 
 struct Mesh_00017F60;
@@ -112,9 +114,9 @@ struct Object_000CD1E0 : Object_000CC600 {
     virtual void func_000CD850();
     virtual void func_000D77D0() = 0;
     virtual void func_000D7880() = 0;
-    virtual void func_000CD440();
+    virtual float func_000CD440();
     virtual float func_000CD4F0();
-    virtual void func_000CD390();
+    virtual int func_000CD390(Vector3 *position, float value, Vector3 *direction);
 
     int unknown_04;
     int state;

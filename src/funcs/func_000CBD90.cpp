@@ -31,7 +31,7 @@ struct Object_000C5B50 {
     Item_000CBD90 *items;
 
     int func_000C59A0();
-    int func_000C5B10(int first, int second);
+    int func_000C5B10(int message, void *data);
 };
 
 struct Limits_000CC020 {
@@ -99,6 +99,6 @@ void Object_000CCE00::func_000CBD90()
             item->flags &= ~1;
         }
         state = 2;
-        owner->func_000C5B10(8, (int)&owner->position);
+        owner->func_000C5B10(8, &owner->position);
     }
 }
