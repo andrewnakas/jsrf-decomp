@@ -15,9 +15,10 @@ code_sections = [".text", "D3D", "DSOUND", "MMATRIX", "XGRPH", "XPP"]
 profile = "msvc7.0"
 banner = "13.00.9466"
 cflags = ["/O2", "/GX"]
-# /Oy-: 12 game functions keep a frame pointer with no exception handling and no stack alignment
-# (0x14370, 0x15520, 0x23f20, 0x47160, 0x47230, 0x50690, 0xa2960, 0xa6dc0, 0xc3a60, 0xd27f0, 0xe45d0,
-# 0xedc30), while their neighbours have none: STATUS.md, "How the flags were pinned"
+# /Oy-: 11 game functions keep a frame pointer the pinned flags do not give them, with no stack alignment
+# (0x14370, 0x23f20, 0x47160, 0x47230, 0x50690, 0xa2960, 0xa6dc0, 0xc3a60, 0xd27f0, 0xe45d0, 0xedc30),
+# while their neighbours have none; eight already match with it and not without: STATUS.md, "How the flags
+# were pinned"
 allowed_cflags = ["/Oy-"]
 includes = ["include", "include/game", "include/sdk"]
 
@@ -155,6 +156,16 @@ not_starts = ["0x4c8a0", "0x4c8a4"]
 # and also a game member called with two arguments at 0xcbdc1.
 # Lane 2 (round 5): 0x33800 (mov eax, 1; ret 4) is Object_000265a0's member and is also called directly by
 # 0xcbfc0 as a member of the owner object Object_000c5b50.
+# Lane 4 (MUSASHI round 3): 0x160860 is the destructor 0x160e80 calls for both logic_error's and
+# length_error's tables; 0x179a20 is slot 4 of 0x1e410c and 0x1e4130, whose slot-3 signatures differ;
+# 0x176c10, 0x178d80, 0x176800, 0x178e00, 0x1791c0, 0x179210 are shared by 0x1e3f84 and 0x1e406c, which are
+# not base and derived (0x1e406c's constructor 0x1792c0 never runs 0x1e3f84's); 0x174c20 and its adjustor
+# thunk 0x168ff0 by MGameSound8 and MemStream; 0x15fd40 by MGameInput8 and 0x1e4020; the forwarders
+# 0x1773a0-0x1775e0 (0x1e3d30, 0x1e3d88, 0x1e3fb0, 0x1e3fe4), 0x173210-0x1732f0 (slots 10-17 of 0x1e3d30
+# and 0x1e3d88) and 0x17b840, 0x17b6d0, 0x17a9b0, 0x17aa80 (0x1e41d8, 0x1e420c, which differ in the other
+# slots 6, 7 and 10).
+# Lane 3 (round 5): 0xd6a00 and 0xd7950 are slots 6 and 7 of both 0x1ce5f0 (constructor 0xd6350) and
+# 0x1cee44 (constructor 0xe7f50), sibling classes whose constructors each call the base constructor.
 folded = ["0x11c90", "0x11c80", "0x7e020", "0x23f10", "0x461a0", "0xaecc0", "0xaee80", "0xb3de0", "0xc6090",
           "0xc7cd0", "0xc7db0", "0x115f40", "0x14d080", "0x1504b0", "0x150fd0", "0x1526d0", "0x157f20",
           "0x167c90", "0x167cb0", "0x167cc0", "0x50330", "0x121b0", "0x121d0",
@@ -163,7 +174,11 @@ folded = ["0x11c90", "0x11c80", "0x7e020", "0x23f10", "0x461a0", "0xaecc0", "0xa
           "0x177fe0", "0x179350", "0x1664d0", "0x165570", "0x165e90", "0x16fce0", "0x1766a0", "0x17b6a0",
           "0x160e80",
           "0x14d4a0", "0x14e1f0", "0x1532f0", "0x15f1b0", "0x15f450", "0x157f00", "0x157f30", "0x1583f0",
-          "0x157f10", "0x33800"]
+          "0x157f10", "0x33800",
+          "0x160860", "0x179a20", "0x176c10", "0x178d80", "0x176800", "0x178e00", "0x1791c0", "0x179210",
+          "0x174c20", "0x168ff0", "0x15fd40", "0x1773a0", "0x1773c0", "0x1773e0", "0x177400", "0x1775e0",
+          "0x173210", "0x173230", "0x173250", "0x173270", "0x173290", "0x1732b0", "0x1732d0", "0x1732f0",
+          "0x17b840", "0x17b6d0", "0x17a9b0", "0x17aa80", "0xd6a00", "0xd7950"]
 # Data that a function keeps inside its own code. 0x1bc808 (XPP) jumps at 0x1bc851 over 27 bytes to 0x1bc86e;
 # the game passes 0x1bc860, a device-type table among them, to 0x1bd5ff.
 # 0x19b1ef-0x19e340 is a zero-filled gap between function rows of the D3D section that holds D3D's own
