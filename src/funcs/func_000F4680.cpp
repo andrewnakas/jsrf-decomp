@@ -31,8 +31,9 @@ struct Node {
     Node ***drawTail;
 };
 
-// The class of the member-function table at 0x21b2dc (func_000F4140 is entry 4).
-struct Object_000F4140 : Node {
+// The child of Node whose table is at 0x1CF098 (destructor func_000F3F70): its slot 1 (func_000F4480) runs entry
+// `state` of the member-function table at 0x21b2dc on itself (func_000F4140 is entry 4).
+struct Object_000F44E0 : Node {
     char unknown_040[4];
     int state;
     char unknown_048[0x84];
@@ -46,7 +47,7 @@ struct Object_000F4140 : Node {
 
 // Entry 1 of that table: when func_000F4570 reports true, func_000F4280, state 2 at 0x44 and 0 at 0xcc;
 // otherwise func_000F41C0.
-void Object_000F4140::func_000F4680()
+void Object_000F44E0::func_000F4680()
 {
     if (func_000F4570()) {
         func_000F4280();
