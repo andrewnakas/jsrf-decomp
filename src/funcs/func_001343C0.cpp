@@ -1,0 +1,66 @@
+struct Object_00070850 {
+    void func_00070960(int index);
+};
+
+struct Object_00120420 {
+    char unknown_0000[0x1e0];
+    int busy;
+    char unknown_01e4[0xf4c];
+    int choice;
+    char unknown_1134[0x1d86];
+    unsigned char flag_2eba;
+    unsigned char flag_2ebb;
+    unsigned char flag_2ebc;
+    char unknown_2ebd;
+    unsigned char flag_2ebe;
+    unsigned char flag_2ebf;
+    unsigned char flag_2ec0;
+
+    int func_001343C0(int value);
+};
+
+extern unsigned int data_00251EE8;
+
+// The yes / no prompt of func_0012C9D0 with its choice at +0x1130 and its flags at +0x2EBA; the argument is
+// unused. 0x4000 picks 0, 0x8000 picks 1 (each with sound 3); 1 or 4 confirms (1 for choice 0, else -1), 2 or 8
+// cancels (-1). Then sets the highlight flags for the choice and returns the result (0 while undecided or busy).
+int Object_00120420::func_001343C0(int)
+{
+    int result = 0;
+    if (busy == 0) {
+        if (data_00251EE8 & 0x4000) {
+            choice = 0;
+            ((Object_00070850 *)this)->func_00070960(3);
+        }
+        if (data_00251EE8 & 0x8000) {
+            choice = 1;
+            ((Object_00070850 *)this)->func_00070960(3);
+        }
+        if (choice < 0 || choice > 1) {
+            choice = 1;
+        }
+        if (data_00251EE8 & 5) {
+            if (choice == 0) {
+                result = 1;
+                ((Object_00070850 *)this)->func_00070960(0);
+            } else {
+                result = -1;
+                ((Object_00070850 *)this)->func_00070960(2);
+            }
+        }
+        if (data_00251EE8 & 0xa) {
+            result = -1;
+            ((Object_00070850 *)this)->func_00070960(2);
+        }
+    }
+    flag_2ebc = 1;
+    flag_2ec0 = 1;
+    if (choice == 0) {
+        flag_2ebf = 1;
+        flag_2eba = 1;
+    } else {
+        flag_2ebe = 1;
+        flag_2ebb = 1;
+    }
+    return result;
+}
