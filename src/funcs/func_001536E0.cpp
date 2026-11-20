@@ -1,3 +1,4 @@
+struct LightInfo;
 struct Guid;
 extern const Guid data_001E13D0;
 
@@ -11,13 +12,13 @@ struct Object_001E12F8 {
     virtual long __stdcall func_00153300(const void *iid, void **object);  // slot 0
     virtual unsigned long __stdcall func_001532F0();  // slot 1: AddRef
     virtual unsigned long __stdcall func_00153670();  // slot 2: Release
-    virtual long __stdcall func_001533D0(unsigned long argument1, unsigned long argument2,
-                                         unsigned long argument3);  // slot 3
+    virtual long __stdcall func_001533D0(unsigned long argument1, const LightInfo *argument2,
+                                         int argument3);  // slot 3
     virtual long __stdcall func_00152E30(int index);  // slot 4
     virtual long __stdcall func_00153520(unsigned long argument1, unsigned long argument2,
                                          unsigned long argument3);  // slot 5
     virtual long __stdcall func_00152E90(unsigned long argument1, unsigned long argument2,
-                                         unsigned long argument3);  // slot 6
+                                         unsigned long *argument3);  // slot 6
     virtual long __stdcall func_001530F0(unsigned long argument1, unsigned long argument2);  // slot 7
     virtual long __stdcall func_00152FE0(unsigned long argument1);  // slot 8
     virtual long __stdcall func_001531E0();  // slot 9
