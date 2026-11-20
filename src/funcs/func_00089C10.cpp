@@ -16,7 +16,7 @@ struct Object_0003E750 {
 
 extern Object_0003E750 data_002314B0;
 
-struct Object_00089C10 {
+struct Object_000A1C50 {
     char unknown_000[8];
     int unknown_008;
     char unknown_00c[0x2a8];
@@ -29,7 +29,7 @@ struct Object_00089C10 {
 
 // Fills in the mark at +0x2b4 with the position at +0xca4 and the word at +0x8, and hands it to func_0003E6F0 of
 // the table object at 0x2314B0.
-void Object_00089C10::func_00089C10()
+void Object_000A1C50::func_00089C10()
 {
     mark.position.x = position.x;
     mark.position.y = position.y;
