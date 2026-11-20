@@ -33,7 +33,7 @@
   as COMDATs) are placed and proven inside the unit that carries them. `config/covered.csv` lists them so the
   progress report counts them; the match gate refuses the file if it lists one no proven unit carries. A
   maintainer refreshes it with `xbx covers --write`.
-- 418 functions (38 of them `game`) have a non-empty `conv`: link-time code generation gave them a custom
+- 412 functions (33 of them `game`) have a non-empty `conv`: link-time code generation gave them a custom
   calling convention. Lanes skip them for now (AGENTS.md).
 
 ## What is in `.text`
@@ -93,7 +93,7 @@ that comes from aligned locals under the pinned flags and needs no per-file flag
 
 ## Known gaps
 
-- Link-time code generation is rare in the game's own code: 38 `game` functions read a register no standard
+- Link-time code generation is rare in the game's own code: 33 `game` functions read a register no standard
   calling convention passes arguments in. The per-object compile cannot reproduce those; everything else is in
   reach.
 - 84 two-byte rows (75 in `engine`, 9 in hand-written game routines) were short jumps over filler to the next
