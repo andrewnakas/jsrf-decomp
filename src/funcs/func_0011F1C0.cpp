@@ -41,6 +41,10 @@ struct Node {
     char unknown_34[0x10];
 };
 
+struct Matrix_001BA950 {
+    float m[4][4];
+};
+
 struct Model_0011F1C0 {
     char unknown_00[0x14];
     float position[3];
@@ -89,7 +93,7 @@ void func_001BAA00();
 void func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
 void __fastcall func_001BAAE0(float *vector);
-void __fastcall func_001BA950(float *matrix);
+void __fastcall func_001BA950(Matrix_001BA950 *matrix);
 void func_001BB230(float x, float y, float z);
 
 // The class whose table is at 0x1D8F20.
@@ -117,7 +121,7 @@ struct Object_0011EDA0 : Node {
     char unknown_070[0xc];
     Sprite_0011F1C0 *sprite_7c;
     Sprite_0011F1C0 *sprite_80;
-    float matrix[16];
+    Matrix_001BA950 matrix;
     float offset[3];
     unsigned int state;
     int value_d4;
@@ -163,7 +167,7 @@ Object_0011EDA0::Object_0011EDA0(Node *owner, int id, unsigned int flags, int nu
         func_001BAAA0(sprite_80->model->position);
         func_001BB230(0.45f, 0.45f, 0.45f);
         func_001BAAE0(sprite_80->model->position);
-        func_001BA950(matrix);
+        func_001BA950(&matrix);
         func_001BAA50();
     }
 }
