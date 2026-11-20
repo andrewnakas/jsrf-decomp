@@ -11,9 +11,14 @@ struct Game {
 extern Game *data_0022FCE0;
 extern Pair_00137890 data_0022CB18[];
 
+// The class whose table is at 0x1DEA20 (destructor 0x1377C0); its slot 1 (0x137950) calls this on itself.
+struct Object_001377C0 {
+    void func_00137890();
+};
+
 // Copies the pair of entry (game value 0x1b7) - 1 of the table at data_0022CB18 (entry 0 when out of range)
 // into game values 2 and 3, and again into 5 and 6.
-void func_00137890()
+void Object_001377C0::func_00137890()
 {
     unsigned int index = data_0022FCE0->func_000127E0(0x1b7) - 1;
     if (index >= 0x6f) {
