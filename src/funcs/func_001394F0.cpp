@@ -1,7 +1,7 @@
 unsigned int func_0014C690(float value);
 
 // The menu func_0013A340 runs: a pulse level at +0x2b8 moving at the speed at +0x2b4 and the colour it gives.
-struct Object_00139C00 {
+struct Object_001379E0 {
     char unknown_000[0x2b4];
     float speed;
     float level;
@@ -15,7 +15,7 @@ struct Object_00139C00 {
 
 // Moves the level by a thirtieth of the speed, turning the speed around at 1 and at 0, and sets the colour from it:
 // red 50 + func_0014C690(110 level), green and blue 50 + func_0014C690(-50 level).
-void Object_00139C00::func_001394F0()
+void Object_001379E0::func_001394F0()
 {
     level += speed * (1.0f / 30.0f);
     if (speed > 0.0f) {

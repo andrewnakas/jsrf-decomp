@@ -14,7 +14,7 @@ extern Game *data_0022FCE0;
 
 // A menu: the buttons at +0x48, a cursor over five rows at +0x50 and one over nine entries at +0x54, of which the
 // mask at +0x60 says which are there.
-struct Object_00139C00 {
+struct Object_001379E0 {
     char unknown_000[0x44];
     int value_44;
     unsigned int buttons;
@@ -31,7 +31,7 @@ struct Object_00139C00 {
 // object 4; 0x40 and 0x80 move the row up and down (wrapping over 0-4) and play sound 3; 1 or 4 set +0x44 to 2,
 // move the entry to the next one the mask has (from the current one, wrapping after 8) and pass 0 to
 // func_00070960 (which never reads this).
-void Object_00139C00::func_00139C00()
+void Object_001379E0::func_00139C00()
 {
     if ((buttons | buttons >> 8 | buttons >> 16 | buttons >> 24) & 0xa) {
         value_44 = 0;

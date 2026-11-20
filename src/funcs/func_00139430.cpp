@@ -5,7 +5,7 @@ extern unsigned int data_0025ED2C;
 
 unsigned long __stdcall func_001BD5FF(void *type);
 
-struct Object_00139B50 {
+struct Object_001379E0 {
     char unknown_000[0x64];
     int value_64;
     char unknown_068[0x230];
@@ -19,7 +19,7 @@ struct Object_00139B50 {
 
 // Records which of the four ports hold a device (func_001BD5FF) and how many; 1 when fewer than last time (with
 // none left, state 10 and +0x64 cleared), else 0. The count is kept in data_0025ED2C for the next call.
-int Object_00139B50::func_00139430()
+int Object_001379E0::func_00139430()
 {
     int result = 0;
     unsigned long mask = func_001BD5FF((void *)data_001BC860);
