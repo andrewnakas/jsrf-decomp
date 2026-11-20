@@ -35,7 +35,7 @@ struct Model_00138540 {
     unsigned int flags;
 };
 
-struct Object_00139B50 {
+struct Object_001379E0 {
     char unknown_000[0x2c0];
     Animation_00138540 *animation;
     Model_00138540 *model;
@@ -53,7 +53,7 @@ void func_001BB670(float angle);
 
 // Advances the animation at +0x2c0 by half a frame (wrapping at its frame count) and draws the model at +0x2c4
 // with it, placed by func_001BB630 (0.76), func_001BB650 (-0.88), func_001BB670 (`angle`) and scaled by 0.07.
-void Object_00139B50::func_00138540(float angle)
+void Object_001379E0::func_00138540(float angle)
 {
     if (animation) {
         frame += 0.5f;
