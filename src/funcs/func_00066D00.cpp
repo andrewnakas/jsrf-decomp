@@ -8,7 +8,7 @@ struct Item_00066D40 {
     Item_00066D40 *next;
 };
 
-struct Object_00066D40 {
+struct Object_00065730 {
     char unknown_00[0x10];
     Item_00066D40 **tail;
 
@@ -16,7 +16,7 @@ struct Object_00066D40 {
 };
 
 // Appends a new 0x58-byte item holding a value to the list (tail link at +0x10) and returns it.
-Item_00066D40 *Object_00066D40::func_00066D00(int value)
+Item_00066D40 *Object_00065730::func_00066D00(int value)
 {
     Item_00066D40 *item = new Item_00066D40;
     item->value = value;

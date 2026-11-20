@@ -6,7 +6,7 @@ struct Item_00024AB0 {
     char unknown_3c[0x2c];
 };
 
-struct Object_00024A70 {
+struct Object_0001DEF0 {
     char unknown_00[0x10];
     Item_00024AB0 **tail;
 
@@ -14,7 +14,7 @@ struct Object_00024A70 {
 };
 
 // Appends a new 0x68-byte item to the list whose tail link is at +0x10, its word at +0x38 clear, and returns it.
-Item_00024AB0 *Object_00024A70::func_00024AB0()
+Item_00024AB0 *Object_0001DEF0::func_00024AB0()
 {
     Item_00024AB0 *item = new Item_00024AB0;
     item->unknown_38 = 0;

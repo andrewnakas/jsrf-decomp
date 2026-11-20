@@ -4,7 +4,7 @@ struct Item_00024A70 {
     Item_00024A70 *next;
 };
 
-struct Object_00024A70 {
+struct Object_0001DEF0 {
     char unknown_00[8];
     Item_00024A70 **tail;
 
@@ -12,7 +12,7 @@ struct Object_00024A70 {
 };
 
 // Unlinks an item from the list (links at +0x28/+0x2c, tail link at +8) of the object at 0x1EC050 and deletes it.
-void Object_00024A70::func_00024A70(Item_00024A70 *item)
+void Object_0001DEF0::func_00024A70(Item_00024A70 *item)
 {
     *item->link = item->next;
     if (item->next) {
