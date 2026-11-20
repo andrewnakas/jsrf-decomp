@@ -1,7 +1,12 @@
+// A member of Object_000F96A0 (func_000F8360 and func_000F8700 pass this in ecx; it is not read).
 // Classifies the text at `text`: 1 for a lead byte 0x80-0x9f, 0 unless it starts with '$'; then by the next
 // character: c 3, x 5, $ 6, r 7, e 8, v 9, j 10, s 11, n 12, p 13, b followed by c, j or o 14 to 16, a, f, m, h, o and
 // g 17 to 22, anything else 2. (After "$b" and another character the result is left unset.)
-int __stdcall func_000F81B0(const char *text)
+struct Object_000F96A0 {
+    int func_000F81B0(const char *text);
+};
+
+int Object_000F96A0::func_000F81B0(const char *text)
 {
     unsigned short c = text[0] & 0xff;
     if (c >= 0x80 && c < 0xa0) {
