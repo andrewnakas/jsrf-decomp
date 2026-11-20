@@ -1,15 +1,16 @@
-struct Object_000D1720 {
+struct Object_000D1700 {
     char unknown_00[8];
     int state;
     char unknown_0c[0x74];
-    int mode;
+    int toggle;
 
     void func_000D1720();
 };
 
-// State 1, and the mode at 0x80 toggles between 14 and 18.
-void Object_000D1720::func_000D1720()
+// A handler of the member-function table at 0x216a08, next to the merged func_000D1700 (whose class it
+// shares): state 1, and the field at 0x80 toggles between 14 and 18.
+void Object_000D1700::func_000D1720()
 {
     state = 1;
-    mode = (mode == 14) ? 18 : 14;
+    toggle = (toggle == 14) ? 18 : 14;
 }
