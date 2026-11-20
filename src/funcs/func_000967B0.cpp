@@ -1,8 +1,21 @@
+/* sym: ?func_00011C80_1@Object_000967B0@@UAEXH@Z = 0x000967B0 */
 struct Node {
     virtual ~Node();
-    virtual void slot1();
-    virtual void slot2();
-    virtual void slot3(int argument);
+    virtual void func_00011C90();
+    virtual void func_00011C90_1();
+    virtual void func_00011C80(int argument);
+    virtual void func_00011C90_2();
+    virtual void func_00011C90_3();
+    virtual void func_00011C80_1(int argument);
+    virtual void func_00011C90_4();
+    virtual void func_00011C90_5();
+    virtual void func_00011C80_2(int argument);
+    virtual void func_00011C90_6();
+    virtual void func_00011C90_7();
+    virtual void func_00011C80_3(int argument);
+    virtual void func_00011C90_8();
+    virtual void func_00011C90_9();
+    virtual void func_00011C80_4(int argument);
 
     unsigned int flags;
     int id;
@@ -26,15 +39,16 @@ struct Owner_000967B0 {
     int state;
 };
 
+// One of four direct children of Node (tables 0x1CD320, 0x1CD360, 0x1CD3A0 and 0x1CD3E0) whose slot 6 is this
+// same code.
 struct Object_000967B0 : Node {
-    virtual void func_000967B0(int argument);
+    virtual void func_00011C80_1(int argument);
 };
 
-// Virtual (slot 6 of four vtables, data_001CD320 to data_001CD3E0). Passes the argument to the third virtual
-// function when the parent's state at 0xe50 is 27.
-void Object_000967B0::func_000967B0(int argument)
+// Overrides Node's slot 6: passes the argument to slot 3 when the parent's state at 0xe50 is 27.
+void Object_000967B0::func_00011C80_1(int argument)
 {
     if (((Owner_000967B0 *)func_00011BD0())->state == 27) {
-        slot3(argument);
+        func_00011C80(argument);
     }
 }
