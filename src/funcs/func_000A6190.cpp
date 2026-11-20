@@ -2,7 +2,7 @@ struct Game {
     void *func_000128C0(int id);
 };
 
-struct Object_000A0610 {
+struct Object_000A1C50 {
     void func_000A0610(int value);
 };
 
@@ -21,7 +21,7 @@ extern Game *data_0022FCE0;
 void Object_000A63C0::func_000A6190()
 {
     state_8b4 = 0;
-    Object_000A0610 *target = (Object_000A0610 *)data_0022FCE0->func_000128C0(target_id);
+    Object_000A1C50 *target = (Object_000A1C50 *)data_0022FCE0->func_000128C0(target_id);
     if (target) {
         target->func_000A0610(0);
     }

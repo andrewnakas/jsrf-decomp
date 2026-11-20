@@ -5,7 +5,7 @@ struct Data_00093920 {
     int value_38;
 };
 
-struct Object_00092FF0 {
+struct Object_000A1C50 {
     char unknown_000[0x118];
     int value_118;
     int value_11c;
@@ -18,7 +18,7 @@ struct Object_00092FF0 {
 
 // Sets the field at 0x11c to 162 and the one at 0x118 to 1, then func_00092FF0(data->value_38, 0, 5, 1);
 // returns 0.
-int Object_00092FF0::func_00093F30()
+int Object_000A1C50::func_00093F30()
 {
     value_11c = 0xa2;
     value_118 = 1;

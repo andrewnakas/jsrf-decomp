@@ -3,7 +3,7 @@ struct Data_00093920 {
     int value;
 };
 
-struct Object_00092FF0 {
+struct Object_000A1C50 {
     char unknown_000[0xc90];
     Data_00093920 *data;
     char unknown_c94[0x40];
@@ -15,7 +15,7 @@ struct Object_00092FF0 {
 
 // Scales the field at 0xcd4 by 2/3, then func_00092FF0(data->value, 1, 1, 0) like the merged
 // func_00093920; returns 0.
-int Object_00092FF0::func_00094630()
+int Object_000A1C50::func_00094630()
 {
     speed *= 0.6666667f;
     func_00092FF0(data->value, 1, 1, 0);

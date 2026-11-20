@@ -1,4 +1,4 @@
-struct Object_000A0610 {
+struct Object_000A1C50 {
     char unknown_000[0xf14];
     int active;
 
@@ -6,7 +6,7 @@ struct Object_000A0610 {
     void func_0009B2B0();
 };
 
-void Object_000A0610::func_0009B2B0()
+void Object_000A1C50::func_0009B2B0()
 {
     if (active) {
         func_000A0610(1);

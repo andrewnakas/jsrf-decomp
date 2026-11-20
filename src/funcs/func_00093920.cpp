@@ -3,7 +3,7 @@ struct Data_00093920 {
     int value;
 };
 
-struct Object_00092FF0 {
+struct Object_000A1C50 {
     char unknown_000[0xc90];
     Data_00093920 *data;
 
@@ -11,7 +11,7 @@ struct Object_00092FF0 {
     int func_00093920();
 };
 
-int Object_00092FF0::func_00093920()
+int Object_000A1C50::func_00093920()
 {
     func_00092FF0(data->value, 1, 1, 0);
     return 0;
