@@ -11,12 +11,12 @@
 
 ## Function table
 
-`config/functions.csv` lists 9,344 functions. The headline counts 7,234 of them (1,398,585 bytes).
+`config/functions.csv` lists 9,260 functions. The headline counts 7,150 of them (1,398,634 bytes).
 
 | Owner | Functions | Bytes | Counts toward |
 |---|---|---|---|
-| `game` | 5,724 (4,723 kind `func`, 1,001 kind `eh`) | 1,206,966 | the headline |
-| `engine` | 667 | 78,867 | the headline |
+| `game` | 5,715 (4,714 kind `func`, 1,001 kind `eh`) | 1,206,966 | the headline |
+| `engine` | 592 | 78,916 | the headline |
 | `musashi` | 843 (693 kind `func`, 150 kind `eh`) | 112,752 | the headline |
 | `lib:adx` | 429 | 41,908 | the library category |
 | `lib:crt` | 264 (262 kind `func`, 2 kind `eh`) | 27,628 | the library category |
@@ -96,8 +96,9 @@ that comes from aligned locals under the pinned flags and needs no per-file flag
 - Link-time code generation is rare in the game's own code: 38 `game` functions read a register no standard
   calling convention passes arguments in. The per-object compile cannot reproduce those; everything else is in
   reach.
-- 82 two-byte rows in `engine` (`0x14B9A1` and after) are not functions. Each is a short jump over filler to the
-  next 16-byte boundary, the padding of hand-written assembly. The tools do not recognise that padding yet.
+- 84 two-byte rows (75 in `engine`, 9 in hand-written game routines) were short jumps over filler to the next
+  routine, the alignment padding of hand-written assembly. Since 2026-11-20 they are listed under `not_starts` and
+  belong to the routine before them.
 - Some rows inside `lib:xapi` and `lib:crt` are fragments of hand-written routines, and the 8-byte row at
   `0x180498` is the text "VC20XC00". They are library rows and do not affect the headline.
 - `config/symbols.csv` holds only the names the compiler itself emits (see `config/README.md`).

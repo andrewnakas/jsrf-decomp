@@ -5187,112 +5187,69 @@ addr,size,owner,kind,section,conv,parent,calls
 0014b7a0,90,engine,func,.text,,,
 0014b800,94,engine,func,.text,,,
 0014b860,173,engine,func,.text,,,
-0014b910,145,engine,func,.text,,,
-0014b9a1,2,engine,func,.text,,,0014b9b0
-0014b9b0,243,engine,func,.text,,,
-0014baa3,2,engine,func,.text,,,0014bab0
-0014bab0,243,engine,func,.text,,,
-0014bba3,2,engine,func,.text,,,0014bbb0
-0014bbb0,243,engine,func,.text,,,
-0014bca3,2,engine,func,.text,,,0014bcb0
-0014bcb0,69,engine,func,.text,,,0014b9b0 0014bab0 0014bbb0
-0014bcf5,2,engine,func,.text,,,0014bd00
+0014b910,147,engine,func,.text,,,0014b9b0
+0014b9b0,245,engine,func,.text,,,0014bab0
+0014bab0,245,engine,func,.text,,,0014bbb0
+0014bbb0,245,engine,func,.text,,,0014bcb0
+0014bcb0,71,engine,func,.text,,,0014b9b0 0014bab0 0014bbb0 0014bd00
 0014bd00,125,engine,func,.text,,,
-0014bd80,231,engine,func,.text,,,
-0014be67,2,engine,func,.text,,,0014be70
-0014be70,23,engine,func,.text,,,0014bd80
-0014be87,2,engine,func,.text,,,0014be90
-0014be90,615,engine,func,.text,,,
-0014c0f7,2,engine,func,.text,,,0014c100
-0014c100,181,engine,func,.text,,,
-0014c1b5,2,engine,func,.text,,,0014c1c0
+0014bd80,233,engine,func,.text,,,0014be70
+0014be70,25,engine,func,.text,,,0014bd80 0014be90
+0014be90,617,engine,func,.text,,,0014c100
+0014c100,183,engine,func,.text,,,0014c1c0
 0014c1c0,130,engine,func,.text,,,
-0014c242,2,engine,func,.text,,,0014c250
-0014c24b,2,engine,func,.text,,,0014c250
+0014c242,11,engine,func,.text,,,0014c250
 0014c250,79,engine,func,.text,,,
 0014c2a0,10,engine,func,.text,,,
-0014c2b0,22,engine,func,.text,,,
-0014c2c6,2,engine,func,.text,,,0014c2d0
-0014c2d0,39,engine,func,.text,,,
-0014c2f7,2,engine,func,.text,,,0014c300
-0014c300,49,engine,func,.text,,,
-0014c331,2,engine,func,.text,,,0014c340
-0014c340,43,engine,func,.text,,,
-0014c36b,2,engine,func,.text,,,0014c370
-0014c370,49,engine,func,.text,,,
-0014c3a1,2,engine,func,.text,,,0014c3b0
+0014c2b0,24,engine,func,.text,,,0014c2d0
+0014c2d0,41,engine,func,.text,,,0014c300
+0014c300,51,engine,func,.text,,,0014c340
+0014c340,45,engine,func,.text,,,0014c370
+0014c370,51,engine,func,.text,,,0014c3b0
 0014c3b0,89,engine,func,.text,,,
 0014c410,77,engine,func,.text,,,
 0014c460,95,engine,func,.text,,,
-0014c4c0,49,engine,func,.text,,,
-0014c4f1,2,engine,func,.text,,,0014c500
-0014c500,43,engine,func,.text,,,
-0014c52b,2,engine,func,.text,,,0014c530
-0014c530,67,engine,func,.text,,,
-0014c573,2,engine,func,.text,,,0014c580
+0014c4c0,51,engine,func,.text,,,0014c500
+0014c500,45,engine,func,.text,,,0014c530
+0014c530,69,engine,func,.text,,,0014c580
 0014c580,63,engine,func,.text,,,
 0014c5c0,89,engine,func,.text,,,
 0014c620,18,engine,func,.text,,,
-0014c632,2,engine,func,.text,,,0014c640
-0014c63b,2,engine,func,.text,,,0014c640
-0014c640,19,engine,func,.text,,,
-0014c653,2,engine,func,.text,,,0014c660
+0014c632,11,engine,func,.text,,,0014c640
+0014c640,21,engine,func,.text,,,0014c660
 0014c660,44,engine,func,.text,,,
-0014c690,7,engine,func,.text,,,
-0014c697,2,engine,func,.text,,,0014c6a0
-0014c6a0,7,engine,func,.text,,,
-0014c6a7,2,engine,func,.text,,,0014c6b0
-0014c6b0,53,engine,func,.text,,,
-0014c6e5,2,engine,func,.text,,,0014c6f0
-0014c6f0,49,engine,func,.text,,,
-0014c721,2,engine,func,.text,,,0014c730
+0014c690,9,engine,func,.text,,,0014c6a0
+0014c6a0,9,engine,func,.text,,,0014c6b0
+0014c6b0,55,engine,func,.text,,,0014c6f0
+0014c6f0,51,engine,func,.text,,,0014c730
 0014c730,63,engine,func,.text,,,
 0014c770,34,engine,func,.text,,,
-0014c792,2,engine,func,.text,,,0014c7a0
-0014c79b,2,engine,func,.text,,,0014c7a0
-0014c7a0,36,engine,func,.text,,,
-0014c7c4,2,engine,func,.text,,,0014c7d0
+0014c792,11,engine,func,.text,,,0014c7a0
+0014c7a0,38,engine,func,.text,,,0014c7d0
 0014c7d0,28,engine,func,.text,,,
-0014c7f0,7,engine,func,.text,,,
-0014c7f7,2,engine,func,.text,,,0014c800
-0014c800,23,engine,func,.text,,,
-0014c817,2,engine,func,.text,,,0014c820
-0014c820,21,engine,func,.text,,,
-0014c835,2,engine,func,.text,,,0014c840
-0014c840,8,engine,func,.text,,,
-0014c848,2,engine,func,.text,,,0014c850
-0014c850,24,engine,func,.text,,,
-0014c868,2,engine,func,.text,,,0014c870
-0014c870,24,engine,func,.text,,,
-0014c888,2,engine,func,.text,,,0014c890
-0014c890,17,engine,func,.text,,,
-0014c8a1,2,engine,func,.text,,,0014c8b0
-0014c8b0,91,engine,func,.text,,,
-0014c90b,2,engine,func,.text,,,0014c910
+0014c7f0,9,engine,func,.text,,,0014c800
+0014c800,25,engine,func,.text,,,0014c820
+0014c820,23,engine,func,.text,,,0014c840
+0014c840,10,engine,func,.text,,,0014c850
+0014c850,26,engine,func,.text,,,0014c870
+0014c870,26,engine,func,.text,,,0014c890
+0014c890,19,engine,func,.text,,,0014c8b0
+0014c8b0,93,engine,func,.text,,,0014c910
 0014c910,389,engine,func,.text,,,00145a2f
 0014caa0,36,engine,func,.text,,,0014c910
 0014cad0,29,engine,func,.text,,,00145a5d
 0014caf0,38,engine,func,.text,,,
 0014cb20,58,engine,func,.text,,,
-0014cb60,49,engine,func,.text,,,
-0014cb91,2,engine,func,.text,,,0014cba0
+0014cb60,51,engine,func,.text,,,0014cba0
 0014cba0,45,engine,func,.text,,,
-0014cbd0,129,engine,func,.text,,,
-0014cc51,2,engine,func,.text,,,0014cc60
-0014cc60,17,engine,func,.text,,,
-0014cc71,2,engine,func,.text,,,0014cc80
-0014cc80,17,engine,func,.text,,,
-0014cc91,2,engine,func,.text,,,0014cca0
-0014cca0,33,engine,func,.text,,,
-0014ccc1,2,engine,func,.text,,,0014ccd0
-0014ccd0,19,engine,func,.text,,,
-0014cce3,2,engine,func,.text,,,0014ccf0
-0014ccf0,83,engine,func,.text,,,
-0014cd43,2,engine,func,.text,,,0014cd50
-0014cd50,36,engine,func,.text,,,
-0014cd74,2,engine,func,.text,,,0014cd80
-0014cd80,43,engine,func,.text,,,
-0014cdab,2,engine,func,.text,,,0014cdb0
+0014cbd0,131,engine,func,.text,,,0014cc60
+0014cc60,19,engine,func,.text,,,0014cc80
+0014cc80,19,engine,func,.text,,,0014cca0
+0014cca0,35,engine,func,.text,,,0014ccd0
+0014ccd0,21,engine,func,.text,,,0014ccf0
+0014ccf0,85,engine,func,.text,,,0014cd50
+0014cd50,38,engine,func,.text,,,0014cd80
+0014cd80,45,engine,func,.text,,,0014cdb0
 0014cdb0,327,engine,func,.text,,,00145571 00182b81
 0014cf00,22,engine,func,.text,,,
 0014cf20,81,engine,func,.text,,,
@@ -5470,8 +5427,7 @@ addr,size,owner,kind,section,conv,parent,calls
 00152fe0,145,engine,func,.text,,,0018dc00 001bab20
 00153080,99,engine,func,.text,,,0018dde0
 001530f0,135,engine,func,.text,,,00153080
-00153180,85,engine,func,.text,,,
-001531d5,2,engine,func,.text,,,001531e0
+00153180,87,engine,func,.text,,,001531e0
 001531e0,81,engine,func,.text,,,
 00153240,85,engine,func,.text,,,00153180 0018dde0
 001532a0,67,engine,func,.text,,,0018dde0
@@ -5493,16 +5449,11 @@ addr,size,owner,kind,section,conv,parent,calls
 001539b0,210,engine,func,.text,,,0004a8f0 0004a900 00153890
 00153a90,220,engine,func,.text,,,0014c640 0014c7d0
 00153b70,223,engine,func,.text,,,
-00153c50,69,engine,func,.text,,,00153b70
-00153c95,2,engine,func,.text,,,00153ca0
-00153ca0,85,engine,func,.text,,,00153b70 001bab20
-00153cf5,2,engine,func,.text,,,00153d00
-00153d00,166,engine,func,.text,,,
-00153da6,2,engine,func,.text,,,00153db0
-00153db0,53,engine,func,.text,,,00153d00
-00153de5,2,engine,func,.text,,,00153df0
-00153df0,53,engine,func,.text,,,00153d00 001bab20
-00153e25,2,engine,func,.text,,,00153e30
+00153c50,71,engine,func,.text,,,00153b70 00153ca0
+00153ca0,87,engine,func,.text,,,00153b70 00153d00 001bab20
+00153d00,168,engine,func,.text,,,00153db0
+00153db0,55,engine,func,.text,,,00153d00 00153df0
+00153df0,55,engine,func,.text,,,00153d00 00153e30 001bab20
 00153e30,130,engine,func,.text,,,0018daa0
 00153ec0,285,engine,func,.text,,,0018cc60
 00153fe0,191,engine,func,.text,,,0014c660 00153a90 00153ec0
@@ -5511,10 +5462,8 @@ addr,size,owner,kind,section,conv,parent,calls
 001540f0,23,engine,func,.text,,,
 00154110,20,engine,func,.text,,,
 00154130,66,engine,func,.text,,,
-00154172,2,engine,func,.text,,,00154180
-0015417b,2,engine,func,.text,,,00154180
-00154180,84,engine,func,.text,,,
-001541d4,2,engine,func,.text,,,001541e0
+00154172,11,engine,func,.text,,,00154180
+00154180,86,engine,func,.text,,,001541e0
 001541e0,99,engine,func,.text,,,0018daa0
 00154250,73,engine,func,.text,,,
 001542a0,184,engine,func,.text,,,00154250 0018cd70
@@ -5577,8 +5526,7 @@ addr,size,owner,kind,section,conv,parent,calls
 00156030,21,engine,func,.text,,,
 00156050,107,engine,func,.text,,,0014c690
 001560c0,81,engine,func,.text,,,0014c690
-00156120,103,engine,func,.text,,,
-00156187,2,engine,func,.text,,,00156190
+00156120,105,engine,func,.text,,,00156190
 00156190,528,engine,func,.text,,,
 001563a0,248,engine,func,.text,,,
 001564a0,5,engine,func,.text,,,00011c90
@@ -5693,35 +5641,26 @@ addr,size,owner,kind,section,conv,parent,calls
 0015a1c0,466,engine,func,.text,,,0015a170
 0015a3a0,144,engine,func,.text,,,
 0015a430,160,engine,func,.text,,,
-0015a4d0,132,engine,func,.text,,,
-0015a554,2,engine,func,.text,,,0015a560
+0015a4d0,134,engine,func,.text,,,0015a560
 0015a560,246,engine,func,.text,,,0015a3a0 0015a430 0015a4d0
 0015a660,58,engine,func,.text,,,
-0015a6a0,115,engine,func,.text,,,
-0015a713,2,engine,func,.text,,,0015a720
-0015a720,131,engine,func,.text,,,
-0015a7a3,2,engine,func,.text,,,0015a7b0
-0015a7b0,91,engine,func,.text,,,
-0015a80b,2,engine,func,.text,,,0015a810
-0015a810,103,engine,func,.text,,,
-0015a877,2,engine,func,.text,,,0015a880
+0015a6a0,117,engine,func,.text,,,0015a720
+0015a720,133,engine,func,.text,,,0015a7b0
+0015a7b0,93,engine,func,.text,,,0015a810
+0015a810,105,engine,func,.text,,,0015a880
 0015a880,144,engine,func,.text,,,0015a6a0 0015a720 0015a810
 0015a910,35,engine,func,.text,,,
 0015a940,21,engine,func,.text,,,
 0015a960,264,engine,func,.text,,,0015a6a0 0015a720 0015a7b0
 0015aa70,62,engine,func,.text,,,0015ae80
 0015aab0,8,engine,func,.text,,,0015aff0
-0015aac0,38,engine,func,.text,,,
-0015aae6,2,engine,func,.text,,,0015aaf0
+0015aac0,40,engine,func,.text,,,0015aaf0
 0015aaf0,82,engine,func,.text,,,
-0015ab42,2,engine,func,.text,,,0015ab50
-0015ab4b,2,engine,func,.text,,,0015ab50
+0015ab42,11,engine,func,.text,,,0015ab50
 0015ab50,160,engine,func,.text,,,
-0015abf0,70,engine,func,.text,,,
-0015ac36,2,engine,func,.text,,,0015ac40
+0015abf0,72,engine,func,.text,,,0015ac40
 0015ac40,194,engine,func,.text,,,
-0015ad02,2,engine,func,.text,,,0015ad10
-0015ad0b,2,engine,func,.text,,,0015ad10
+0015ad02,11,engine,func,.text,,,0015ad10
 0015ad10,272,engine,func,.text,,,0015aac0 0015aaf0 0015ab50 0015abf0 0015ac40 001ba9b0
 0015ae20,70,engine,func,.text,,,
 0015ae70,14,engine,func,.text,,,
@@ -5747,25 +5686,20 @@ addr,size,owner,kind,section,conv,parent,calls
 0015b6e0,137,engine,func,.text,,,
 0015b770,76,engine,func,.text,,,
 0015b7c0,80,engine,func,.text,,,
-0015b810,75,engine,func,.text,,,
-0015b85b,2,engine,func,.text,,,0015b860
+0015b810,77,engine,func,.text,,,0015b860
 0015b860,76,engine,func,.text,,,
 0015b8b0,226,engine,func,.text,,,0015b770 0015b7c0 0015b810 0015b860
 0015b9a0,63,engine,func,.text,,,
-0015b9e0,132,engine,func,.text,,,
-0015ba64,2,engine,func,.text,,,0015ba70
-0015ba70,136,engine,func,.text,,,
-0015baf8,2,engine,func,.text,,,0015bb00
+0015b9e0,134,engine,func,.text,,,0015ba70
+0015ba70,138,engine,func,.text,,,0015bb00
 0015bb00,138,engine,func,.text,,,
 0015bb90,142,engine,func,.text,,,
 0015bc20,169,engine,func,.text,,,0015b9e0 0015ba70 0015bb00 0015bb90
 0015bcd0,139,engine,func,.text,,,
 0015bd60,138,engine,func,.text,,,
 0015bdf0,63,engine,func,.text,,,
-0015be30,251,engine,func,.text,,,
-0015bf2b,2,engine,func,.text,,,0015bf30
-0015bf30,263,engine,func,.text,,,
-0015c037,2,engine,func,.text,,,0015c040
+0015be30,253,engine,func,.text,,,0015bf30
+0015bf30,265,engine,func,.text,,,0015c040
 0015c040,115,engine,func,.text,,,0015be30 0015bf30
 0015c0c0,84,engine,func,.text,,,
 0015c120,63,engine,func,.text,,,
@@ -5781,15 +5715,12 @@ addr,size,owner,kind,section,conv,parent,calls
 0015c730,1210,engine,func,.text,,,00145a2f 00145a99
 0015cbf0,330,engine,func,.text,,,
 0015cd40,210,engine,func,.text,,,
-0015ce12,2,engine,func,.text,,,0015ce20
-0015ce1b,2,engine,func,.text,,,0015ce20
+0015ce12,11,engine,func,.text,,,0015ce20
 0015ce20,152,engine,func,.text,,,0015cbf0 0015cd40
 0015cec0,191,engine,func,.text,,,
-0015cf80,120,engine,func,.text,,,
-0015cff8,2,engine,func,.text,,,0015d000
+0015cf80,122,engine,func,.text,,,0015d000
 0015d000,152,engine,func,.text,,,0015cec0 0015cf80
-0015d0a0,81,engine,func,.text,,,
-0015d0f1,2,engine,func,.text,,,0015d100
+0015d0a0,83,engine,func,.text,,,0015d100
 0015d100,192,engine,func,.text,,,
 0015d1c0,275,engine,func,.text,,,0015d0a0 0015d100
 0015d2e0,264,engine,func,.text,,,
@@ -5827,8 +5758,7 @@ addr,size,owner,kind,section,conv,parent,calls
 0015f600,7,engine,func,.text,,,
 0015f610,19,engine,func,.text,,,
 0015f630,114,engine,func,.text,,,
-0015f6b0,119,engine,func,.text,,,
-0015f727,2,engine,func,.text,,,0015f730
+0015f6b0,121,engine,func,.text,,,0015f730
 0015f730,19,engine,func,.text,,,0015f630
 0015f750,24,engine,func,.text,,,0015f6b0
 0015f770,143,engine,func,.text,,,0014c6a0 0015f600 0015f610 0015f630 0015f6b0
@@ -5838,8 +5768,7 @@ addr,size,owner,kind,section,conv,parent,calls
 0015f9d0,7,engine,func,.text,,,
 0015f9e0,38,engine,func,.text,,,0018ce30
 0015fa10,6,engine,func,.text,,,
-0015fa20,3,engine,func,.text,,,
-0015fa23,2,engine,func,.text,,,0015fa30
+0015fa20,5,engine,func,.text,,,0015fa30
 0015fa30,37,musashi,func,.text,,,
 0015fa60,31,musashi,func,.text,,,0004a900
 0015fa80,106,musashi,func,.text,,,0015faf0
@@ -6812,17 +6741,13 @@ addr,size,owner,kind,section,conv,parent,calls
 00185ddd,2065,lib:xgraphics,func,.text,,,0017c3e8 0017c61d
 001865ee,859,lib:xgraphics,func,.text,,,00185ddd
 0018694a,6,lib:xboxkrnl,func,.text,,,
-00186950,49,engine,func,.text,,,
-00186981,2,engine,func,.text,,,00186990
-00186990,67,engine,func,.text,,,
-001869d3,2,engine,func,.text,,,001869e0
+00186950,51,engine,func,.text,,,00186990
+00186990,69,engine,func,.text,,,001869e0
 001869e0,78,engine,func,.text,,,
 00186a30,96,engine,func,.text,,,
-00186a90,21,engine,func,.text,,,
-00186aa5,2,engine,func,.text,,,00186ab0
+00186a90,23,engine,func,.text,,,00186ab0
 00186ab0,31,engine,func,.text,,,
-00186ad0,167,engine,func,.text,,,
-00186b77,2,engine,func,.text,,,00186b80
+00186ad0,169,engine,func,.text,,,00186b80
 00186b80,31,lib:crt,func,.text,,,
 00186ba0,11,game,eh,.text,,00012210,0004a900
 00186bab,10,game,eh,.text,,00012210,0017c00f
@@ -9044,33 +8969,26 @@ addr,size,owner,kind,section,conv,parent,calls
 001ba5d6,48,lib:dsound,func,DSOUND,eax,,
 001ba606,72,lib:dsound,func,DSOUND,eax,,
 001ba64e,30,lib:dsound,func,DSOUND,eax,,
-001ba8a0,72,game,func,MMATRIX,,,
-001ba8e8,2,game,func,MMATRIX,,,001ba8f0
+001ba8a0,74,game,func,MMATRIX,,,001ba8f0
 001ba8f0,95,game,func,MMATRIX,,,
 001ba950,95,game,func,MMATRIX,,,
-001ba9b0,8,game,func,MMATRIX,,,
-001ba9b8,2,game,func,MMATRIX,,,001ba9c0
-001ba9c0,53,game,func,MMATRIX,,,
-001ba9f5,2,game,func,MMATRIX,,,001baa00
+001ba9b0,10,game,func,MMATRIX,,,001ba9c0
+001ba9c0,55,game,func,MMATRIX,,,001baa00
 001baa00,76,game,func,MMATRIX,,,
 001baa50,13,game,func,MMATRIX,,,
 001baa60,63,game,func,MMATRIX,,,
-001baaa0,59,game,func,MMATRIX,,,
-001baadb,2,game,func,MMATRIX,,,001baae0
+001baaa0,61,game,func,MMATRIX,,,001baae0
 001baae0,62,game,func,MMATRIX,,,
 001bab20,126,game,func,MMATRIX,,,
-001baba0,86,game,func,MMATRIX,,,
-001babf6,2,game,func,MMATRIX,,,001bac00
+001baba0,88,game,func,MMATRIX,,,001bac00
 001bac00,79,game,func,MMATRIX,,,
 001bac50,28,game,func,MMATRIX,,,001bb2e0 001bb330 001bb380
 001bac70,317,game,func,MMATRIX,,,
 001badb0,220,game,func,MMATRIX,,,
 001bae90,220,game,func,MMATRIX,,,
-001baf70,696,game,func,MMATRIX,,,001bae90
-001bb228,2,game,func,MMATRIX,,,001bb230
+001baf70,698,game,func,MMATRIX,,,001bae90 001bb230
 001bb230,60,game,func,MMATRIX,,,
-001bb270,56,game,func,MMATRIX,,,
-001bb2a8,2,game,func,MMATRIX,,,001bb2b0
+001bb270,58,game,func,MMATRIX,,,001bb2b0
 001bb2b0,46,game,func,MMATRIX,,,
 001bb2e0,79,game,func,MMATRIX,,,
 001bb330,76,game,func,MMATRIX,,,
@@ -9078,8 +8996,7 @@ addr,size,owner,kind,section,conv,parent,calls
 001bb3d0,60,game,func,MMATRIX,,,
 001bb410,25,game,func,MMATRIX,,,
 001bb430,39,game,func,MMATRIX,,,
-001bb460,372,game,func,MMATRIX,,,
-001bb5d4,2,game,func,MMATRIX,,,001bb5e0
+001bb460,374,game,func,MMATRIX,,,001bb5e0
 001bb5e0,80,game,func,MMATRIX,,,
 001bb630,29,game,func,MMATRIX,,,
 001bb650,30,game,func,MMATRIX,,,
@@ -9089,8 +9006,7 @@ addr,size,owner,kind,section,conv,parent,calls
 001bb750,38,game,func,MMATRIX,,,
 001bb780,56,game,func,MMATRIX,,,
 001bb7c0,410,game,func,MMATRIX,,,
-001bb960,24,game,func,MMATRIX,,,
-001bb978,2,game,func,MMATRIX,,,001bb980
+001bb960,26,game,func,MMATRIX,,,001bb980
 001bb980,26,game,func,MMATRIX,,,
 001bb9a0,26,game,func,MMATRIX,,,
 001bb9c0,226,game,func,MMATRIX,,,0014c770 0014c7d0 0014c7f0 0014cca0
