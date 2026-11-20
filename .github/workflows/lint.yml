@@ -1,0 +1,30 @@
+# Checks that need no game data and no compiler: the Steward config, and no game data in the tree.
+# Matching itself is judged on the maintainer's machine (Steward), which has the disc and the compiler.
+name: lint
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: No game data
+        run: |
+          bad=$(git ls-files | grep -iE '\.(xbe|iso|obj|exe|dll|lib|pdb)$|(^|/)orig/|(^|/)toolchain/(msvc|wineprefix)(/|$)' || true)
+          big=$(git ls-files -z | xargs -0 -I{} find {} -maxdepth 0 -type f -size +1M 2>/dev/null || true)
+          if [ -n "$bad$big" ]; then echo "Game data, compiler files or oversized files must not be committed:"; echo "$bad"; echo "$big"; exit 1; fi
+      - name: Steward config
+        run: |
+          git clone -q https://github.com/andrewnakas/decompathon-steward "$RUNNER_TEMP/steward"
+          git -C "$RUNNER_TEMP/steward" checkout -q 92006a5
+          PYTHONPATH="$RUNNER_TEMP/steward" python -m steward check-config steward.toml

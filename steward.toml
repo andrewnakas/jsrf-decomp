@@ -1,0 +1,85 @@
+# Decompathon Steward config for the Jet Set Radio Future (Xbox) decomp.
+# No AI: deterministic gates and rules decide every merge. Nothing here calls a model.
+[project]
+name = "jsrf-decomp"
+repo = "andrewnakas/jsrf-decomp"
+default_branch = "main"
+unit_kind = "address"
+# one C++ file per function: src/funcs/func_XXXXXXXX.cpp (claims and progress are per address)
+unit_paths = ["src/funcs/**", "src/nonmatching/**"]   # nonmatching: equivalent C++, scored, never counted as matched
+unit_regex = 'func_([0-9A-F]{8})\.cpp$'
+# Steward reads the table's addr (hex) and size (bytes) columns. Those are its default column
+# names, so addr_column and size_column are not set.
+function_table = "config/functions.csv"
+
+[ai]
+enabled = false
+
+[policy]
+auto_merge = true
+first_timer_needs_human = true
+owner_rule_days = 7
+# owner opt-in: maintainer PRs (tools, docs, config) merge on green gates without a human hold;
+# steward.toml and .github/** still need a human
+maintainers_skip_escalation = true
+max_units_per_pr = 20
+claim_max_bytes = 0x2000
+claim_max_open = 3
+claim_lapse_days = 7
+claim_warn_days = 5
+maintainers = ["andrewnakas"]
+# Add each agent's GitHub account to the owner's group here, e.g. [["andrewnakas", "nakasmakes"]],
+# only for accounts the same person runs. Separate agents should use separate accounts so claims work.
+identities = [["andrewnakas", "nakasmakes"]]
+# Everything that decides what "matching" means is maintainer-only: the gate wrapper, the function
+# table and symbol table, the pinned tools and flags, and the shared headers. A unit declares the
+# types it needs itself, so there are no derived paths.
+protected_paths = ["tools/**", "config/**", "toolchain/**", "include/**", "tests/**",
+                   "xbx.toml", "requirements.txt", ".gitignore", ".gitattributes",
+                   "RULES.md", "PROVENANCE.md", "AGENTS.md", "START_HERE.md",
+                   "CODEOWNERS", "LICENSE", "docs/**"]
+derived_paths = []
+required_checkboxes = ["Own work:", "No leaked material:", "No game data:", "Lawful decompilation:", "Sources listed:"]
+made_by_checkboxes = ["Written by me", "Prepared by an AI agent"]
+agent_marker = "Prepared by an AI agent"
+agent_checkboxes = ["Agent acknowledgement:"]
+
+# Gates run on the judge box (the owner's machine, which has the disc and the compiler) from a
+# pinned checkout of main with only the PR's unit files copied in: a PR cannot change the tools
+# that judge it. tools/gate.sh keeps .venv on the xbx commit pinned in requirements.txt and then
+# runs `xbx gate <name>`. Order: cheapest first.
+[[gates]]
+name = "toolcheck"
+run = "tools/gate.sh toolcheck"
+where = "judge"
+timeout = 300
+
+[[gates]]
+name = "scan"
+run = "tools/gate.sh scan"
+where = "judge"
+timeout = 300
+
+[[gates]]
+name = "split"
+run = "tools/gate.sh split"
+where = "judge"
+timeout = 900
+
+# Every unit compiles with the pinned Visual C++ 7.0 (cl 13.00.9466) under Wine and matches the
+# retail code byte for byte (every relocation resolved against retail, nothing masked).
+[[gates]]
+name = "match"
+run = "tools/gate.sh match"
+where = "judge"
+timeout = 3600
+
+# The whole tree together.
+[[gates]]
+name = "build"
+run = "tools/gate.sh build"
+where = "judge"
+timeout = 3600
+
+[github]
+app = "decompathon-steward"

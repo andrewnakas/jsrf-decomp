@@ -1,0 +1,25 @@
+name: Tooling problem
+description: The function table, a symbol, the matcher or a gate seems wrong (maintainers fix tools and config; PRs to protected paths are escalated)
+labels: [tooling]
+body:
+  - type: input
+    id: func
+    attributes:
+      label: Function
+      placeholder: func_0012A340
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal repro
+      description: The C++ you tried and the output of `xbx match <unit>` (or the failing gate's output). Never attach game files.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why you think the tool is at fault
+    validations:
+      required: true

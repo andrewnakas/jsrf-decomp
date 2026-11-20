@@ -1,0 +1,14 @@
+orig/
+build/
+toolchain/msvc
+toolchain/wineprefix
+.venv/
+__pycache__/
+*.obj
+*.xbe
+*.iso
+*.exe
+*.dll
+*.lib
+*.pdb
+work/
