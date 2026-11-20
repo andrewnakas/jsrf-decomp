@@ -1,4 +1,4 @@
-/* sym: ??0Object_000EB290@@QAE@PAUNode@@HIPAUVector3@@1@Z = 0x000EB290 */
+/* sym: ??0Object_000EB440@@QAE@PAUNode@@HIPAUVector3@@1@Z = 0x000EB290 */
 struct Vector3 {
     float x;
     float y;
@@ -25,14 +25,14 @@ extern int data_00219344[10];
 extern int data_0021936C[][3];
 
 // The child of Node whose table is at 0x1CEED8 (0xe0 bytes; constructor func_000EB290).
-struct Object_000EB290 {
-    Object_000EB290(Node *owner, int id, unsigned int flags, Vector3 *position, Vector3 *velocity);
+struct Object_000EB440 {
+    Object_000EB440(Node *owner, int id, unsigned int flags, Vector3 *position, Vector3 *velocity);
 
     char unknown_00[0xdc];
     int value_dc;
 };
 
-// Fans ten Object_000EB290 out of `position` under object 9 (id -1, flags 4): the n-th moves along data_00219338
+// Fans ten Object_000EB440 out of `position` under object 9 (id -1, flags 4): the n-th moves along data_00219338
 // turned by the heading data_0021936C gives for (column, row), by -0x1555 + n * 0x444 and by the n-th pitch of
 // data_00219344, and takes the value data_00219308 gives for (column, row). Called by func_000EC3E0.
 void func_000EB540(Vector3 *position, int column, int row)
@@ -47,7 +47,7 @@ void func_000EB540(Vector3 *position, int column, int row)
         Vector3 velocity;
         func_001BAC00(&velocity, &data_00219338);
         func_001BAA50();
-        Object_000EB290 *object = new Object_000EB290(owner, -1, 4, position, &velocity);
+        Object_000EB440 *object = new Object_000EB440(owner, -1, 4, position, &velocity);
         object->value_dc = data_00219308[row][column];
     }
 }
