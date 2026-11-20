@@ -485,6 +485,15 @@ the unit that proves it.
   (`func_000D9220`).
 - An array pointer read from an address-taken local struct is reloaded on every pass of a loop; copied to a
   pointer local before the loop it becomes retail's single advancing pointer (`func_000E5EA0`).
+- x87 stack slots follow how often each value is used, not the order of declaration; a separate temporary
+  changed them to retail's (`func_00044F00`).
+- Computing a derived pointer before its base (`data = pack + off + 0x10; chunk = pack + off;`) gives retail's
+  `lea` and registers (`func_0002E1C0`, `func_0002E4C0`, `func_00033920`).
+- An inline helper's argument is evaluated inside the helper's loop; computed into a local first, it is
+  evaluated once, as in retail (`func_0004FE50`).
+- `return f() != 0;` and `if (f()) return 1; return 0;` place the shared return differently
+  (`func_00016DA0`); success returns written out on each path keep retail's duplicated blocks
+  (`func_00016A30`).
 - Float literals need the digits that round to retail's bits: `5.5555556f` is one bit off `0x40B1C71C`,
   `5.5555553f` matches (`func_000C55F0`).
 
