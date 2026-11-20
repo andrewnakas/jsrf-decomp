@@ -7,7 +7,7 @@ struct Object_000C5B50;
 
 struct Object_000F1820;
 
-// The base of the small state machines (tables 0x1CDDB8, 0x1CDDCC, 0x1CF02C and 0x1CF040): slots 0 and 1 are
+// The base of the small state machines (tables 0x1CDDB8, 0x1CDDCC and 0x1CF040): slots 0 and 1 are
 // pure, slots 2 and 3 take an argument and do nothing, slot 4 is the destructor.
 struct Object_000C4070 {
     virtual void func_000C3D90() = 0;

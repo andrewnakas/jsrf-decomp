@@ -16,8 +16,18 @@ struct Object_000C5B50 {
     int (*callback)(int event, Vector3 *position);
 };
 
-// The base of the small state machines (tables 0x1CDDB8, 0x1CDDCC, 0x1CF02C and 0x1CF040): slots 0 and 1 are
-// pure, slots 2 and 3 take an argument and do nothing, slot 4 is the destructor.
+// The base of the owner's behaviours (table 0x1CE304): slot 0 is pure, slots 2 and 3 take an argument, slot 4 is
+// the destructor.
+struct Object_000CC600 {
+    virtual void func_000CD1E0() = 0;
+    virtual void func_00011C90();
+    virtual void func_00011C80(int argument);
+    virtual void func_00011C80_1(int argument);
+    virtual ~Object_000CC600() {}
+};
+
+// The base of the small state machines (tables 0x1CDDB8, 0x1CDDCC and 0x1CF040): slots 0 and 1 are pure, slots 2
+// and 3 take an argument and do nothing, slot 4 is the destructor.
 struct Object_000C4070 {
     virtual void func_000C3D90() = 0;
     virtual void func_00011C90() = 0;
@@ -28,13 +38,16 @@ struct Object_000C4070 {
     Object_000C5B50 *owner;
 };
 
-// The state machine whose table is at 0x1CF02C (0x1ac bytes).
-struct Object_000F1820 : Object_000C4070 {
+// The state machine whose table is at 0x1CF02C (0x1ac bytes, destructor func_000F1AE0).
+struct Object_000F1820 : Object_000CC600 {
     Object_000F1820(Object_000C5B50 *owner);
-    virtual void func_000C3D90();
+    virtual void func_000CD1E0();
     virtual void func_00011C90();
+    virtual void func_00011C80(int argument);
+    virtual void func_00011C80_1(int argument);
     virtual ~Object_000F1820();
 
+    Object_000C5B50 *owner;
     char unknown_08[0x1a4];
 };
 
