@@ -1,4 +1,5 @@
 struct Object_000DAAB0 {
+    virtual void func_000DAA70();
     virtual void func_000DAAB0();
 
     int unknown_04;
