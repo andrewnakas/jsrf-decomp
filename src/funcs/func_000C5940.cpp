@@ -1,4 +1,4 @@
-/* sym: ?func_00011C80@Object_000C5910@@UAEXH@Z = 0x000C5940 */
+/* sym: ?func_00011C80@Object_000C5B50@@UAEXH@Z = 0x000C5940 */
 struct Part_000C5910 {
     virtual void slot0();
     virtual void slot1();
@@ -40,8 +40,9 @@ struct Node {
 };
 
 // The child of Node whose table is at 0x1CDFF0 (constructor func_000C5830, destructor func_000C6150): two parts
-// at 0xd4 and 0xd8 that take over slots 2, 3 and 12.
-struct Object_000C5910 : Node {
+// at 0xd4 and 0xd8 that take over slots 2, 3 and 12. The behaviours keep it at their 0x4 (func_000C5B10 and the
+// other members of 0xC59A0-0xC5B70 take it as this).
+struct Object_000C5B50 : Node {
     char unknown_040[0x94];
     Part_000C5910 *first;
     Part_000C5910 *second;
@@ -52,7 +53,7 @@ struct Object_000C5910 : Node {
 };
 
 // Overrides Node's slot 3: passes the argument to slot 2 of the two parts that exist.
-void Object_000C5910::func_00011C80(int argument)
+void Object_000C5B50::func_00011C80(int argument)
 {
     if (first) {
         first->slot2(argument);
