@@ -31,7 +31,7 @@ struct Object_000CE220 {
     int value_94;
 
     float func_000CE770(Vector3 *point);
-    void func_000CE2D0();
+    int func_000CE2D0();
     void func_000CF850();
 };
 
