@@ -10,7 +10,9 @@
 /* sym: ?func_000CD850@Object_000E0440@@UAEXXZ = 0x000E1780 */
 /* sym: ?func_000D77D0@Object_000E0440@@UAEXXZ = 0x000E1450 */
 /* sym: ?func_000D7880@Object_000E0440@@UAEXXZ = 0x000E16F0 */
-/* sym: ?func_000CD390@Object_000E0440@@UAEXXZ = 0x000E1000 */
+/* sym: ?func_000CD390@Object_000E0440@@UAEHPAUVector3@@M0@Z = 0x000E1000 */
+struct Vector3;
+
 struct Mesh_00017F60;
 
 struct Object_00016200 {
@@ -110,9 +112,9 @@ struct Object_000CD1E0 : Object_000CC600 {
     virtual void func_000CD850();
     virtual void func_000D77D0() = 0;
     virtual void func_000D7880() = 0;
-    virtual void func_000CD440();
+    virtual float func_000CD440();
     virtual float func_000CD4F0();
-    virtual void func_000CD390();
+    virtual int func_000CD390(Vector3 *position, float value, Vector3 *direction);
 
     int unknown_04;
     int state;
@@ -141,7 +143,7 @@ struct Object_000E0440 : Object_000CD1E0 {
     virtual void func_000CD850();
     virtual void func_000D77D0();
     virtual void func_000D7880();
-    virtual void func_000CD390();
+    virtual int func_000CD390(Vector3 *position, float value, Vector3 *direction);
 
     char unknown_06c[8];
     char *table_074;
