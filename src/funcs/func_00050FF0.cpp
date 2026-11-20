@@ -69,7 +69,7 @@ struct View_00050860 {
 struct Path_00050860;
 
 void func_0005DC90(const View_00050860 *view, Path_00050860 *path, float time, View_00050860 *out);
-void func_0005DF50(Path_00050860 *path, float *time, float step, int flag);
+int func_0005DF50(Path_00050860 *path, float *time, float step, int flag);
 
 void func_001BAA00();
 void func_001BAA50();
