@@ -2,9 +2,11 @@
 # Matching itself is judged on the maintainer's machine (Steward), which has the disc and the compiler.
 name: lint
 
-# Pull requests only: main moves only by merging them (and by maintainer pushes, checked by hand).
+# Pull requests that change more than unit files: main moves only by merging them (and by maintainer
+# pushes, checked by hand), and the judge's scan gate checks every unit file for game data.
 on:
   pull_request:
+    paths-ignore: ["src/**"]
 
 permissions:
   contents: read
