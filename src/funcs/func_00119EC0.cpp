@@ -46,7 +46,7 @@ struct Object_001197F0 : Node {
     virtual void func_00011C90();
     virtual void func_00011C80(int argument);
 
-    void func_00119800();
+    int func_00119800();
     void func_00119C20();
     void func_00119CE0();
     void func_00119DA0();
