@@ -10,11 +10,11 @@ struct Point_00113E00 {
     char unknown_14[0x34];
 };
 
-struct List_00113E00 {
+struct List_000149B0 {
     Point_00113E00 *points;
     unsigned int count;
     char unknown_08[0x184];
-    List_00113E00 *next;
+    List_000149B0 *next;
 };
 
 struct Model_00113E00 {
@@ -27,7 +27,7 @@ struct Model_00113E00 {
 };
 
 struct Object_000149B0 {
-    int func_000149D0();
+    List_000149B0 *func_000149D0();
 };
 
 struct Object_00113C40 {
@@ -50,7 +50,7 @@ void __fastcall func_001BADB0(Vector3 *position);
 // +0xa4.
 void Object_00113C40::func_00113E00()
 {
-    for (List_00113E00 *list = (List_00113E00 *)data_0020C750.func_000149D0(); list; list = list->next) {
+    for (List_000149B0 *list = data_0020C750.func_000149D0(); list; list = list->next) {
         for (unsigned int i = 0; i < list->count; i++) {
             func_001BA9C0();
             func_001BB230(0.01f, 0.01f, 0.01f);
