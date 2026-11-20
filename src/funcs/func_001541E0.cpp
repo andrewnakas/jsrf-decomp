@@ -1,5 +1,5 @@
 // What the caller passes: the width and height at +8.
-struct Size {
+struct Params {
     unsigned long unknown_00[2];
     unsigned long width;
     unsigned long height;
@@ -56,7 +56,7 @@ struct Object_001E0F00 {
     virtual void __stdcall slot30();
     virtual long __stdcall func_00153FE0(long first, float second, float third);  // slot 31
 
-    void func_001541E0(const Size *size);
+    void func_001541E0(const Params *size);
 
     char unknown_04[0x48];
     unsigned long value_4C[5];
@@ -65,7 +65,7 @@ struct Object_001E0F00 {
 
 // Sets the viewport to the whole of the given size with depths 0 to 1, clears +0x4C, sets +0x60 to 1 and puts
 // slot 31 back to its defaults (0x4000, 0.5, 500).
-void Object_001E0F00::func_001541E0(const Size *size)
+void Object_001E0F00::func_001541E0(const Params *size)
 {
     data_00264ED0.x = 0;
     data_00264ED0.y = 0;

@@ -1,9 +1,11 @@
+struct Interface_00265110;
+
 // A class whose table is at 0x1E13F0 (11 slots).
 struct Object_001E13F0 {
     virtual long __stdcall func_00156D60(const void *iid, void **object);  // slot 0
     virtual unsigned long __stdcall func_001532F0_1();  // slot 1: AddRef, folded
     virtual unsigned long __stdcall func_00156DC0();  // slot 2
-    virtual long __stdcall func_0015A020(unsigned long value);  // slot 3
+    virtual long __stdcall func_0015A020(Interface_00265110 *source);  // slot 3
     virtual long __stdcall func_00159D70(unsigned long first, unsigned long second, void **object);  // slot 4
     virtual long __stdcall func_00159450(unsigned long first, unsigned long second, unsigned long third, void **object);  // slot 5
     virtual long __stdcall func_00158F00(unsigned long first, unsigned long second, void **object);  // slot 6
