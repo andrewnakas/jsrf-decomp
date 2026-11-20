@@ -2,7 +2,7 @@ struct Game {
     void *func_000128C0(int id);
 };
 
-struct Object_00107E40 {
+struct Object_00107FE0 {
     void func_00107E40();
 };
 
@@ -12,7 +12,7 @@ extern Game *data_0022FCE0;
 void func_00107130(unsigned int id)
 {
     if (id >= 0x115e && id <= 0x1162) {
-        Object_00107E40 *target = (Object_00107E40 *)data_0022FCE0->func_000128C0(id);
+        Object_00107FE0 *target = (Object_00107FE0 *)data_0022FCE0->func_000128C0(id);
         if (target) {
             target->func_00107E40();
         }
