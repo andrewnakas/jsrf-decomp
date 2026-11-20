@@ -18,8 +18,13 @@ struct Partner_0009C210 {
     unsigned int id;
 };
 
+// The object at data_00257CE8 (func_00157F10 is the engine's); func_000E3E80 calls this on it.
+struct Object_00157F10 {
+    void func_000C1E60();
+};
+
 // Passes the id at 0x23c of the player's partner (0xc98), when it exists, to func_00106D90 with kind 1.
-void func_000C1E60()
+void Object_00157F10::func_000C1E60()
 {
     Object_000A1C50 *player = (Object_000A1C50 *)data_0022FCE0->func_000128C0(0x2c);
     Partner_0009C210 *partner = (Partner_0009C210 *)data_0022FCE0->func_000128C0(player->partnerId);
