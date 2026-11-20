@@ -32,7 +32,7 @@ struct Object_000607B0 {
 // The model (the holder's first word).
 struct Object_00047470 {
     void func_00047970(void *data, int argument);
-    void func_000480C0(int index);
+    void func_000480C0(unsigned int index);
 };
 
 struct Holder_000DCBC0 {
