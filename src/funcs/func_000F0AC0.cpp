@@ -1,7 +1,7 @@
 /* sym: ?func_00011C90@Object_000F08E0@@UAEXXZ = 0x000F0AC0 */
 struct Motion_0005F060;
 
-void func_0005E030(Motion_0005F060 *motion, float *time, float step, int hold);
+int func_0005E030(Motion_0005F060 *motion, float *time, float step, int hold);
 
 struct Node {
     virtual ~Node();
