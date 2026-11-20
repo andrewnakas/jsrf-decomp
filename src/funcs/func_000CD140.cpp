@@ -72,7 +72,7 @@ struct Object_000CCE00 : Object_000CC600 {
     Limits_000CC020 *limits;
 };
 
-// Slot 7: func_000CC4B0 with the field at 4 of the object at 0x30, then func_000CCD10; stores the owner's box
+// Slot 11: func_000CC4B0 with the field at 4 of the object at 0x30, then func_000CCD10; stores the owner's box
 // (func_000BFF80 of data_00257CE0 on its position) at its 0x64 and, when there is one, state 2 and the owner's
 // target at 0xa8 = the point at 0x7c of data_00257CE4.
 void Object_000CCE00::func_000CD140()

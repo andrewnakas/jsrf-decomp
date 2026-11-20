@@ -49,7 +49,7 @@ struct Object_000CCE00 : Object_000CC600 {
 };
 
 /* const: 0x20000 */
-// Slot 10: without the owner's flag 2, state 10; with it, the owner gets flag 0x20000 and, unless it has flag 8, the
+// Slot 12: without the owner's flag 2, state 10; with it, the owner gets flag 0x20000 and, unless it has flag 8, the
 // result of func_000CCAE0 at its 0x70.
 void Object_000CCE00::func_000CD1A0()
 {
