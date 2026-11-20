@@ -34,7 +34,7 @@ struct Object_000C5B50 {
 
 struct Limits_000CC020 {
     char unknown_00[8];
-    int value_08;
+    float limit_08;
 };
 
 // The base with a pure slot 0 (table 0x1CE304, destructor func_000E7EB0).
@@ -64,7 +64,7 @@ struct Object_000CCE00 : Object_000CC600 {
     virtual void func_000CCA40();
     virtual void func_000CC020();
 
-    void func_000CC4B0(int value);
+    void func_000CC4B0(float value);
     float func_000CCAE0();
 
     Object_000C5B50 *owner;
@@ -107,7 +107,7 @@ void Object_000DCBC0::func_000DEDC0()
         state = 10;
         owner->count = data_002179A4;
     }
-    func_000CC4B0(limits->value_08);
+    func_000CC4B0(limits->limit_08);
     func_000CCAE0();
     func_000DE6C0();
 }

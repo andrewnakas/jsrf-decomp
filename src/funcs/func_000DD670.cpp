@@ -127,7 +127,7 @@ struct Object_000265A0 {
 struct Limits_000CC020 {
     int value_00;
     float limit;
-    int value_08;
+    float limit_08;
     char unknown_0c[4];
     float rate;
     float decay;
@@ -181,7 +181,7 @@ struct Object_000CCE00 : Object_000CC600 {
     virtual void func_000CC020();
 
     int func_000CC040();
-    void func_000CC4B0(int value);
+    void func_000CC4B0(float value);
     float func_000CCAE0();
     void func_000CC270();
     void func_000CCE00();
