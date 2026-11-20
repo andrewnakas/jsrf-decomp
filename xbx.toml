@@ -202,6 +202,8 @@ not_starts = ["0x4c8a0", "0x4c8a4",
 # their own table; 0x16a570 and 0x179b60 are called by all six pointer-vector inserts, with iterator objects
 # and with pointers; 0x160aa0 (a vector's erase) is also called by the resizes 0x169360, 0x16acd0, 0x17b050,
 # 0x17b0d0 of other vectors.
+# Lane 1 (round 10): 0x77730 is slot 9 of 0x1cccd8 (Object_00074d60) and 0x1ccd18 (Object_000780f0), unrelated
+# Node children (destructor 0x780f0 does not call 0x74d60).
 folded = ["0x11c90", "0x11c80", "0x7e020", "0x23f10", "0x461a0", "0xaecc0", "0xaee80", "0xb3de0", "0xc6090",
           "0xc7cd0", "0xc7db0", "0x115f40", "0x14d080", "0x1504b0", "0x150fd0", "0x1526d0", "0x157f20",
           "0x167c90", "0x167cb0", "0x167cc0", "0x50330", "0x121b0", "0x121d0",
@@ -217,9 +219,11 @@ folded = ["0x11c90", "0x11c80", "0x7e020", "0x23f10", "0x461a0", "0xaecc0", "0xa
           "0x17b840", "0x17b6d0", "0x17a9b0", "0x17aa80", "0xd6a00", "0xd7950", "0x159050", "0x1526a0",
           "0x16e2c0", "0x179d80", "0x17ab10", "0x16e330", "0x17ab40", "0xfedc0",
           "0x165400", "0x158c80", "0x149d0", "0x149e0", "0xd6ae0", "0xd6b50",
-          "0x170170", "0x16a570", "0x179b60", "0x160aa0"]
+          "0x170170", "0x16a570", "0x179b60", "0x160aa0", "0x77730"]
 # Data that a function keeps inside its own code. 0x1bc808 (XPP) jumps at 0x1bc851 over 27 bytes to 0x1bc86e;
 # the game passes 0x1bc860, a device-type table among them, to 0x1bd5ff.
 # 0x19b1ef-0x19e340 is a zero-filled gap between function rows of the D3D section that holds D3D's own
 # globals; engine code reads and writes the dirty flags at 0x19ded8 and the render-state table at 0x19e0e0.
-data_in_code = [["0x1bc853", "0x1bc86e"], ["0x19b1ef", "0x19e340"]]
+# 0x1bc7c0-0x1bc853 is more of XPP's data that the function table took for code (pointer tables into the
+# section: 0x1bc974, 0x1bc7f0, 0x1bc890, ...); the game passes 0x1bc7e0, a device type, to XPP as well.
+data_in_code = [["0x1bc7c0", "0x1bc853"], ["0x1bc853", "0x1bc86e"], ["0x19b1ef", "0x19e340"]]
