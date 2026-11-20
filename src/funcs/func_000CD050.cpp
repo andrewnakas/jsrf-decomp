@@ -1,9 +1,13 @@
 /* sym: ?func_00011C90@Object_000CCE00@@UAEXXZ = 0x000CD050 */
-struct Owner_000CBF90 {
+// The owner at 0x4. The objects of this family call func_000C5B50 (and func_000C59A0, func_000C5B10, ...) with
+// this taken from 0x4, so the owner is that function's class.
+struct Object_000C5B50 {
     char unknown_00[0x68];
     int value_68;
     char unknown_6c[0x38];
     unsigned int flags;
+
+    void func_000C5B50(int *handle);
 };
 
 struct Limits_000CC020 {
@@ -40,7 +44,7 @@ struct Object_000CCE00 : Object_000CC600 {
 
     void func_000CCE00();
 
-    Owner_000CBF90 *owner;
+    Object_000C5B50 *owner;
     int state;
     int unknown_0c;
     int count;

@@ -4,7 +4,7 @@
 /* sym: ?func_00011C90@Object_000CCE00@@UAEXXZ = 0x000CD050 */
 extern "C" void *memset(void *destination, int value, unsigned int size);
 
-struct Owner_000CBF90;
+struct Object_000C5B50;
 struct Limits_000CC020;
 
 struct Vector_000CC620 {
@@ -47,7 +47,7 @@ struct Object_000CCE00 : Object_000CC600 {
     virtual void func_000CCA40();
     virtual void func_000CC020();
 
-    Owner_000CBF90 *owner;
+    Object_000C5B50 *owner;
     int state;
     int unknown_0c;
     int count;

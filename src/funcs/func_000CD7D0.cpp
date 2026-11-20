@@ -28,7 +28,7 @@ struct Object_000CD1E0 : Object_000CC600 {
     virtual void func_000D77D0() = 0;
     virtual void func_000D7880() = 0;
     virtual void func_000CD440();
-    virtual void func_000CD4F0();
+    virtual float func_000CD4F0();
     virtual void func_000CD390();
 
     int unknown_04;
