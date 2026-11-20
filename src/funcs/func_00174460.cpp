@@ -78,8 +78,8 @@ public:
 
 }
 
-// A std::list of 4-byte values: the count is at +8.
-struct PointerList {
+// A std::list of 4-byte values (nodes of 0xc bytes): the count is at +8.
+struct Object_00174220 {
     char allocator;
     void *head;
     unsigned int size;
@@ -89,7 +89,7 @@ struct PointerList {
 
 // Counts `count` more elements, or throws std::length_error("list<T> too long") when the count would pass
 // 0x3FFFFFFF, the most a list of 4-byte values can hold.
-void PointerList::func_00174460(unsigned int count)
+void Object_00174220::func_00174460(unsigned int count)
 {
     if (0x3FFFFFFF - size < count)
         throw std::length_error(String("list<T> too long"));
