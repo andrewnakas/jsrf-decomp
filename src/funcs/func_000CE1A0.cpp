@@ -1,11 +1,11 @@
-struct Owner_000CE1A0 {
+struct Object_000C5B50 {
     char unknown_00[0xa4];
     unsigned int flags;
 };
 
 struct Object_000CE220 {
     int unknown_00;
-    Owner_000CE1A0 *owner;
+    Object_000C5B50 *owner;
     int state;
     char unknown_0c[4];
     int count;
