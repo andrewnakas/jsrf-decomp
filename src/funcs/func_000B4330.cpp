@@ -1,4 +1,4 @@
-/* sym: ??0Object_000B40F0@@QAE@PAUNode@@HIPAUPlacement_000B4330@@H@Z = 0x000B4330 */
+/* sym: ??0Object_000B40F0@@QAE@PAUNode@@HIPAUParams_000BAC60@@H@Z = 0x000B4330 */
 /* sym: ??1Object_000B40F0@@UAE@XZ = 0x000B4490 */
 /* sym: ??0Node@@QAE@PAU0@HI@Z = 0x00012100 */
 /* sym: ??1Node@@UAE@XZ = 0x00011000 */
@@ -13,7 +13,7 @@ struct Vector3 {
 };
 
 // Where func_000BAC60 places the object: position, angles, scale and a model code (bank << 10 | index).
-struct Placement_000B4330 {
+struct Params_000BAC60 {
     Vector3 position;
     int angles[3];
     Vector3 scale;
@@ -66,11 +66,11 @@ struct Resource_000B4490;
 
 // The class whose table is at 0x1CD8C8 (0x144 bytes; func_000BAC60 makes it, destructor func_000B4490).
 struct Object_000B40F0 : Node {
-    Object_000B40F0(Node *owner, int id, unsigned int flags, Placement_000B4330 *placement, int build);
+    Object_000B40F0(Node *owner, int id, unsigned int flags, Params_000BAC60 *placement, int build);
     virtual ~Object_000B40F0();
 
     int bank;
-    Placement_000B4330 placement;
+    Params_000BAC60 placement;
     char unknown_70[4];
     Resource_000B4490 *buffers[2];
     char unknown_7c[8];
@@ -91,7 +91,7 @@ struct Object_000B40F0 : Node {
 // Copies the placement, finds the model entry (bank 7, group from the code's high bits) and both point sets; with no
 // first point set the node leaves the draw links and is marked at 0xd0, otherwise func_000B4000 builds the points and,
 // when `build` is 1, func_000B4290 makes the children.
-Object_000B40F0::Object_000B40F0(Node *owner, int id, unsigned int flags, Placement_000B4330 *placement, int build)
+Object_000B40F0::Object_000B40F0(Node *owner, int id, unsigned int flags, Params_000BAC60 *placement, int build)
     : Node(owner, id, flags)
 {
     if (placement) {
