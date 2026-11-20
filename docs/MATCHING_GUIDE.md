@@ -494,6 +494,13 @@ the unit that proves it.
   (`func_00123240`).
 - A jump table whose entries land in the middle of blocks comes from cases that fall through into the next
   (`func_000EC990`).
+- `!(a < b)` on floats gives `test ah, 5; jnp`, `a >= b` gives `test ah, 1; jne` (`func_000993D0`).
+- `if (x) f(k, 1); else f(k, 0);` gives two pushes of constants; `f(k, x ? 1 : 0)` gives `setne`
+  (`func_00098100`).
+- `size = size + (a + b)` keeps retail's order of additions; `size += a + b` is reassociated
+  (`func_001063A0`).
+- MSVC cross-jumps identical tails only when each arm carries the full copy (`func_000A0610`,
+  `func_001045D0`, `func_000F4FF0`).
 - Computing a derived pointer before its base (`data = pack + off + 0x10; chunk = pack + off;`) gives retail's
   `lea` and registers (`func_0002E1C0`, `func_0002E4C0`, `func_00033920`).
 - An inline helper's argument is evaluated inside the helper's loop; computed into a local first, it is
