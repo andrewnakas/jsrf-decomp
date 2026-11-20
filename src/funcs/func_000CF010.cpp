@@ -6,7 +6,7 @@ struct Object_000CE220 {
     int unknown_0c;
     int count;
 
-    void func_000CE2D0();
+    int func_000CE2D0();
     void func_000CF010();
 };
 

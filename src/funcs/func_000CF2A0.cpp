@@ -73,7 +73,7 @@ struct Object_000CE220 {
     char unknown_a0[0x8c];
     int value_12c;
 
-    void func_000CE2D0();
+    int func_000CE2D0();
     void func_000CF2A0();
 };
 

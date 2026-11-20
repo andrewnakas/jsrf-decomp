@@ -30,7 +30,7 @@ struct Object_000CE220 {
     char unknown_98[4];
     int mode;
 
-    void func_000CE2D0();
+    int func_000CE2D0();
     void func_000CE8B0();
     void func_000CF690();
 };
