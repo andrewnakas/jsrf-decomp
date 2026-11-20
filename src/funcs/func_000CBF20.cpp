@@ -53,7 +53,7 @@ struct Object_000CCE00 : Object_000CC600 {
     Limits_000CC020 *limits;
 };
 
-// Slot 6: runs the owner's 0x5c down by the rate at 0x14 of the object at 0x30, to 0; with the owner's flag 0x80
+// Slot 8: runs the owner's 0x5c down by the rate at 0x14 of the object at 0x30, to 0; with the owner's flag 0x80
 // the time at 0x18 advances by its step at 0x60; once the count at 0x10 passes the count of the object at 0x30,
 // state 2.
 void Object_000CCE00::func_000CBF20()
