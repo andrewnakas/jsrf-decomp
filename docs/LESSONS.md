@@ -17,4 +17,10 @@ project does about it from day one. Lessons found here are added below as they h
 
 ## Found here
 
-Nothing yet.
+| Lesson | When | What changed |
+|---|---|---|
+| Wine's first compile in an idle prefix can take minutes | 2026-11-19: with no Wine process running, each compile started the Wine server and services from cold; under load one took 139 s and others hit the timeout | the tools keep one idle Wine process in the prefix (`XBX_WINE_KEEP_WARM`, 15 minutes by default) |
+| Never wait on a pipe the compiler's children inherit | 2026-11-19: Wine's services kept a compile's output pipe open after `cl.exe` had finished, and the judge sat 20 minutes on one gate | a compile writes its output to a file and only the compiler process is waited for |
+| Maintainer pushes cost re-judging | 2026-11-19: Steward re-judges every passed but unmerged PR when `main` moves by anything other than unit files | config and tool changes are batched into one push, made right after a merge |
+| Library code hides inside `.text` | 2026-11-19: about 300 KB of `.text` (CRI ADX, the platform libraries, the C runtime) has no section of its own | its ranges are tagged under `[[owners.ranges]]`, with the evidence in STATUS.md, and lanes skip them |
+| Identical functions were folded | 2026-11-19: `0x11c90` (`ret`) and `0x11c80` (`ret 4`) fill several slots of the same vtable in about 200 vtables, so no unit of a class with such a vtable could name its slots | `[names] folded` in `xbx.toml`, and the alias names `func_XXXXXXXX_N` (MATCHING_GUIDE) |

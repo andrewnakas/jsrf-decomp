@@ -116,3 +116,9 @@ known_starts = ["0xc0490", "0xc04a0"]
 # 0x4c8a0 is the last ret of the function at 0x4c400, reached through that function's jump
 # table, and 0x4c8a4 is the table itself (12 entries, all pointing into the function).
 not_starts = ["0x4c8a0", "0x4c8a4"]
+
+[names]
+# Functions the linker folded together. 0x11c90 (a bare ret) fills slots 1, 2, 4, 5, ... and 0x11c80
+# (ret 4) slots 3, 6, ... of Node's vtable at 0x1c4390, and both fill two or more slots of the same
+# vtable in about 200 others: each is many source functions. Units may name them func_00011C90_1 ...
+folded = ["0x11c90", "0x11c80"]

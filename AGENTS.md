@@ -186,6 +186,21 @@ For now:
 
 Never chase the convention with inline assembly, `__declspec(naked)` or steering code.
 
+## Rows the compiler made
+
+Some function-table rows are code the compiler generated for a class, not source functions. Do not write units
+for them; they are placed and compared inside the unit whose object carries the class's vtable (a constructor
+or destructor), and that unit gets the credit:
+
+- scalar deleting destructors (30 bytes: call the destructor, `test byte ptr [esp+8], 1`, call
+  `func_0004A900`, `ret 4`);
+- vcall thunks (the whole body is `mov eax, [ecx]; jmp [eax+N]`), the target of a pointer to a virtual member
+  function.
+
+`0x11C90` (`ret`) and `0x11C80` (`ret 4`) are folded: each is many source functions, and units name the
+others `func_00011C90_1`, `func_00011C90_2`, ... (MATCHING_GUIDE, "Folded functions"). `xbx names` says
+when an address is folded.
+
 ## Equivalent but not matching yet (`src/nonmatching/`)
 
 When a function is readable and equivalent but still differs from the retail code, keep it as

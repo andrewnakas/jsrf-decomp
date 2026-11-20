@@ -249,6 +249,27 @@ So in such a unit every virtual function is declared in slot order and named `fu
 in its slot. Run `xbx match` once with any names: the `?` lines give the address each slot implies. Code the
 compiler generates for the class (a deleting destructor, for example) is placed and compared in the same way.
 
+#### Folded functions
+
+The linker folds identical functions into one: a bare `ret` can be a dozen different empty virtual functions,
+and then fills several slots of one vtable. C++ cannot give two of a class's virtual functions the same name,
+so an address the project lists under `[names] folded` in `xbx.toml` may also be written
+`func_XXXXXXXX_1`, `func_XXXXXXXX_2`, ... up to `_99`. Each alias is the same address and counts as an address
+of its own for the one-declaration rule, so number them in slot order within a class:
+
+```cpp
+struct Node {
+    virtual ~Node();
+    virtual void func_00011C90();       // slot 1
+    virtual void func_00011C90_1();     // slot 2: the same folded function
+    virtual void func_00011C80(int);    // slot 3
+    virtual void func_00011C90_2();     // slot 4
+};
+```
+
+The evidence for a folded address is one function filling two slots of the same vtable. An alias on an address
+that is not listed is refused; ask a maintainer to list it.
+
 ## `/* sym: */`: special members
 
 Constructors, destructors, operators and vtables have decorated names that start with `??` and cannot carry an
@@ -383,5 +404,55 @@ label for exactly that value existed. Never invent a case value the binary does 
 
 ## Findings
 
-None yet. A finding is added here when a merged unit proves it: one line saying what the retail code shows and
-what C++ produces it, with the unit that proves it (`func_XXXXXXXX`).
+A finding is added here when a merged unit proves it: what the retail code shows and what C++ produces it, with
+the unit that proves it.
+
+**Loops, copies and stores**
+- `lea edi; mov ecx, 8; xor eax, eax; rep stosd` is a `for` loop that zeroes 8 words. The `memset` intrinsic
+  copies `this` to `edx` first and misses (`func_00039F40`).
+- Eight unrolled `mov` pairs are eight element-wise assignments; a struct assignment of the same 32 bytes gives
+  `rep movsd` (`func_00039F60`).
+- The order of constant stores shows in the code: `a = 0; b = 1; c = 0; d = 12; return 1;` stores an immediate
+  1, while the order a, c, b, d shares the 1 with the return value (`func_00031450`). `x = 0; y = arg; z = 0;`
+  loads the argument first (`func_00038DA0`).
+- Walking a list with the parameter itself (`while (first->next) first = first->next;`) gives `je; jmp`; a
+  copy local changes the addressing (`func_00011B60`).
+- `delete node;` on a class with a virtual destructor inside `while (node)` emits no null check
+  (`func_00011B90`).
+
+**Conditions and branches**
+- `if (a && b) return 1; return 0;` stays branchy (`func_0003A580`). A single-condition `if (x) return 1;
+  return 0;` and every equivalent spelling become `setne`.
+- `return p->x == 0;` gives `mov; xor eax, eax; test; sete al` (`func_00012910`).
+- The same constant stored in both arms of an if/else is hoisted above the branch and kept in a register
+  (`func_001015E0`).
+- `js`/`jns` after `test eax, eax` is a top-bit test of an unsigned field (`flags & 0x80000000`); `x >= 0` on an
+  `int` gives `jl`/`jge` (`func_000B9960`).
+- `if (state < 3 && x) state = 3;` on an unsigned field loads 3 once and reuses it for the compare and the store
+  (`func_000F44E0`).
+- A switch with four cases and no default keeps the unreachable load of a pointer it never set. Guarded by
+  `type <= 3` the guard merges with the switch's range test (`func_00039B50`); guarded by `type < 4` both tests
+  stay (`func_00039BE0`).
+- Only the nested `if (!busy) { if (index < N) { if (h) {...} else {...} } return 1; } return 0;` shape
+  matched `func_00025390`; early returns changed the register assignment.
+
+**Registers and evaluation order**
+- An expression repeated in two statements and the same expression named as a local give different register
+  assignments (`func_00039E80`).
+- `return t[i] ? (o->*t[i])(arg) : 1;` keeps the index in `ecx` and the handler in `edx`; the if/else spelling
+  puts both in `edx` (`func_000256C0`).
+- `Object *o = (Object *)game->f(7); return o->g(a, b);` finds the object before pushing the arguments; written
+  as one expression the arguments are pushed first (`func_000256A0`).
+- `int result = 0; p = lookup(); if (p) result = p->f(); return result;` gives `xor esi, esi ... mov eax, esi`
+  on the null path and a tail `jmp` on the other (`func_00107AB0`).
+- `time = owner->step + time;` gives `fld [owner+N]; fadd [this+M]`: the operand order of a float sum shows
+  (`func_000E6980`).
+- Float literals need the digits that round to retail's bits: `5.5555556f` is one bit off `0x40B1C71C`,
+  `5.5555553f` matches (`func_000C55F0`).
+
+**Classes**
+- A pointer to a member of a class that is only forward-declared takes the 16-byte general form and a thunked
+  call. Defining the class first (an empty body is enough) gives the 4-byte form and `call edx`
+  (`func_00025700`, `func_00025740`).
+- Several functions end in `ret N` and never read `ecx`, but every caller loads `ecx` with an object first: they
+  match as member functions that do not use `this` (`func_000C1440`, `func_000C1810`).
