@@ -1,8 +1,8 @@
 struct Desc {
     char unknown_00[0x10];
-    unsigned long first;
-    unsigned long second;
-    unsigned long third;
+    long first;
+    float second;
+    float third;
 };
 
 // The Direct3D device wrapper: table 0x1E0F00 (121 slots), constructor 0x14CDB0, 0xE4 bytes.
@@ -38,7 +38,7 @@ struct Object_001E0F00 {
     virtual void __stdcall slot28();
     virtual void __stdcall slot29();
     virtual long __stdcall func_00153E30(Desc *desc);  // slot 30
-    virtual long __stdcall func_00153FE0(unsigned long first, unsigned long second, unsigned long third);  // slot 31
+    virtual long __stdcall func_00153FE0(long first, float second, float third);  // slot 31
     virtual long __stdcall func_001540A0(Desc *desc);  // slot 32
 };
 

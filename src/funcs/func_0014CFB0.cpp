@@ -42,7 +42,7 @@ struct Object_001E0F00 : Stats {
     virtual long __stdcall func_00155150(unsigned long argument1, unsigned long argument2);  // slot 9
     virtual long __stdcall func_00155050(unsigned long argument1, unsigned long argument2);  // slot 10
     virtual int __stdcall func_00154CF0(Rect6 *out);  // slot 11
-    virtual long __stdcall func_00154BB0(unsigned long argument1);  // slot 12
+    virtual void __stdcall func_00154BB0(unsigned long mode);  // slot 12
     virtual int __stdcall func_001548E0(int index);  // slot 13
     virtual long __stdcall func_0014F720(unsigned long argument1, unsigned long argument2);  // slot 14
     virtual void __stdcall func_0014F6D0(unsigned int index);  // slot 15
@@ -61,7 +61,7 @@ struct Object_001E0F00 : Stats {
     virtual long __stdcall func_00154520(int state, const void *matrix);  // slot 28
     virtual long __stdcall func_00154540(int state, const void *matrix);  // slot 29
     virtual long __stdcall func_00153E30(Desc *desc);  // slot 30
-    virtual long __stdcall func_00153FE0(unsigned long first, unsigned long second, unsigned long third);  // slot 31
+    virtual long __stdcall func_00153FE0(long first, float second, float third);  // slot 31
     virtual long __stdcall func_001540A0(Desc *desc);  // slot 32
     virtual long __stdcall func_001540D0(float value);  // slot 33
     virtual float __stdcall func_001540F0(float value);  // slot 34
