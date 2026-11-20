@@ -464,6 +464,12 @@ the unit that proves it.
   stay (`func_00039BE0`).
 - Only the nested `if (!busy) { if (index < N) { if (h) {...} else {...} } return 1; } return 0;` shape
   matched `func_00025390`; early returns changed the register assignment.
+- `cmp 1; je X; cmp 2; jne Y` comes from `if (k == 1) {A} else if (k == 2) {A}` with identical blocks, not from
+  `k == 1 || k == 2` (`func_000E8500`, `func_000E8280`, `func_000E08A0`).
+- Where retail keeps a short "back out and return" path inline and puts the long path last, a flag set by the
+  test gives that order: `int turn = 0; if (cond) turn = 1; if (!turn) { ...; return; } ...` (`func_000D4860`,
+  `func_000E24B0`, `func_000D9220`). About 20 spellings with `break`, `goto`, if/else and switch did not.
+- A `goto` to a shared tail gives retail's load, operate, store with one cross-jumped store (`func_000D87E0`).
 
 **Registers and evaluation order**
 - An expression repeated in two statements and the same expression named as a local give different register
@@ -475,7 +481,10 @@ the unit that proves it.
 - `int result = 0; p = lookup(); if (p) result = p->f(); return result;` gives `xor esi, esi ... mov eax, esi`
   on the null path and a tail `jmp` on the other (`func_00107AB0`).
 - `time = owner->step + time;` gives `fld [owner+N]; fadd [this+M]`: the operand order of a float sum shows
-  (`func_000E6980`).
+  (`func_000E6980`). Likewise `position.x += velocity.x` and `+= at->x` load in opposite orders
+  (`func_000D9220`).
+- An array pointer read from an address-taken local struct is reloaded on every pass of a loop; copied to a
+  pointer local before the loop it becomes retail's single advancing pointer (`func_000E5EA0`).
 - Float literals need the digits that round to retail's bits: `5.5555556f` is one bit off `0x40B1C71C`,
   `5.5555553f` matches (`func_000C55F0`).
 
