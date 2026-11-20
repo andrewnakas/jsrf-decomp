@@ -34,13 +34,13 @@ struct Device_00251D6C {
 
 extern Device_00251D6C *data_00251D6C;
 
-struct Object_000A4C00 {
+struct Object_000A4D80 {
     void func_000A4C10(const void *settings);
 };
 
 // Passes the settings to slot 30 of the device in data_00251D6C. It does not use `this`; its callers
 // (func_00110B40 at 0x110b71, func_00107B00) load ecx with the object of func_000A4C00 first.
-void Object_000A4C00::func_000A4C10(const void *settings)
+void Object_000A4D80::func_000A4C10(const void *settings)
 {
     data_00251D6C->slot30(settings);
 }
