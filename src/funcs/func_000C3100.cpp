@@ -1,17 +1,48 @@
+struct Data_000C2700 {
+    char unknown_00[3];
+    char kind;
+};
+
 struct Pair_000C3100 {
     short first;
     short second;
 };
 
-struct Object_000C3100 {
-    char unknown_00[0x7c];
+// The base whose table is at 0x1CDCF8 (constructor func_000C2420, destructor func_000C2470); slot 9 is the
+// destructor.
+struct Object_000C2420 {
+    Object_000C2420(Data_000C2700 *data);
+    virtual void func_000C2630();
+    virtual void func_000C2700();
+    virtual void func_000C3800();
+    virtual void func_000C30C0();
+    virtual void func_000C3100();
+    virtual void func_000C3140();
+    virtual void func_000C31B0();
+    virtual void func_000C3350();
+    virtual void func_000C33C0();
+    virtual ~Object_000C2420();
+    virtual void func_000C2480();
+    virtual void func_000C36F0();
+    virtual void func_000C2FE0();
+    virtual void func_000C2500();
+    virtual void func_000C2560();
+    virtual void func_000C25D0();
+    virtual int func_000C2AA0();
+
+    char unknown_04[0x24];
+    int value_28;
+    char unknown_2c[4];
+    unsigned int flags;
+    unsigned int state;
+    char unknown_38[0x40];
+    Data_000C2700 *data;
     Pair_000C3100 *pair;
     float value;
-
-    void func_000C3100();
 };
 
-void Object_000C3100::func_000C3100()
+// Slot 4: raises the value at 0x80 by 0.5 while it is below the pair's second value minus 1.
+void Object_000C2420::func_000C3100()
 {
     if ((float)pair->second - 1.0f > value) {
         value += 0.5f;
