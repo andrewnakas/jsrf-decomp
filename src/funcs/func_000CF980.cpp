@@ -14,7 +14,7 @@ struct Object_000C5B50 {
     char unknown_60[0x44];
     unsigned int flags;
 
-    int func_000C5B10(int first, int second);
+    int func_000C5B10(int message, void *data);
 };
 
 // The objects whose state handlers fill the table at 0x2165F4 to 0x216660 (func_000CE1A0, func_000CE220,
