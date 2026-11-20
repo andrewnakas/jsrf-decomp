@@ -1,11 +1,13 @@
 struct Object_00097D30 {
-    int func_00097D30(int index);
+    void func_00097D30(int index);
 };
 
 extern int (Object_00097D30::*data_0020E4A4[])();
 
-// Runs the handler the table holds for the index and returns its result (the handlers return 1).
-int Object_00097D30::func_00097D30(int index)
+// Runs the handler the table holds for the index. The handlers return 1, but this function passes no result
+// on: its callers read none, and func_000A0870, which sits in one outer table (data_00215230) with
+// dispatchers of this shape, ends in a call to a function without a result.
+void Object_00097D30::func_00097D30(int index)
 {
-    return (this->*data_0020E4A4[index])();
+    (this->*data_0020E4A4[index])();
 }
