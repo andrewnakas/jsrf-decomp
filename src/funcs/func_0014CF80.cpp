@@ -1,4 +1,5 @@
 struct Desc;
+struct Params;
 struct Rect6;
 struct Source;
 
@@ -32,11 +33,11 @@ struct Object_001E0F00 : Stats {
     virtual long __stdcall func_00155A60(unsigned long argument1);  // slot 3
     virtual void __stdcall func_00155540(void *handle);  // slot 4
     virtual long __stdcall func_00155560(unsigned long argument1, unsigned long argument2, unsigned long argument3);  // slot 5
-    virtual long __stdcall func_00155380(unsigned long argument1);  // slot 6
+    virtual long __stdcall func_00155380(Params *params);  // slot 6
     virtual long __stdcall func_00154D70(int kind, Source *source);  // slot 7
     virtual void *__stdcall func_00154DC0(int kind);  // slot 8
     virtual long __stdcall func_00155150(unsigned long argument1, unsigned long argument2);  // slot 9
-    virtual long __stdcall func_00155050(unsigned long argument1, unsigned long argument2);  // slot 10
+    virtual long __stdcall func_00155050(const Params *desc, int again);  // slot 10
     virtual int __stdcall func_00154CF0(Rect6 *out);  // slot 11
     virtual void __stdcall func_00154BB0(unsigned long mode);  // slot 12
     virtual int __stdcall func_001548E0(int index);  // slot 13
@@ -136,8 +137,8 @@ struct Object_001E0F00 : Stats {
     virtual long __stdcall func_001510D0();  // slot 107
     virtual long __stdcall func_00150FD0();  // slot 108
     virtual long __stdcall func_00150FD0_1();  // slot 109
-    virtual long __stdcall func_00150CA0(unsigned long argument1, unsigned long argument2, unsigned long argument3);  // slot 110
-    virtual long __stdcall func_00150D90(unsigned long argument1, unsigned long argument2, unsigned long argument3);  // slot 111
+    virtual long __stdcall func_00150CA0(int index, unsigned long kind, unsigned long value);  // slot 110
+    virtual long __stdcall func_00150D90(int index, unsigned long kind, unsigned long *value);  // slot 111
     virtual long __stdcall func_001502F0(unsigned long stage, int type, unsigned long value);  // slot 112
     virtual long __stdcall func_001508F0(unsigned long value);  // slot 113
     virtual long __stdcall func_001502C0(unsigned long stage, unsigned long value);  // slot 114
@@ -145,7 +146,7 @@ struct Object_001E0F00 : Stats {
     virtual long __stdcall func_0014E600(unsigned long argument1);  // slot 116
     virtual long __stdcall func_0014D9D0(int mode);  // slot 117
     virtual long __stdcall func_0014D8E0(unsigned long argument1, void **object);  // slot 118
-    virtual long __stdcall func_0014D110(unsigned long argument1, unsigned long argument2);  // slot 119
+    virtual long __stdcall func_0014D110(unsigned long *size, unsigned long argument2);  // slot 119
     virtual void __stdcall func_0014D0D0();  // slot 120
 
     ~Object_001E0F00() {}
