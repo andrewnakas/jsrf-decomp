@@ -115,7 +115,7 @@ Directives a unit may carry, each on a line of its own:
 | Directive | Use |
 |---|---|
 | `/* cflags: ... */` | First line of the file only. Extra compiler flags, only from `allowed_cflags` in `xbx.toml`. |
-| `/* sym: DECORATED_NAME = 0xADDR */` | Only for C++ special members that cannot carry an address in their name: constructors, destructors, operators, vtables (decorated names that start with `??`). |
+| `/* sym: DECORATED_NAME = 0xADDR */` | Only for names that cannot carry their own address: C++ special members (constructors, destructors, operators, vtables: decorated names that start with `??`) and virtual overrides, which keep the name of the function they override (MATCHING_GUIDE, "Overrides"). |
 | `/* const: 0xV */` | A number that happens to fall inside the image's address range (`0x10000` to `0x288620`) but is a number, not an address. |
 | `/* fuzzy: NN.N */` | Non-matching tier only. Written by the tool (`xbx match --write-fuzzy`), never by hand. |
 

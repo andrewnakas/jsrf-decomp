@@ -21,7 +21,8 @@
    inline helpers that the compiler really inlines are fine.
 5. Names carry addresses. The unit's function is named `func_XXXXXXXX`; every other function or global it
    refers to is named `func_XXXXXXXX` or `data_XXXXXXXX` after its own retail address. `/* sym: */` lines are
-   only for C++ special members whose decorated names start with `??`. Library and runtime names come only from
+   only for C++ special members (decorated names that start with `??`) and for virtual overrides, which keep the
+   name of the function they override. Library and runtime names come only from
    `config/symbols.csv`. Across all units, one address is referenced under one decorated name.
 6. No steering or fake-match code. A statement is allowed only if it is real code: every instruction it
    produces exists in the retail function (the instruction test). Bare expression statements, self-assignments,

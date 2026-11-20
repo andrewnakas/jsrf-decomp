@@ -173,7 +173,7 @@ for a `DIFF`, the first differing offset and the number of differing bytes.
   so clear them before you open a PR.
 - **`?` is an assumed address.** The name carries no address and nothing maps it, so the matcher assumed the
   address the retail bytes imply and went on. Read the address off the line and rename the declaration
-  (`func_0012B000`), or add a `/* sym: */` line if it is a special member. Under `--strict` every `?` is a
+  (`func_0012B000`), or add a `/* sym: */` line if it is a special member or an override. Under `--strict` every `?` is a
   failure.
 
 Compare sizes first. If the sizes differ, the structure is wrong (a missing branch, a wrong loop, a wrong type
@@ -187,7 +187,7 @@ width); fix that before you look at registers.
 | `NAME is 0x.., retail refers to 0x..` | a call, global or member refers to the wrong address | fix the name: the retail address is the one printed last |
 | `NAME at 0x.. differs from retail: N of M bytes` | a string, float, table or vtable our object carries is not what retail has there | fix the literal, the table or the slot |
 | `NAME is at 0x.. by an earlier reference, retail refers to 0x.. here` | one constant of ours stands for two different retail addresses | they are two different things in retail; write them so |
-| `the object defines no function for this unit` | no function is named `func_<address>` | rename it, or add the `/* sym: */` line for a special member |
+| `the object defines no function for this unit` | no function is named `func_<address>` | rename it, or add the `/* sym: */` line for a special member or an override |
 | `is emitted as an inline copy` | the unit's function is defined in the class body or marked `inline` | define it out of line |
 | `a second function rides in this unit` | a helper was not inlined, so it is a real function in retail | declare it as a prototype named after its address |
 | `the unit defines a global` / `uninitialised data` / `data it should only declare` | the unit owns data | declare it `extern` as `data_XXXXXXXX` |
@@ -305,8 +305,9 @@ address. Map each one the unit refers to, one per line:
   (`func_0012A300.cpp`) and carries the `sym:` line that gives its decorated name that address.
 - Copy the decorated name from the matcher's output (the `?` line, or the list of functions it prints when it
   finds none named for the unit). Do not compose decorations by hand.
-- `sym:` is only for `??` names. Everything else is named `func_` or `data_`.
-- The one-name-per-address contract covers these too.
+- `sym:` is only for `??` names and for virtual overrides ("Overrides" above). Everything else is named `func_`
+  or `data_`.
+- The one-name-per-address contract covers these too (folded addresses excepted).
 
 ## `/* const: */`: numbers that look like addresses
 
