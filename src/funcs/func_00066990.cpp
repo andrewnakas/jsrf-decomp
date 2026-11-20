@@ -17,7 +17,7 @@ struct Item_00066A00 {
     int unknown_10[2];
 };
 
-struct Object_00066A70 {
+struct Object_00039A10 {
     char unknown_00[8];
     Item_00066A00 **tail;
 
@@ -26,7 +26,7 @@ struct Object_00066A70 {
 
 // Appends a new item to the list whose tail link is at +0x8, with a copy of the source's 0x90-byte elements, and
 // returns it.
-Item_00066A00 *Object_00066A70::func_00066990(const Source_00066990 *source)
+Item_00066A00 *Object_00039A10::func_00066990(const Source_00066990 *source)
 {
     Item_00066A00 *item = new Item_00066A00;
     item->elements = (Element_00066990 *)operator new(source->count * sizeof(Element_00066990));

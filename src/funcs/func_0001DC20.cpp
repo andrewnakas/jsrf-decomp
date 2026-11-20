@@ -20,7 +20,7 @@ struct Item_0001DCA0 {
     Item_0001DCA0 *next;
 };
 
-struct Object_00066AB0 {
+struct Object_00039A10 {
     char unknown_00[8];
     Item_0001DCA0 **tail;
 
@@ -29,7 +29,7 @@ struct Object_00066AB0 {
 
 // Appends a new item to the list whose tail link is at +0x8: a copy of the source's first 0x90 bytes and its four
 // words after them, the last one first. Returns it.
-Item_0001DCA0 *Object_00066AB0::func_0001DC20(const Source_0001DC20 *source)
+Item_0001DCA0 *Object_00039A10::func_0001DC20(const Source_0001DC20 *source)
 {
     Item_0001DCA0 *item = new Item_0001DCA0;
     item->block = source->block;

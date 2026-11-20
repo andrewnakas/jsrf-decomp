@@ -4,7 +4,7 @@ struct Item_0001DCA0 {
     Item_0001DCA0 *next;
 };
 
-struct Object_00066AB0 {
+struct Object_00039A10 {
     char unknown_00[0x8];
     Item_0001DCA0 **tail;
 
@@ -12,7 +12,7 @@ struct Object_00066AB0 {
 };
 
 // Unlinks an item from the list whose tail link is at +0x8 (links at +0xa0/+0xa4) and deletes it.
-void Object_00066AB0::func_0001DCA0(Item_0001DCA0 *item)
+void Object_00039A10::func_0001DCA0(Item_0001DCA0 *item)
 {
     *item->link = item->next;
     if (item->next) {
