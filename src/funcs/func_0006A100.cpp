@@ -1,4 +1,5 @@
 /* sym: ?func_00047820@Object_00069F00@@UAEXH@Z = 0x0006A100 */
+struct Frame_000479D0;
 void func_001BA9C0();
 void __fastcall func_001BAA50();
 
@@ -12,7 +13,7 @@ extern Device_00251D6C *data_00251D6C;
 struct Object_00047470 {
     virtual ~Object_00047470();
     virtual void slot1();
-    virtual void func_00047470();
+    virtual void func_00047470(void *first, void *second, Frame_000479D0 *frame);
     virtual void slot3();
     virtual void func_00047540();
     virtual void func_00047690(int first, int second);

@@ -10,7 +10,7 @@ struct Object_00047470 {
         func_00047550();
     }
     virtual void func_00048190(void *first, void *second, Frame_000479D0 *frame);
-    virtual void func_00047470();
+    virtual void func_00047470(void *first, void *second, Frame_000479D0 *frame);
     virtual void func_00048390(void *first, void *second, Frame_000479D0 *frame);
     virtual void func_00047540();
     virtual void func_00047690(int value, int argument);

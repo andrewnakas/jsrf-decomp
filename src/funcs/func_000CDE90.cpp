@@ -1,4 +1,5 @@
 /* sym: ?func_00011C80_1@Object_000CE9D0@@UAEXH@Z = 0x000CDE90 */
+struct Frame_000479D0;
 struct Vector3 {
     float x;
     float y;
@@ -30,7 +31,7 @@ struct Surface_000476F0;
 struct Object_00047470 {
     virtual ~Object_00047470();
     virtual void slot1();
-    virtual void func_00047470();
+    virtual void func_00047470(void *first, void *second, Frame_000479D0 *frame);
     virtual void slot3();
     virtual void func_00047540();
     virtual void func_00047690(int first, int second);

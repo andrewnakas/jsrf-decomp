@@ -23,7 +23,7 @@ struct Frame_000479D0 {
 struct Object_00069F00 {
     virtual ~Object_00069F00();
     virtual void func_00069F90();
-    virtual void func_00047470();
+    virtual void func_00047470(void *first, void *second, Frame_000479D0 *frame);
     virtual void func_00048390();
     virtual void func_00047540();
     virtual void func_00047690(int value, int argument);

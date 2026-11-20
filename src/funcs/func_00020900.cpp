@@ -1,3 +1,4 @@
+struct Frame_000479D0;
 struct Matrix_001BA950 {
     float m[4][4];
 };
@@ -93,7 +94,7 @@ extern Device_00251D6C *data_00251D6C;
 struct Object_00047470 {
     virtual ~Object_00047470();
     virtual void func_00048190(void *first, void *second, void *frame);
-    virtual void func_00047470();
+    virtual void func_00047470(void *first, void *second, Frame_000479D0 *frame);
     virtual void func_00048390(void *first, void *second, void *frame);
     virtual void func_00047540();
     virtual void func_00047690(int value, int argument);

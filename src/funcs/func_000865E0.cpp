@@ -1,4 +1,5 @@
 /* sym: ?func_00011C80@Object_00086960@@UAEXH@Z = 0x000865E0 */
+struct Frame_000479D0;
 void func_001BA9C0();
 void __fastcall func_001BAA50();
 void __fastcall func_001BAAA0(float *matrix);
@@ -50,7 +51,7 @@ void __fastcall func_001BAB20(Vector3 *out, const Vector3 *in);
 struct Object_00047470 {
     virtual ~Object_00047470();
     virtual void slot1();
-    virtual void func_00047470();
+    virtual void func_00047470(void *first, void *second, Frame_000479D0 *frame);
     virtual void slot3();
     virtual void func_00047540();
     virtual void func_00047690(int first, int second);

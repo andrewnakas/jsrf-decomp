@@ -1,3 +1,4 @@
+struct Frame_000479D0;
 struct Data_000C2700 {
     char unknown_00;
     unsigned char type;
@@ -18,7 +19,7 @@ struct Matrix_001BA950 {
 struct Object_00047470 {
     virtual ~Object_00047470();
     virtual void slot1();
-    virtual void func_00047470();
+    virtual void func_00047470(void *first, void *second, Frame_000479D0 *frame);
     virtual void slot3();
     virtual void func_00047540();
     virtual void func_00047690(int first, int second);
