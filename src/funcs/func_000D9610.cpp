@@ -8,7 +8,7 @@ struct Object_000DADE0 {
     void func_000DADE0(Vector3 *position, Vector3 *direction);
 };
 
-struct Object_00060930 {
+struct Object_000607B0 {
     void func_00060930(int id, int value);
 };
 
@@ -51,7 +51,7 @@ void Object_000D8A40::func_000D9610()
         return;
     }
     if (pending) {
-        Object_00060930 *node = (Object_00060930 *)data_0022FCE0->func_000128C0(0xe8);
+        Object_000607B0 *node = (Object_000607B0 *)data_0022FCE0->func_000128C0(0xe8);
         if (node) {
             node->func_00060930(value_9c, 0);
         }
