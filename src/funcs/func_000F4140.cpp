@@ -22,15 +22,16 @@ struct Node {
     void func_00011C20(Node *node);
 };
 
-struct Object_000F4140 : Node {
+struct Object_000F44E0 : Node {
     char unknown_040[0x30];
     int count;
 
     void func_000F4140();
 };
 
-// Counts up at 0x70; past 5 the node and everything below it are marked dead.
-void Object_000F4140::func_000F4140()
+// Entry 4 of the member-function table at 0x21b2dc of Object_000F44E0 (table 0x1CF098): counts up at 0x70; past 5
+// the node and everything below it are marked dead.
+void Object_000F44E0::func_000F4140()
 {
     if (++count > 5) {
         func_00011BE0(this);
