@@ -1,4 +1,4 @@
-struct Object_0009B190 {
+struct Object_000A1C50 {
     char unknown_0000[0x1120];
     int value_1120;
 
@@ -6,7 +6,7 @@ struct Object_0009B190 {
     int func_00097DA0();
 };
 
-int Object_0009B190::func_00097DA0()
+int Object_000A1C50::func_00097DA0()
 {
     value_1120 = 0;
     func_0009B190(9);

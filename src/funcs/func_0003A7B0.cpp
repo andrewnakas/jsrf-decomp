@@ -1,0 +1,25 @@
+struct Object_00039BE0 {
+    char unknown_0000[0x349c];
+    int count1;
+    int count2;
+    char unknown_34a4[0x35b0];
+    int count0;
+
+    void func_0003A7B0(int kind, int value);
+};
+
+// Sets the count of a kind: 0 at +0x6a54, 1 at +0x349c, 2 at +0x34a0.
+void Object_00039BE0::func_0003A7B0(int kind, int value)
+{
+    switch (kind) {
+    case 0:
+        count0 = value;
+        break;
+    case 1:
+        count1 = value;
+        break;
+    case 2:
+        count2 = value;
+        break;
+    }
+}

@@ -3,7 +3,7 @@ struct Params_00092E40 {
     int value_80;
 };
 
-struct Object_00092E40 {
+struct Object_000A1C50 {
     char unknown_000[0x2a0];
     Params_00092E40 *params;
     char unknown_2a4[0xa30];
@@ -16,7 +16,7 @@ struct Object_00092E40 {
 
 // Clears the field at 0xe60 and takes the field at 0xcd4 from the parameters at 0x2a0; returns 0.
 // Neither argument is read (`ret 8`).
-int Object_00092E40::func_00092E40(int, int)
+int Object_000A1C50::func_00092E40(int, int)
 {
     value_e60 = 0;
     value_cd4 = params->value_80;

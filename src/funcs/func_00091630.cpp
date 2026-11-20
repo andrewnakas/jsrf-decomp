@@ -1,11 +1,12 @@
-struct Object_00091630 {
+// The player object: func_00091580 runs this from the table at 0x20DB1C with its own `this`.
+struct Object_000A1C50 {
     void func_00091630(int index);
 };
 
-extern void (Object_00091630::*data_0020DB8C[])();
+extern void (Object_000A1C50::*data_0020DB8C[])();
 
 // Runs the handler the table holds for the index.
-void Object_00091630::func_00091630(int index)
+void Object_000A1C50::func_00091630(int index)
 {
     (this->*data_0020DB8C[index])();
 }
