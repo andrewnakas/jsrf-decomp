@@ -501,6 +501,11 @@ the unit that proves it.
   (`func_001063A0`).
 - MSVC cross-jumps identical tails only when each arm carries the full copy (`func_000A0610`,
   `func_001045D0`, `func_000F4FF0`).
+- A float a loop assigns after a call stays on the x87 stack across passes; taking a pointer to its field
+  before the call (`float *distance = &faces[i].distance;`) gives retail's store (`func_000C9860` went from
+  lock 144 to 5).
+- Before naming the cases of a switch with a byte map, read the whole map (`xbx asm` prints it in rows of
+  four, the last row may be short): an empty case shifts every label after it (`func_000BB7B0`).
 - Computing a derived pointer before its base (`data = pack + off + 0x10; chunk = pack + off;`) gives retail's
   `lea` and registers (`func_0002E1C0`, `func_0002E4C0`, `func_00033920`).
 - An inline helper's argument is evaluated inside the helper's loop; computed into a local first, it is
