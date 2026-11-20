@@ -25,7 +25,7 @@ extern unsigned char data_00231D40[];
 
 int __stdcall func_0006EA90(void *item);
 
-struct Object_00048180 {
+struct Object_00047470 {
     char unknown_00[0x6c];
     int *handles;
     unsigned int handleCount;
@@ -35,7 +35,7 @@ struct Object_00048180 {
 
 // Makes a handle (func_0006EA90) for each distinct item of the groups (only the first item of a group whose `single`
 // is clear), and keeps the handles in a new array.
-void Object_00048180::func_00047160(Group_00047160 *groups, unsigned int groupCount)
+void Object_00047470::func_00047160(Group_00047160 *groups, unsigned int groupCount)
 {
     Pair_00047160 *pairs = (Pair_00047160 *)data_00231D40;
     unsigned int count = 0;

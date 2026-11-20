@@ -24,7 +24,7 @@ struct Maker_00047410 {
 
 extern int data_0020C39C[];
 
-struct Object_00048180 {
+struct Object_00047470 {
     int unknown_00;
     Maker_00047410 *maker;
     char unknown_08[0x10];
@@ -39,7 +39,7 @@ struct Object_00048180 {
 // Has slot 3 of +0x4 make a handle for the group's buffer into `out` (kind: entry +0x18 of the table at 0x20C39C with
 // flag 2, 0x112 with flag 0x40, else the buffer's own), clears the word after it and copies the group's parts into
 // `out` (func_00047230). The first argument is not used.
-void Object_00048180::func_00047410(int unused, Group_00047230 *group, Out_00047230 *out, int unknown)
+void Object_00047470::func_00047410(int unused, Group_00047230 *group, Out_00047230 *out, int unknown)
 {
     Buffer_00047230 *buffer = group->buffer;
     int handle;

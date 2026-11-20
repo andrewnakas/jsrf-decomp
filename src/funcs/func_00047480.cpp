@@ -25,7 +25,7 @@ struct Maker_00047410 {
 
 extern int data_0020C39C[];
 
-struct Object_00048180 {
+struct Object_00047470 {
     int unknown_00;
     Maker_00047410 *maker;
     char unknown_08[0x10];
@@ -45,7 +45,7 @@ struct Object_00048180 {
 // As func_00047410 (with flag 0x10 instead): has slot 3 of +0x4 make a handle for the group's buffer into `out` and
 // copies the group's parts into `out` (func_00047230); then slot 4 makes the second handle from the colour at +0x28
 // (red, green, blue, alpha from 0 to 1, packed as A8R8G8B8) and +0x38.
-void Object_00048180::func_00047480(int unused, Group_00047230 *group, Out_00047230 *out, int unknown)
+void Object_00047470::func_00047480(int unused, Group_00047230 *group, Out_00047230 *out, int unknown)
 {
     Buffer_00047230 *buffer = group->buffer;
     int handle;

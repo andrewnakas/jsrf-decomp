@@ -56,7 +56,7 @@ struct Pair_00047230 {
 
 extern unsigned char data_00231D40[];
 
-struct Object_00048180 {
+struct Object_00047470 {
     char unknown_00[0x6c];
     int *handles;
     unsigned int handleCount;
@@ -66,7 +66,7 @@ struct Object_00048180 {
 
 // Copies a group's parts into `out` (one part made up from the group's buffer when the group has no table), giving
 // each part the handle func_00047160 left in the scratch pairs at 0x231D40 for its item.
-void Object_00048180::func_00047230(Group_00047230 *group, Out_00047230 *out)
+void Object_00047470::func_00047230(Group_00047230 *group, Out_00047230 *out)
 {
     Pair_00047230 *pairs = (Pair_00047230 *)data_00231D40;
     if (group->partCount == 0) {
