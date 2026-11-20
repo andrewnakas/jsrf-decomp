@@ -6,7 +6,7 @@ struct Game {
 extern Game *data_0022FCE0;
 
 // Object 0x1165.
-struct Object_000FE190 {
+struct Object_000FDF30 {
     void func_000FDFB0(int kind, int first, int second, int crowded);
 };
 
@@ -22,7 +22,7 @@ void func_000FE4E0(int kind, int first, int second)
     } else if (kind == 0xac) {
         kind = 0x60;
     }
-    Object_000FE190 *object = (Object_000FE190 *)data_0022FCE0->func_000128C0(0x1165);
+    Object_000FDF30 *object = (Object_000FDF30 *)data_0022FCE0->func_000128C0(0x1165);
     if (object) {
         object->func_000FDFB0(kind, first, second, crowded);
     }

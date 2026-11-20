@@ -25,7 +25,7 @@ struct Target_000FE160 {
 // Object 0x1165 (func_000FE4E0 looks it up and calls func_000FDFB0 on it): func_000FDFB0 creates a child
 // with `this` as its owner and keeps the child's id at 0xbc, entry 6 of the ids at 0xa4; the child's
 // func_000FB9F0 calls this on its parent with 6.
-struct Object_000FE190 {
+struct Object_000FDF30 {
     char unknown_00[0xa4];
     int ids[1]; // a list of object ids; its length is not known here
 
@@ -36,7 +36,7 @@ extern Game *data_0022FCE0;
 
 // Calls virtual slot 16 of the object whose id is entry `index` of the list at 0xa4, when the entry is set
 // and the object exists.
-void Object_000FE190::func_000FE160(int index)
+void Object_000FDF30::func_000FE160(int index)
 {
     int id = ids[index];
     if (id != -1) {

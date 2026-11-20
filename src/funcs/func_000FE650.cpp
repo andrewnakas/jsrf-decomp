@@ -2,9 +2,10 @@ struct Game {
     void *func_000128C0(int id);
 };
 
-struct Table_000FE650 {
+// Object 0x1165 (its constructor func_000FE740 clears five rows of the table).
+struct Object_000FDF30 {
     char unknown_000[0x184];
-    int entries[1][16]; // rows of 16; the row count is not known here
+    int table[5][16];
 };
 
 extern Game *data_0022FCE0;
@@ -13,9 +14,9 @@ extern Game *data_0022FCE0;
 int func_000FE650(int row, int column)
 {
     int result = 0;
-    Table_000FE650 *table = (Table_000FE650 *)data_0022FCE0->func_000128C0(0x1165);
-    if (table) {
-        result = table->entries[row][column];
+    Object_000FDF30 *object = (Object_000FDF30 *)data_0022FCE0->func_000128C0(0x1165);
+    if (object) {
+        result = object->table[row][column];
     }
     return result;
 }
