@@ -42,7 +42,7 @@ struct Node {
     char unknown_34[0x10];
 };
 
-Node *func_000C70A0(Node *owner, Vector3 *position, int kind);
+void func_000C70A0(Node *owner, Vector3 *position, int kind);
 
 struct Object_000C1270 {
     int func_000C1160(int kind, int count, Vector3 *position);

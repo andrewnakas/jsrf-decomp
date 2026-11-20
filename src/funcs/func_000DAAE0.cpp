@@ -1,7 +1,7 @@
 struct Node;
 struct Vector3;
 
-Node *func_000C70A0(Node *owner, Vector3 *position, int kind);
+void func_000C70A0(Node *owner, Vector3 *position, int kind);
 
 // The class whose table is at 0x1CE6E0 (built inline by func_000DAB10; deleting destructor func_000DAC00).
 struct Object_000DAAB0 {
