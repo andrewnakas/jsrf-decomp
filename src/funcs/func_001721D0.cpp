@@ -153,7 +153,7 @@ struct Object_001E3C08 {
     virtual long __stdcall func_001710E0(void *argument);
     virtual long __stdcall func_00171B50();
     virtual long __stdcall func_0016FD90(unsigned long *value);
-    virtual long __stdcall func_00171E00(void *argument);
+    virtual long __stdcall func_00171E00(unsigned long flags);
     virtual long __stdcall func_00170C50(void *argument);
     virtual long __stdcall func_0016FEE0(void *argument1, void *argument2);
     virtual long __stdcall func_00170920(unsigned long value1, unsigned long value2);
