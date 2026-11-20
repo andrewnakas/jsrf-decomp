@@ -3,7 +3,7 @@ struct Motion_0005F060 {
     short frames;
 };
 
-void func_0005E030(Motion_0005F060 *motion, float *time, float step, int hold);
+int func_0005E030(Motion_0005F060 *motion, float *time, float step, int hold);
 
 extern float data_0020C638[5];
 
