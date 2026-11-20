@@ -8,7 +8,7 @@ struct Object_0006E130 {
     void func_0006E7B0(int id);
 };
 
-struct Object_0012BDF0 {
+struct Object_00120420 {
     char unknown_000[0x8b0];
     int id;
 
@@ -21,7 +21,7 @@ extern Object_0006E130 data_00252790;
 
 // Releases what func_0012BDF0 cleared: slot 2 of the interface at data_002590D0, the id at +0x8b0 through
 // func_0006E7B0 of data_00252790, and the buffer at data_00259008.
-void Object_0012BDF0::func_0012BDA0()
+void Object_00120420::func_0012BDA0()
 {
     if (data_002590D0) {
         data_002590D0->slot2();
