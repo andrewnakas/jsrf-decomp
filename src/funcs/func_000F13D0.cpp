@@ -26,11 +26,12 @@ struct Item_000162A0 {
 
 struct Item_00016200;
 struct Model_000178B0;
+struct Motion_0005F060;
 
 struct Object_00016200 {
     void func_00016240(Item_00016200 *item);
     void func_000162A0(Item_000162A0 *item);
-    void func_000178B0(Model_000178B0 *model, float first, float second);
+    void func_000178B0(Model_000178B0 *model, Motion_0005F060 *motion, float time);
     void func_00019570(Mesh_00017F60 *mesh, const Mesh_00017F60 *source);
 };
 
@@ -65,7 +66,7 @@ struct Object_000F1820 {
     char unknown_000[0x78];
     Object_00047470 *skeleton;
     char unknown_07c[0x2c];
-    float time;
+    Motion_0005F060 *motion;
     char unknown_0ac[0x28];
     Part_000F1820 first[2];
     Part_000F1820 second[2];
@@ -76,7 +77,7 @@ struct Object_000F1820 {
 
 // Between func_001BA9C0 and func_001BAA50, for both sides: loads skeleton matrix 8 / 0x15 (data_0021B010) and queues
 // the mesh of the first part at 0xd4 as data_0021AF90, then matrix 0xd / 0x1a (data_0021B018) and the second part at
-// 0x11c as data_0021AFA8 (func_00019570, func_000162A0 of data_0022FCE8). Then poses the model at 0x164 at the time
+// 0x11c as data_0021AFA8 (func_00019570, func_000162A0 of data_0022FCE8). Then poses the model at 0x164 with the motion
 // at 0xa8 (func_000178B0) and queues it (func_00016240).
 void Object_000F1820::func_000F13D0()
 {
@@ -90,6 +91,6 @@ void Object_000F1820::func_000F13D0()
         data_0022FCE8.func_000162A0(&second[i].item);
     }
     func_001BAA50();
-    data_0022FCE8.func_000178B0(body.model, time, 0.0f);
+    data_0022FCE8.func_000178B0(body.model, motion, 0.0f);
     data_0022FCE8.func_00016240((Item_00016200 *)&body);
 }
