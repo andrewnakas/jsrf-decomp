@@ -9,7 +9,7 @@ struct Object_001E1598 {
     virtual long __stdcall func_00158D70();  // slot 3
     virtual unsigned long __stdcall func_00158D90();  // slot 4
     virtual long __stdcall func_00158DB0(const Vector4 *value);  // slot 5
-    virtual void __stdcall func_00158E30(unsigned long first, unsigned long second, unsigned long third);  // slot 6
+    virtual long __stdcall func_00158E30(const void *source, unsigned int count, unsigned int stride);  // slot 6
     virtual void __stdcall func_00158E80();  // slot 7
     virtual void __stdcall func_00158ED0(float value);  // slot 8
     virtual void __stdcall func_00157F20_5(unsigned long value);  // slot 9: does nothing, folded
