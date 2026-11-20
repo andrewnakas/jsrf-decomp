@@ -82,8 +82,8 @@ struct Device_00251D6C {
 
 extern Device_00251D6C *data_00251D6C;
 
-struct Object_00048100 {
-    virtual ~Object_00048100();
+struct Object_00047470 {
+    virtual ~Object_00047470();
 
     Surface_000476F0 *surface;
 
@@ -92,7 +92,7 @@ struct Object_00048100 {
 
 // Stored at +0x64 when flag 0x20 is set (0x48557): takes the texture slot 15 of the interface at +0x4 gives for its
 // argument, runs slot 28 of the device (0, -1), then slots 9, 8 (0) and 24 of the texture.
-void Object_00048100::func_00047730(int argument)
+void Object_00047470::func_00047730(int argument)
 {
     Texture_00047730 *texture = surface->slot15(argument, 0);
     data_00251D6C->slot28(0, -1);
