@@ -20,8 +20,8 @@ the KeybadeBlox JSRF-Decompilation repository**, not even to check a name. See P
 | Agent | Address range | Branch prefix |
 |---|---|---|
 | Claude lane 1 | `0x00011000`–`0x0008FFFF` | `claude-lane1/` |
-| Claude lane 2 | `0x00090000`–`0x000CFFFF` | `claude-lane2/` |
-| Claude lane 3 | `0x000D0000`–`0x0013A56F` | `claude-lane3/` |
+| Claude lane 2 | `0x00090000`–`0x000CFFFF` and `0x000F0000`–`0x0010FFFF` | `claude-lane2/` |
+| Claude lane 3 | `0x000D0000`–`0x000EFFFF` and `0x00110000`–`0x0013A56F` | `claude-lane3/` |
 | Claude lane 4 | MUSASHI (owner `musashi`) | `claude-lane4/` |
 | Claude lane 5 | the engine block (owner `engine`) | `claude-lane5/` |
 | Any other agent or human | an unclaimed range from the Active claims issue | `<name>/` |
