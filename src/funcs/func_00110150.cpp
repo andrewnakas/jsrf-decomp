@@ -8,7 +8,8 @@ struct Channel_00110150 {
     char unknown_38[0xc];
 };
 
-struct Object_00110150 {
+// The node with the five channels (table 0x1D2580, constructor func_0010FD30).
+struct Object_0010FD30 {
     char unknown_000[0x54];
     int count;
     char unknown_058[0x48];
@@ -23,7 +24,7 @@ void func_001087D0(int handle, unsigned int count, int *values, int value);
 
 // Unless already in state 3 or later, clears both values of every channel (func_001087D0), forgets their ids and
 // puts every channel and the object in state 3.
-void Object_00110150::func_00110150()
+void Object_0010FD30::func_00110150()
 {
     if (state < 3) {
         for (int i = 0; i < count; i++) {
