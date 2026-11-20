@@ -10,7 +10,7 @@ extern Game *data_0022FCE0;
 
 // The menu func_0013A340 runs (func_00139C00 is another of its members): the four controllers' buttons, one per
 // byte, at +0x48.
-struct Object_00139C00 {
+struct Object_001379E0 {
     char unknown_000[0x48];
     unsigned int buttons;
     int mode;
@@ -29,7 +29,7 @@ struct Object_00139C00 {
 // Clamps the cursor at +0x5c to 3 (with more than two entries in mode 0, else 0; the last entry in mode 1); then
 // for each enabled controller: in mode 0, 0x40 and 0x80 move the cursor up and down (wrapping) with sound 3; 1 or 4
 // set state 2 with sound 1 and return 1. Otherwise 0.
-int Object_00139C00::func_0013A140()
+int Object_001379E0::func_0013A140()
 {
     data_0022FCE0->func_000128C0(0x1deb);
     unsigned int last = 0;

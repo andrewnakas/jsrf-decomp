@@ -1,7 +1,7 @@
-/* sym: ??1Object_00126AC0@@UAE@XZ = 0x00126AC0 */
+/* sym: ??1Object_00120420@@UAE@XZ = 0x00126AC0 */
 /* sym: ??1Node@@UAE@XZ = 0x00011000 */
-/* sym: ?func_00011C90@Object_00126AC0@@UAEXXZ = 0x00127810 */
-/* sym: ?func_00011C80@Object_00126AC0@@UAEXH@Z = 0x00127080 */
+/* sym: ?func_00011C90@Object_00120420@@UAEXXZ = 0x00127810 */
+/* sym: ?func_00011C80@Object_00120420@@UAEXH@Z = 0x00127080 */
 struct Object_0006E130 {
     void func_0006E7B0(int id);
 };
@@ -43,9 +43,9 @@ struct Node {
 };
 
 // The class whose table is at 0x1DA300 (constructor 0x127590): holds sound ids and owns the nodes it creates.
-struct Object_00126AC0 : Node {
-    Object_00126AC0(Node *owner, int id, unsigned int flags);
-    virtual ~Object_00126AC0();
+struct Object_00120420 : Node {
+    Object_00120420(Node *owner, int id, unsigned int flags);
+    virtual ~Object_00120420();
     virtual void func_00011C90();
     virtual void func_00011C80(int argument);
     void func_0012CC70();
@@ -74,7 +74,7 @@ struct Object_00126AC0 : Node {
 
 // Frees the shared buffers, releases every sound id it holds, deletes the nodes it owns and releases registration
 // 0x13.
-Object_00126AC0::~Object_00126AC0()
+Object_00120420::~Object_00120420()
 {
     func_0012CC70();
     if (sound_754 != -1) {

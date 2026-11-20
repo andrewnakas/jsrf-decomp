@@ -12,7 +12,7 @@ struct Game {
 
 extern Game *data_0022FCE0;
 
-struct Object_00139B50 {
+struct Object_001379E0 {
     char unknown_000[0x44];
     int value_44;
     unsigned int buttons;
@@ -27,7 +27,7 @@ struct Object_00139B50 {
 // Reacts to the buttons at +0x48 (the four bytes or-ed together): 0x0a sets state 3 and plays sound 2 of group 8
 // on object 4; 0x40 or 0x80 flips the toggle at +0x4c, clears the four words after it and plays sound 3; 1 or 4
 // sets +0x44 and passes 0 to func_00070960 (which never reads this).
-void Object_00139B50::func_00139B50()
+void Object_001379E0::func_00139B50()
 {
     if ((buttons | buttons >> 8 | buttons >> 16 | buttons >> 24) & 0xa) {
         state = 3;

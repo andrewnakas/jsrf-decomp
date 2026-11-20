@@ -1,4 +1,4 @@
-/* sym: ??0Object_00126AC0@@QAE@PAUNode@@HI@Z = 0x00127590 */
+/* sym: ??0Object_00120420@@QAE@PAUNode@@HI@Z = 0x00127590 */
 int func_00025680();
 int func_000256A0(unsigned int index, int argument);
 int func_000256C0(unsigned int index, int argument);
@@ -18,9 +18,9 @@ struct Node {
 };
 
 // Object 0x1de2: the class whose table is at 0x1DA300 (constructor 0x127590, destructor 0x126AC0; 0x4180 bytes).
-struct Object_00126AC0 : Node {
-    Object_00126AC0(Node *owner, int id, unsigned int flags);
-    virtual ~Object_00126AC0();
+struct Object_00120420 : Node {
+    Object_00120420(Node *owner, int id, unsigned int flags);
+    virtual ~Object_00120420();
 
     char unknown_44[0x413c];
 };
@@ -38,7 +38,7 @@ struct Object_0007C250 : Node {
 void Object_0007C250::func_0007CF00()
 {
     if (!func_000256C0(0x13, 0) && !func_00025680()) {
-        new Object_00126AC0(this, 0x1de2, 0x300);
+        new Object_00120420(this, 0x1de2, 0x300);
         func_000256A0(0x13, 0);
         state = 0x2d;
         func_00024620(0, 1.0f / 60.0f);
