@@ -1,2 +1,2 @@
 # One exact commit of the xbx tools. Bump deliberately (maintainers only): a tools change re-judges every unit.
-decompathon-xbox @ git+https://github.com/andrewnakas/decompathon-xbox@1fbed6467a01bd02624dec1e143959ebd52bc76e
+decompathon-xbox @ git+https://github.com/andrewnakas/decompathon-xbox@9cfc2708dcd2fb65bf490819db49496a47285fcf

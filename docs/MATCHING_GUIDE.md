@@ -291,6 +291,13 @@ A class that declares no destructor gets an implicit one. When a deleting destru
 the matcher places and compares it like the deleting destructor; declaring an empty destructor instead adds a
 vtable store that retail does not have.
 
+#### Functions retail inlined
+
+Retail sometimes inlined a function into its caller (usually one from the same source file). Write the callee as
+an `inline` helper in the caller's unit and call it: the compiler inlines it the same way. The out-of-line copy
+it also emits is a COMDAT that nothing refers to, which the linker drops; the matcher notes it and ignores it.
+The callee's own unit is still written separately at its own address.
+
 ## `/* sym: */`: special members
 
 Constructors, destructors, operators and vtables have decorated names that start with `??` and cannot carry an
