@@ -24,17 +24,17 @@ struct Surface_000476F0 {
     virtual void __stdcall slot22(int first, int second, int third);
 };
 
-struct Object_00048100 {
-    virtual ~Object_00048100();
+struct Object_00047470 {
+    virtual ~Object_00047470();
 
     Surface_000476F0 *surface;
 
     void func_00047710(int first, int second, int third);
 };
 
-// Stored at +0x68 by the constructor func_00048100 and called through that pointer: passes its three arguments
+// Stored at +0x68 by the constructor (0x48100) and called through that pointer: passes its three arguments
 // to slot 22 of the interface at +0x4.
-void Object_00048100::func_00047710(int first, int second, int third)
+void Object_00047470::func_00047710(int first, int second, int third)
 {
     surface->slot22(first, second, third);
 }

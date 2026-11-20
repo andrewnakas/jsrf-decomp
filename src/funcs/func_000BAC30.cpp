@@ -11,16 +11,16 @@ struct Object_000BAC20 {
     char unknown_00[0xa0];
     int count;
 
-    void func_000BAC30(Info_000B9E70 *info, int value, int unused1, int unused2);
+    int func_000BAC30(Info_000B9E70 *info, int value, int unused1, int unused2);
 };
 
 int func_000B9E70(Node *owner, Info_000B9E70 *info, int value, int first, int second);
 
-// Counts at 0xa0 and has func_000B9E70 create the child the info describes under itself (with the value and -1, -1;
-// its id is not kept).
+// Counts at 0xa0 and has func_000B9E70 create the child the info describes under itself (with the value and -1, -1);
+// returns the child's id (0x40330 keeps it).
 // The last two arguments are not read.
-void Object_000BAC20::func_000BAC30(Info_000B9E70 *info, int value, int, int)
+int Object_000BAC20::func_000BAC30(Info_000B9E70 *info, int value, int, int)
 {
     count++;
-    func_000B9E70((Node *)this, info, value, -1, -1);
+    return func_000B9E70((Node *)this, info, value, -1, -1);
 }
