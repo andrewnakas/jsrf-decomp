@@ -7,7 +7,7 @@ struct Vector3 {
 struct Node;
 
 Node *func_000C70A0(Node *owner, Vector3 *position, int kind);
-Node *func_000C4B70(int kind);
+void func_000C4B70(int kind);
 void func_001BA9C0();
 void func_001BAA50();
 void __fastcall func_001BAAA0(float *vector);
