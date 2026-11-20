@@ -9,14 +9,14 @@ struct Object_000F7920 {
     char unknown_048[0xc4];
     int value_10c;
     char unknown_110[0x10];
-    int value_120;
+    float value_120;
 };
 
 extern Game *data_0022FCE0;
 
 // When object 0x1164 exists: clears its 0x10c, keeps the value at 0x120 and sets bit 31 of its flags at 0x44, looking
 // it up again for each.
-void func_000F7920(int value)
+void func_000F7920(float value)
 {
     if (data_0022FCE0->func_000128C0(0x1164)) {
         Object_000F7920 *object = (Object_000F7920 *)data_0022FCE0->func_000128C0(0x1164);
