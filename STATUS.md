@@ -29,6 +29,10 @@
 
 - Kind `eh` rows are compiler-made exception-handling stubs. They are matched together with the function that
   registers them (the `parent` column) and never get a unit of their own.
+- Other compiler-made functions (deleting and implicit destructors, adjustor thunks, special members emitted
+  as COMDATs) are placed and proven inside the unit that carries them. `config/covered.csv` lists them so the
+  progress report counts them; the match gate refuses the file if it lists one no proven unit carries. A
+  maintainer refreshes it with `xbx covers --write`.
 - 418 functions (38 of them `game`) have a non-empty `conv`: link-time code generation gave them a custom
   calling convention. Lanes skip them for now (AGENTS.md).
 
