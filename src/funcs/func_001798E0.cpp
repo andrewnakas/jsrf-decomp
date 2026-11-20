@@ -18,7 +18,8 @@ struct Object_001E410C {
     void *event;
 };
 
-// Slot 7: resets the event at +0xc (func_00145B46), or fails with 0x800401F0 (not initialised) when there is none.
+// Slot 7: passes the event handle at +0xc to func_00145B46 (which hands it to kernel import #186), or fails with
+// 0x800401F0 (not initialised) when there is none.
 long __stdcall Object_001E410C::func_001798E0()
 {
     if (event) {

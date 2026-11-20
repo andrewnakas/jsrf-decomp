@@ -22,7 +22,8 @@ struct Object_001E41D8 {
     void *thread;
 };
 
-// Slot 11: resumes the thread at +0xc (func_00147DAC), or fails with 0x800401F0 (not initialised) when there is none.
+// Slot 11: passes the thread handle at +0xc to func_00147DAC (which hands it to kernel import #231), or fails with
+// 0x800401F0 (not initialised) when there is none.
 long __stdcall Object_001E41D8::func_0017AA80()
 {
     if (thread) {
