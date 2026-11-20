@@ -5,7 +5,7 @@ struct Motion_0005F060 {
 
 // The owner type of the Object_000CC600 family; func_000C5B10 calls its callback at 0xe8.
 struct Object_000C5B50 {
-    int func_000C5B10(int first, int second);
+    int func_000C5B10(int message, void *data);
 };
 
 // The object at 0x30 of the one at 0x3b4.
