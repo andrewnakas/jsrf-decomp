@@ -13,7 +13,7 @@ struct Object_0006DB80 {
 
 extern Object_0006DB80 data_00251F78;
 
-void func_00106FF0(int first, int second, int third);
+void func_00106FF0(unsigned int id, int key, int which);
 
 // The object in data_00257CE8 (its callers load `ecx` from there; this function does not read it).
 struct Object_00157F10 {
