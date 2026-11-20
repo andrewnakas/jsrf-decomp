@@ -4,7 +4,7 @@ struct Vector3 {
     float z;
 };
 
-struct Object_000A4BD0 {
+struct Object_000A4D80 {
     char unknown_000[0x158];
     Vector3 position;
     int value_164;
@@ -20,8 +20,9 @@ struct Object_000A4BD0 {
 };
 
 // Copies the position at 0x1e4 to 0x158 and clears 0x164; the first time only, also copies the field at 0x228 to
-// 0x234 and sets the latch at 0x238 (like func_000A4BD0).
-void Object_000A4BD0::func_000A5A70()
+// 0x234 and sets the latch at 0x238 (like func_000A4BD0). Entry 10 of the camera node's member-function table at
+// 0x215534.
+void Object_000A4D80::func_000A5A70()
 {
     position = start;
     value_164 = 0;
