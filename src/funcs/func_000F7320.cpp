@@ -41,7 +41,7 @@ struct Game {
 extern Game *data_0022FCE0;
 
 // Object 0x1163.
-struct Object_000FEC10 {
+struct Object_000FEDB0 {
     char unknown_000[0x130];
     int value_130;
 };
@@ -56,5 +56,5 @@ struct Object_000F7280 : Node {
 // Clears the value at 0x130 of object 0x1163.
 Object_000F7280::~Object_000F7280()
 {
-    ((Object_000FEC10 *)data_0022FCE0->func_000128C0(0x1163))->value_130 = 0;
+    ((Object_000FEDB0 *)data_0022FCE0->func_000128C0(0x1163))->value_130 = 0;
 }

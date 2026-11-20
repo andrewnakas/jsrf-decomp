@@ -1,4 +1,5 @@
-struct Object_000FF060 {
+// Object 0x1163 (func_00079B50 and func_0007A8B0 look it up and call this).
+struct Object_000FEDB0 {
     char unknown_000[0x144];
     unsigned int flags;
 
@@ -6,7 +7,7 @@ struct Object_000FF060 {
 };
 
 // Sets or clears the top flag bit at 0x144.
-void Object_000FF060::func_000FF060(int set)
+void Object_000FEDB0::func_000FF060(int set)
 {
     if (set) {
         flags |= 0x80000000;
