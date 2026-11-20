@@ -16,7 +16,7 @@ struct LockedRect {
 long __stdcall func_0018E630(void *texture, unsigned int level, LockedRect *lock, const void *rect,
                              unsigned long flags);
 // Unswizzles the source into the destination (the counterpart of 0x14EAC0).
-void __stdcall func_00152470(Swizzle *swizzle, void *destination, void *source, unsigned long bits);
+long __stdcall func_00152470(Swizzle *swizzle, void *linear, void *swizzled, unsigned long bits);
 
 // The base of the classes whose tables are at 0x1E1290 (destructor 0x152690), 0x1E1298, 0x1E12B8 and 0x1E12D8
 // (created by 0x152BC0); all four share this QueryInterface.
