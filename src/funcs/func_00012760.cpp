@@ -7,5 +7,5 @@ struct Game {
 
 void Game::func_00012760()
 {
-    unknown_0074 = 1;
+    unknown_0074 = 2;
 }
