@@ -1,3 +1,5 @@
+struct Record;
+
 // A class whose table is at 0x1E1610 (11 slots).
 struct Object_001E1610 {
     virtual long __stdcall func_00159180(const void *iid, void **object);  // slot 0
@@ -8,7 +10,7 @@ struct Object_001E1610 {
     virtual long __stdcall func_0015C5D0(unsigned long value);  // slot 5
     virtual long __stdcall func_0015C600(unsigned long first, unsigned long second, unsigned long third);  // slot 6
     virtual long __stdcall func_001590D0();  // slot 7
-    virtual long __stdcall func_00159330(unsigned long first, unsigned long second);  // slot 8
+    virtual long __stdcall func_00159330(const Record *records, unsigned int count);  // slot 8
     virtual long __stdcall func_0015C670(unsigned long value);  // slot 9
     virtual long __stdcall func_0015C6E0(int position);  // slot 10
 
