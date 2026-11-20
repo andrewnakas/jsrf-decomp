@@ -10,7 +10,7 @@ struct Game {
 };
 
 struct Object_000607B0 {
-    void func_000651E0(int kind, void *position, Vector3 *direction);
+    int func_000651E0(int kind, void *position, Vector3 *direction);
 };
 
 extern Game *data_0022FCE0;
