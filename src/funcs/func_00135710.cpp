@@ -11,7 +11,7 @@ struct Slot_00135710 {
     char unknown_04[0x34];
 };
 
-struct Object_00135710 {
+struct Object_00134880 {
     char unknown_000[0x560];
     Slot_00135710 slots[3];
     char unknown_608[0x24];
@@ -22,7 +22,7 @@ struct Object_00135710 {
 
 // 0 when a cell of another row than `row` holds `id` and `value` (for a negative id, only in that row's slot
 // column); 1 otherwise.
-int Object_00135710::func_00135710(int id, int value, int row)
+int Object_00134880::func_00135710(int id, int value, int row)
 {
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 5; j++) {
