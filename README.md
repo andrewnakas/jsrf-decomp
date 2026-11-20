@@ -22,11 +22,11 @@ source, debug and prototype builds and the Xbox Development Kit are off limits: 
 |---|---|
 | Target | `default.xbe`, sha256 `fd19055756719893c466302809b433b785ecf5732df0441286f3f605f0f3ef9c`, title id `5345000A`, linked 2002-01-28, Xbox SDK libraries version 1.0.4134 |
 | Compiler | Microsoft Visual C++ 7.0 (`cl` 13.00.9466, from Visual Studio .NET 2002), run under [Wine](https://www.winehq.org/), with the flags pinned in `xbx.toml`. Each contributor uses their own licensed copy; the tools download nothing. |
-| Function table | `config/functions.csv`: about 9,350 functions (exact counts are in [STATUS.md](STATUS.md)). Owner `game` is the headline. The Xbox SDK libraries linked into the executable (`lib:d3d8`, `lib:dsound`, `lib:xgraphics`, `lib:xpp`) are a separate category. |
+| Function table | `config/functions.csv`: about 9,350 functions (exact counts are in [STATUS.md](STATUS.md)). The headline is the game's own code and the engine code linked with it: about 7,230 functions. The Xbox platform libraries, the C runtime and CRI ADX (`lib:*`) are a separate category. |
 | Progress (2026-11-19) | Clean start: the toolchain is pinned and the first 10 functions are matched (the set the compiler flags were calibrated on). |
 
 Progress is tracked on [bytematch.dev](https://bytematch.dev/andrewnakas/jsrf-decomp). The headline counts exact
-matches of owner `game` only.
+matches of the owners `game`, `engine` and `musashi`.
 
 ## Two tiers of C++
 

@@ -47,5 +47,5 @@
 13. **Link-time code generation.** A function whose `conv` column in `config/functions.csv` is not empty has a
     custom calling convention that a per-object compile cannot reproduce. Such functions, and callers whose
     call site is affected, are skipped for now or go to the non-matching tier as equivalent C++.
-14. Progress: the headline counts exact matches of owner `game` only. Library code (`lib:*` owners) is reported
+14. Progress: the headline counts exact matches of the owners `game`, `engine` and `musashi` (STATUS.md). Library code (`lib:*` owners) is reported
     as a separate category.

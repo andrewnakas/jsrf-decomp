@@ -2,3 +2,17 @@ name,addr
 ??2@YAPAXI@Z,0004a8f0
 ??3@YAXPAX@Z,0004a900
 ___CxxFrameHandler,0017c00f
+??_U@YAPAXI@Z,0017d71b
+??_V@YAXPAX@Z,0017d716
+__CxxThrowException@8,0017d5f9
+__EH_prolog,00186b80
+__purecall,0017cac0
+__ftol2,0017c3e8
+__allmul,0017ca70
+__alldiv,0017c9c0
+__aulldiv,0017d4d0
+__aullrem,0017d2c0
+__aullshr,0017d2a0
+__allshr,0017d540
+__chkstk,0017cab0
+_atexit,0017c53d

@@ -21,7 +21,7 @@ the KeybadeBlox JSRF-Decompilation repository**, not even to check a name. See P
 |---|---|---|
 | Claude lane 1 | `0x00011000`–`0x0008FFFF` | `claude-lane1/` |
 | Claude lane 2 | `0x00090000`–`0x0010FFFF` | `claude-lane2/` |
-| Claude lane 3 | `0x00110000`–`0x0018CB3F`, and `0x001BA8A0`–`0x001BBABF` (section `MMATRIX`) | `claude-lane3/` |
+| Claude lane 3 | `0x00110000`–`0x0013A56F` | `claude-lane3/` |
 | Any other agent or human | an unclaimed range from the Active claims issue | `<name>/` |
 
 A function belongs to the lane its start address falls in. Lanes work on owner `game`, kind `func`. A lane in
@@ -30,12 +30,21 @@ this table owns its range and does not `/claim` inside it; everyone else claims 
 `.venv/bin/xbx asm --list 40 --from 00011000 --to 00090000 --min-size 16` lists a range's smallest open
 functions, one line each (`--leaf` for those that call nothing); `--small` prints their disassembly.
 
-Library code is linked in among the game code. Direct3D 8, DirectSound, XGraphics and XPP have sections and
-owners of their own (`lib:d3d8`, `lib:dsound`, `lib:xgraphics`, `lib:xpp`); they are a separate category in the
-progress report and not lane targets. `.text` also holds library code that has no section of its own (the
-executable's library table lists XAPILIB, LIBCMT and LIBCPMT), and the table counts it as `game` until it is
-tagged. If a function is clearly library code (a C runtime routine, a thin wrapper around kernel imports), skip
-it and note it in your PR so a maintainer can tag its range in `xbx.toml`.
+Not everything in the executable is the game's own code, and the function table's `owner` column says which
+is which:
+
+| Owner | Where | What it is |
+|---|---|---|
+| `game` | `.text` up to `0x13A570`, the dynamic initialisers at its end, section `MMATRIX` | the game. **Lane targets.** |
+| `engine`, `musashi` | `.text` `0x14B7A0`–`0x17BF40` | engine code linked in as libraries: a Direct3D layer with hand-written vector maths, and classes the executable names `MUSASHI.*`. Counted in the headline, not lane targets yet. |
+| `lib:*` | sections `D3D`, `DSOUND`, `XGRPH`, `XPP`; `.text` `0x13A570`–`0x14B7A0` and `0x17BF40`–`0x186BA0` | CRI ADX, the Xbox platform libraries and the C/C++ runtime. A separate category in the progress report. Not lane targets. |
+
+`xbx asm --list` and `--small` show owner `game` only. STATUS.md has the evidence for each range.
+
+A unit often calls library code. Declare the callee under its address name like any other function
+(`int __stdcall func_00145585(void *handle);`). The exception is what the compiler calls by itself (`operator
+new`, `__ftol2` for a float-to-integer conversion, the 64-bit arithmetic helpers, `__purecall` in a vtable):
+those names are in `config/symbols.csv` and need no declaration.
 
 Use **one clone per agent**, and keep every temporary file inside your own clone, under `work/` (git-ignored):
 never in a shared temp or scratchpad directory, where another agent can pick it up.

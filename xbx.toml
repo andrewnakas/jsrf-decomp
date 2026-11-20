@@ -26,10 +26,93 @@ unit_glob = "func_*.cpp"
 symbols = "config/symbols.csv"
 
 [owners]
-headline = ["game"]
+# The headline counts the game's own code and the two blocks of engine code linked with it
+# (STATUS.md, "What is in .text"). The lib: owners are a separate category.
+headline = ["game", "engine", "musashi"]
 
 [owners.sections]
 D3D = "lib:d3d8"
 DSOUND = "lib:dsound"
 XGRPH = "lib:xgraphics"
 XPP = "lib:xpp"
+
+# Library code inside .text, which has no section of its own. Every range is on function-table
+# row boundaries; the evidence for each is in STATUS.md ("What is in .text").
+[[owners.ranges]]
+start = "0x13a570"
+end = "0x145560"
+owner = "lib:adx"
+
+[[owners.ranges]]
+start = "0x145560"
+end = "0x14b774"
+owner = "lib:xapi"
+
+[[owners.ranges]]
+start = "0x14b774"
+end = "0x14b77c"
+owner = "lib:dsound"
+
+[[owners.ranges]]
+start = "0x14b77c"
+end = "0x14b7a0"
+owner = "lib:xboxkrnl"
+
+[[owners.ranges]]
+start = "0x14b7a0"
+end = "0x15fa30"
+owner = "engine"
+
+[[owners.ranges]]
+start = "0x15fa30"
+end = "0x17bf40"
+owner = "musashi"
+
+[[owners.ranges]]
+start = "0x17bf40"
+end = "0x182b81"
+owner = "lib:crt"
+
+[[owners.ranges]]
+start = "0x182b81"
+end = "0x182c97"
+owner = "lib:xapi"
+
+[[owners.ranges]]
+start = "0x182c97"
+end = "0x18694a"
+owner = "lib:xgraphics"
+
+[[owners.ranges]]
+start = "0x18694a"
+end = "0x186950"
+owner = "lib:xboxkrnl"
+
+[[owners.ranges]]
+start = "0x186950"
+end = "0x186b80"
+owner = "engine"
+
+[[owners.ranges]]
+start = "0x186b80"
+end = "0x186ba0"
+owner = "lib:crt"
+
+# exception-handling stubs of the functions in 0x15fa30-0x17bf40, and of two C++ runtime functions
+[[owners.ranges]]
+start = "0x18a380"
+end = "0x18aca2"
+owner = "musashi"
+
+[[owners.ranges]]
+start = "0x18aca2"
+end = "0x18acc0"
+owner = "lib:crt"
+
+[inventory]
+# 0xc0470, 0xc0490 and 0xc04a0 are three functions: each ends in its own ret and each is an
+# entry of the vtable at 0x1cdc1c (slots 0x1cdc1c, 0x1cdc20, 0x1cdc24). No code calls the last two.
+known_starts = ["0xc0490", "0xc04a0"]
+# 0x4c8a0 is the last ret of the function at 0x4c400, reached through that function's jump
+# table, and 0x4c8a4 is the table itself (12 entries, all pointing into the function).
+not_starts = ["0x4c8a0", "0x4c8a4"]
