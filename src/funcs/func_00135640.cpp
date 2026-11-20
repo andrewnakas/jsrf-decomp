@@ -20,7 +20,7 @@ struct Cursor_00135640 {
     int unknown_0c;
 };
 
-struct Object_00135710 {
+struct Object_00134880 {
     char unknown_000[0x54c];
     Slot_00135640 slots[4];
     char unknown_62c[0xc4];
@@ -35,7 +35,7 @@ extern int data_0022C6E4[];
 // Reads the buttons of the player's controller: 1 or 4 confirms (state 6, sound 0); 0x8000 or a pending right
 // count above 25 moves right (state 2, the count reset to 20, sound 3); 0x4000 or a pending left count above 25
 // moves left (state 4, likewise).
-void Object_00135710::func_00135640(int player)
+void Object_00134880::func_00135640(int player)
 {
     unsigned int pressed = *(unsigned int *)&data_00251DE8[data_0022C6E4[player]];
     if (!(pressed & 5)) {
