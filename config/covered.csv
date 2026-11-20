@@ -50,6 +50,7 @@ addr,unit
 00066900,src/funcs/func_000663E0.cpp
 00067e70,src/funcs/func_00067980.cpp
 0006a190,src/funcs/func_00069A30.cpp
+0006c340,src/funcs/func_0006B270.cpp
 0006cec0,src/funcs/func_0006CE00.cpp
 0006da60,src/funcs/func_0006CEE0.cpp
 0006df10,src/funcs/func_0006DA80.cpp
@@ -60,7 +61,7 @@ addr,unit
 000728a0,src/funcs/func_000726A0.cpp
 00072970,src/funcs/func_000728C0.cpp
 00074080,src/funcs/func_00073AD0.cpp
-00074660,src/funcs/func_000743D0.cpp
+00074660,src/funcs/func_000740A0.cpp
 00074d40,src/funcs/func_00074BD0.cpp
 00075ce0,src/funcs/func_00074D60.cpp
 000789d0,src/funcs/func_000780F0.cpp
@@ -74,7 +75,7 @@ addr,unit
 0007e7b0,src/funcs/func_0007E2F0.cpp
 00080320,src/funcs/func_0007E830.cpp
 00083ff0,src/funcs/func_00080020.cpp
-00086180,src/funcs/func_00085410.cpp
+00086180,src/funcs/func_00085280.cpp
 00086f70,src/funcs/func_000862B0.cpp
 00086f90,src/funcs/func_00086900.cpp
 00087090,src/funcs/func_00086900.cpp
